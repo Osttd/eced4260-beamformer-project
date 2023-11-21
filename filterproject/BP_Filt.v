@@ -6,14 +6,14 @@
 
 `timescale 1 ps / 1 ps
 module BP_Filt (
-		input  wire        clk,              //                     clk.clk
-		input  wire        reset_n,          //                     rst.reset_n
-		input  wire [15:0] ast_sink_data,    //   avalon_streaming_sink.data
-		input  wire        ast_sink_valid,   //                        .valid
-		input  wire [1:0]  ast_sink_error,   //                        .error
-		output wire [33:0] ast_source_data,  // avalon_streaming_source.data
-		output wire        ast_source_valid, //                        .valid
-		output wire [1:0]  ast_source_error  //                        .error
+		input  wire         clk,              //                     clk.clk
+		input  wire         reset_n,          //                     rst.reset_n
+		input  wire [15:0]  ast_sink_data,    //   avalon_streaming_sink.data
+		input  wire         ast_sink_valid,   //                        .valid
+		input  wire [1:0]   ast_sink_error,   //                        .error
+		output wire [110:0] ast_source_data,  // avalon_streaming_source.data
+		output wire         ast_source_valid, //                        .valid
+		output wire [1:0]   ast_source_error  //                        .error
 	);
 
 	BP_Filt_0002 bp_filt_inst (
@@ -55,15 +55,15 @@ endmodule
 //	needed under any third party's intellectual property, are provided herein.
 //-->
 // Retrieval info: <instance entity-name="altera_fir_compiler_ii" version="20.1" >
-// Retrieval info: 	<generic name="filterType" value="single" />
-// Retrieval info: 	<generic name="interpFactor" value="1" />
+// Retrieval info: 	<generic name="filterType" value="interp" />
+// Retrieval info: 	<generic name="interpFactor" value="3" />
 // Retrieval info: 	<generic name="decimFactor" value="1" />
 // Retrieval info: 	<generic name="symmetryMode" value="sym" />
 // Retrieval info: 	<generic name="L_bandsFilter" value="1" />
 // Retrieval info: 	<generic name="inputChannelNum" value="1" />
 // Retrieval info: 	<generic name="clockRate" value="100" />
 // Retrieval info: 	<generic name="clockSlack" value="0" />
-// Retrieval info: 	<generic name="inputRate" value="0.3" />
+// Retrieval info: 	<generic name="inputRate" value="100" />
 // Retrieval info: 	<generic name="coeffReload" value="false" />
 // Retrieval info: 	<generic name="baseAddress" value="0" />
 // Retrieval info: 	<generic name="readWriteMode" value="read_write" />
@@ -82,11 +82,11 @@ endmodule
 // Retrieval info: 	<generic name="inputType" value="int" />
 // Retrieval info: 	<generic name="inputBitWidth" value="16" />
 // Retrieval info: 	<generic name="inputFracBitWidth" value="0" />
-// Retrieval info: 	<generic name="coeffSetRealValue" value="0.0176663,0.013227,0.0,-0.0149911,-0.0227152,-0.0172976,0.0,0.0204448,0.0318046,0.0249882,0.0,-0.0321283,-0.0530093,-0.04498,0.0,0.0749693,0.159034,0.224907,0.249809,0.224907,0.159034,0.0749693,0.0,-0.04498,-0.0530093,-0.0321283,0.0,0.0249882,0.0318046,0.0204448,0.0,-0.0172976,-0.0227152,-0.0149911,0.0,0.013227,0.0176663" />
+// Retrieval info: 	<generic name="coeffSetRealValue" value="0.001419957202571,0.00451711541738676,0.0075678534008609,0.0104588615495023,0.0103380412351341,0.00687600922262098,3.95829134872921E-4,-0.00612096249306285,-0.00937902305491801,-0.00696701312680051,3.61144372724572E-4,0.00876148177927153,0.0128764278994344,0.00913977156353317,-0.00158533744673784,-0.0135618279792288,-0.0189637870620453,-0.0125999834108673,0.00400958665165545,0.0220735339920639,0.0295708574744339,0.0183424388660461,-0.00958161345597076,-0.0404186262847226,-0.0536909726090302,-0.0321302097915839,0.0283671286884479,0.114189752583401,0.197924889488893,0.249517157835301,0.249517157835301,0.197924889488893,0.114189752583401,0.0283671286884479,-0.0321302097915839,-0.0536909726090302,-0.0404186262847226,-0.00958161345597076,0.0183424388660461,0.0295708574744339,0.0220735339920639,0.00400958665165545,-0.0125999834108673,-0.0189637870620453,-0.0135618279792288,-0.00158533744673784,0.00913977156353317,0.0128764278994344,0.00876148177927153,3.61144372724572E-4,-0.00696701312680051,-0.00937902305491801,-0.00612096249306285,3.95829134872921E-4,0.00687600922262098,0.0103380412351341,0.0104588615495023,0.0075678534008609,0.00451711541738676,0.001419957202571" />
 // Retrieval info: 	<generic name="coeffSetRealValueImag" value="0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -0.0530093, -0.04498, 0.0, 0.0749693, 0.159034, 0.224907, 0.249809, 0.224907, 0.159034, 0.0749693, 0.0, -0.04498, -0.0530093, -0.0321283, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0" />
 // Retrieval info: 	<generic name="coeffScaling" value="auto" />
 // Retrieval info: 	<generic name="coeffType" value="int" />
-// Retrieval info: 	<generic name="coeffBitWidth" value="12" />
+// Retrieval info: 	<generic name="coeffBitWidth" value="16" />
 // Retrieval info: 	<generic name="coeffFracBitWidth" value="0" />
 // Retrieval info: 	<generic name="coeffComplex" value="false" />
 // Retrieval info: 	<generic name="karatsuba" value="false" />
