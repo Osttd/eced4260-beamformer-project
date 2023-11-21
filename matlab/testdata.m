@@ -24,11 +24,29 @@ xlabel("f (Hz)")
 ylabel("|fft(X)|")
 
 
+Fs = 300;  % Sampling Frequency
+
+Fpass = 45;              % Passband Frequency
+Fstop = 50;              % Stopband Frequency
+Dpass = 0.057501127785;  % Passband Ripple
+Dstop = 0.001;           % Stopband Attenuation
+dens  = 20;              % Density Factor
+
+% Calculate the order from the parameters using FIRPMORD.
+[N, Fo, Ao, W] = firpmord([Fpass, Fstop]/(Fs/2), [1 0], [Dpass, Dstop]);
+
+% Calculate the coefficients using the FIRPM function.
+b  = firpm(N, Fo, Ao, W, {dens});
+Hd = dfilt.dffir(b);
+
 Z=X(1:length(ind_dels), 1:8)';
 
-W=Z(ind_dels);
+%G=filter(Hd, Z, 1);
+G=Z;
 
-A=sum(W);
+V=G(ind_dels);
+
+A=sum(V);
 
 figure(3)
 plot(1000*t2,A)
