@@ -142,24 +142,24 @@ vlib work;
 vlog ../*.v
 vlog *.v
 
-vlog -work work C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Tutorial/BP_filt_tut/Modelsim/altera_avalon_sc_fifo.v
+vlog -work work C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject/Modelsim/altera_avalon_sc_fifo.v
 
-vcom -work work C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Tutorial/BP_filt_tut/Modelsim/dspba_library_package.vhd
-vcom -work work C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Tutorial/BP_filt_tut/Modelsim/dspba_library.vhd
+vcom -work work C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject/Modelsim/dspba_library_package.vhd
+vcom -work work C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject/Modelsim/dspba_library.vhd
 
-vcom -work work C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Tutorial/BP_filt_tut/Modelsim/auk_dspip_roundsat_hpfir.vhd
-vcom -work work C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Tutorial/BP_filt_tut/Modelsim/auk_dspip_math_pkg_hpfir.vhd
-vcom -work work C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Tutorial/BP_filt_tut/Modelsim/auk_dspip_lib_pkg_hpfir.vhd
+vcom -work work C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject/Modelsim/auk_dspip_roundsat_hpfir.vhd
+vcom -work work C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject/Modelsim/auk_dspip_math_pkg_hpfir.vhd
+vcom -work work C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject/Modelsim/auk_dspip_lib_pkg_hpfir.vhd
 
-vcom -work work C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Tutorial/BP_filt_tut/Modelsim/auk_dspip_avalon_streaming_controller_hpfir.vhd
-vcom -work work C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Tutorial/BP_filt_tut/Modelsim/auk_dspip_avalon_streaming_sink_hpfir.vhd
-vcom -work work C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Tutorial/BP_filt_tut/Modelsim/auk_dspip_avalon_streaming_source_hpfir.vhd
+vcom -work work C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject/Modelsim/auk_dspip_avalon_streaming_controller_hpfir.vhd
+vcom -work work C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject/Modelsim/auk_dspip_avalon_streaming_sink_hpfir.vhd
+vcom -work work C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject/Modelsim/auk_dspip_avalon_streaming_source_hpfir.vhd
 
 
-vlog -work work C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Tutorial/BP_filt_tut/Filtering.v
-vcom -work work C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Tutorial/BP_filt_tut/Modelsim/BP_filt_0002.vhd
-vcom -work work C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Tutorial/BP_filt_tut/Modelsim/BP_filt_0002_ast.vhd
-vcom -work work C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Tutorial/BP_filt_tut/Modelsim/BP_filt_0002_rtl_core.vhd
+vlog -work work C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject/Modelsim/FIR_Filter.v
+vcom -work work C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject/Modelsim/BP_filt_0002.vhd
+vcom -work work C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject/Modelsim/BP_filt_0002_ast.vhd
+vcom -work work C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject/Modelsim/BP_filt_0002_rtl_core.vhd
 
 vsim work.${sim_entity}_tb 
 

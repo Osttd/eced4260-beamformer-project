@@ -1,5 +1,5 @@
 Flow report for FIR_Filter
-Tue Nov 21 09:43:43 2023
+Tue Nov 21 10:45:11 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,21 +41,21 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Nov 21 09:43:38 2023       ;
+; Flow Status                        ; Successful - Tue Nov 21 10:45:06 2023       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; FIR_Filter                                  ;
 ; Top-level Entity Name              ; FIR_Filter                                  ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 4,261 / 114,480 ( 4 % )                     ;
-;     Total combinational functions  ; 2,945 / 114,480 ( 3 % )                     ;
-;     Dedicated logic registers      ; 4,247 / 114,480 ( 4 % )                     ;
-; Total registers                    ; 4247                                        ;
-; Total pins                         ; 117 / 529 ( 22 % )                          ;
+; Total logic elements               ; 3,833 / 114,480 ( 3 % )                     ;
+;     Total combinational functions  ; 2,734 / 114,480 ( 2 % )                     ;
+;     Dedicated logic registers      ; 3,789 / 114,480 ( 3 % )                     ;
+; Total registers                    ; 3789                                        ;
+; Total pins                         ; 129 / 529 ( 24 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
-; Embedded Multiplier 9-bit elements ; 8 / 532 ( 2 % )                             ;
+; Embedded Multiplier 9-bit elements ; 52 / 532 ( 10 % )                           ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/21/2023 09:42:45 ;
+; Start date & time ; 11/21/2023 10:44:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; FIR_Filter          ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+-------------------------------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                                       ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+-------------------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 180886426622917.170057416511492                             ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 180886426622917.170057784904512                             ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                          ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                           ; --            ; --          ; --         ;
 ; MISC_FILE                           ; BP_Filt.cmp                                                 ; --            ; --          ; --         ;
@@ -115,11 +115,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4850 MB             ; 00:00:21                           ;
-; Fitter               ; 00:00:34     ; 1.1                     ; 5893 MB             ; 00:01:00                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4705 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.4                     ; 4938 MB             ; 00:00:04                           ;
-; Total                ; 00:00:53     ; --                      ; --                  ; 00:01:28                           ;
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4859 MB             ; 00:00:23                           ;
+; Fitter               ; 00:00:39     ; 1.1                     ; 5896 MB             ; 00:01:13                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4707 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.5                     ; 4931 MB             ; 00:00:04                           ;
+; Total                ; 00:00:59     ; --                      ; --                  ; 00:01:43                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

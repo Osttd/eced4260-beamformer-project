@@ -400,6 +400,54 @@
 					"strict" : false
 				},
 				{
+					"name" : "data_out[99]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[100]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[101]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[102]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[103]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[104]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[105]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[106]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[107]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[108]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[109]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[110]",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},

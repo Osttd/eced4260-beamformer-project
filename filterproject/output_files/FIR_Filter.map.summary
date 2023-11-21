@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Tue Nov 21 09:42:58 2023
+Analysis & Synthesis Status : Successful - Tue Nov 21 10:44:21 2023
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : FIR_Filter
 Top-level Entity Name : FIR_Filter
 Family : Cyclone IV E
-Total logic elements : 4,257
-    Total combinational functions : 2,945
-    Dedicated logic registers : 4,247
-Total registers : 4247
-Total pins : 117
+Total logic elements : 3,799
+    Total combinational functions : 2,734
+    Dedicated logic registers : 3,789
+Total registers : 3789
+Total pins : 129
 Total virtual pins : 0
 Total memory bits : 0
-Embedded Multiplier 9-bit elements : 8
+Embedded Multiplier 9-bit elements : 52
 Total PLLs : 0
