@@ -13,7 +13,7 @@ module FIR_Filter_tb ();
 	real y = 0;
 	reg [15:0] data_cast = 0;
 	
-	Filtering U1 (
+	FIR_Filter U1 (
 	.clk(clk),
 	.rst(rst),
 	.data_in(data_in),
