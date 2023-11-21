@@ -1,0 +1,9 @@
+module BRAM (
+	input rst,
+	input clock,
+	input load,
+	input start,
+	input [3:0] data_in,
+	input [2:0] read_addr,
+	input [2:0] write_addr,
+	output [3:0] data_out);

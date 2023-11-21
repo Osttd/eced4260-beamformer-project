@@ -1,0 +1,41 @@
+`timescale 1ns / 1ps
+
+module BRAM_tb ();
+
+	reg rst;
+	reg clock;
+	reg start;
+	reg data_load;
+	reg [13:0] data_in_dat;
+	wire [13:0] data_out;
+	
+	Delay_app UU1 (rst, clock, start, data_load, data_in_dat, data_out);
+	
+	initial begin
+		clock <= 0;
+		forever #5 clock <= !clock;
+	end
+	
+	initial begin
+		data_in_dat <= 14'b00_0000_0000_0000;
+		forever #10 data_in_dat <= data_in_dat+1;
+	end
+	
+	initial begin
+		rst <= 1;
+		start <= 0;
+		data_load <= 0;
+		
+		#20 
+		rst <= 0;
+		#100
+		data_load <= 1;
+		#40
+		data_load <= 0;
+		#10240
+		start <= 1;
+		#40
+		start <= 0;
+	end
+	
+endmodule

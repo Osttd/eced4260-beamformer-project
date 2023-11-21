@@ -1,0 +1,80 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Tutorial/BRAM_tut/Modelsim
+vBRAM
+Z0 !s110 1700522828
+!i10b 1
+!s100 hW>V`5I<ORbeEY4jIOAS:2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I@_b`LY4^UfHKf8^UjkKi53
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dD:/DDal/5th Year Fall (2023)/ECED4260/project/frombrightspace/Tutorial/BRAM2/Modelsim
+w1698592371
+8../BRAM.v
+F../BRAM.v
+!i122 12
+L0 1 41
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1700522827.000000
+Z6 !s107 ../DPBRAM.v|../BRAM.v|
+Z7 !s90 -reportprogress|300|../BRAM.v|../DPBRAM.v|
+!i113 1
+Z8 tCvgOpt 0
+n@b@r@a@m
+vBRAM_tb
+R0
+!i10b 1
+!s100 :2K^@PF_>68K7TfSBT3eP1
+R1
+IDnMFRXloRNbgGbASg;?J51
+R2
+R3
+w1698592080
+8BRAM_tb.v
+FBRAM_tb.v
+!i122 13
+L0 3 42
+R4
+r1
+!s85 0
+31
+!s108 1700522828.000000
+!s107 BRAM_tb.v|
+!s90 -reportprogress|300|BRAM_tb.v|
+!i113 1
+R8
+n@b@r@a@m_tb
+vDPBRAM
+R0
+!i10b 1
+!s100 8B93[7Y19C=ZlG0zCU=de2
+R1
+IW;_ojJHg7?n5>;6MLX7zW0
+R2
+R3
+w1698590115
+8../DPBRAM.v
+F../DPBRAM.v
+!i122 12
+L0 40 78
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+n@d@p@b@r@a@m
