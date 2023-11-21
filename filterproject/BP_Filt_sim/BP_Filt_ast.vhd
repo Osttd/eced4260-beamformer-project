@@ -9,17 +9,17 @@ use work.auk_dspip_math_pkg_hpfir.all;
 entity BP_Filt_ast is
   generic (
         INWIDTH             : integer := 16;
-        OUT_WIDTH_UNTRIMMED : integer := 34;
+        OUT_WIDTH_UNTRIMMED : integer := 37;
         BANKINWIDTH         : integer := 0;
         REM_LSB_BIT_g       : integer := 0;
         REM_LSB_TYPE_g      : string := "trunc";
         REM_MSB_BIT_g       : integer := 0;
         REM_MSB_TYPE_g      : string := "trunc";
         PHYSCHANIN          : integer := 1;
-        PHYSCHANOUT         : integer := 1;
+        PHYSCHANOUT         : integer := 3;
         CHANSPERPHYIN       : natural := 1;
         CHANSPERPHYOUT      : natural := 1;
-        OUTPUTFIFODEPTH     : integer := 4;
+        OUTPUTFIFODEPTH     : integer := 16;
         USE_PACKETS         : integer := 0;
         MODE_WIDTH         : integer := 0;
         ENABLE_BACKPRESSURE : boolean := false;
@@ -197,7 +197,9 @@ real_passthrough : if COMPLEX_CONST = 1 generate
         xIn_0                : in std_logic_vector(16 - 1 downto 0);
         xOut_v               : out std_logic_vector(0 downto 0);
         xOut_c               : out std_logic_vector(7 downto 0);
-        xOut_0              : out std_logic_vector(34- 1 downto 0);
+        xOut_0              : out std_logic_vector(37- 1 downto 0);
+        xOut_1              : out std_logic_vector(37- 1 downto 0);
+        xOut_2              : out std_logic_vector(37- 1 downto 0);
         clk                  : in std_logic;
         areset               : in std_logic
         );
@@ -222,7 +224,9 @@ end component BP_Filt_rtl_core;
             xIn_0     => data_in_core((0 + 16) * 0 + 16 - 1 downto (0 + 16) * 0),
             xOut_v    => core_out_valid_core,
             xOut_c    => core_out_channel_core,
-            xOut_0   => core_out_core(34* 0 + 34- 1 downto 34* 0),
+            xOut_0   => core_out_core(37* 0 + 37- 1 downto 37* 0),
+            xOut_1   => core_out_core(37* 1 + 37- 1 downto 37* 1),
+            xOut_2   => core_out_core(37* 2 + 37- 1 downto 37* 2),
             clk       => clk,
             areset    => reset_fir
         );
