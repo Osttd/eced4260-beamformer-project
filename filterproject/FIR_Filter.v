@@ -18,6 +18,10 @@ module FIR_Filter (
 		.ast_source_error(error_out)
 	);
 	
+	
+	
+	
+	
 	always @ (posedge clk) begin
 		if (data_in !== buffer_in) begin
 			start <= 1;
