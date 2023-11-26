@@ -16,10 +16,12 @@ filters for each channel
 
 whatever is needed for upsampling? output of this is size m
 
-BRAM holding input (word size 8*m) will need to figure out something for this
+beamform using known indexes
+
+BRAM holding output (word size 8*m) will need to figure out something for this since that is too large
 m-1:0 will be channel 1 and so on
 
-
+sum and send to 
 
 
 # Plans for controller
