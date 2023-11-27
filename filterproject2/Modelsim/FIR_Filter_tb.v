@@ -5,13 +5,13 @@ module FIR_Filter_tb ();
 	reg clk;
 	reg clk2;
 	reg rst;
-	reg [15:0] data_in;
+	reg [31:0] data_in;
 	reg start = 0;
-	wire [110:0] data_out;
+	wire [158:0] data_out;
 	
 	integer x = 0;
 	real y = 0;
-	reg [15:0] data_cast = 0;
+	reg [31:0] data_cast = 0;
 	
 	FIR_Filter U1 (
 	.clk(clk),

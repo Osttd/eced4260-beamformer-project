@@ -142,24 +142,24 @@ vlib work;
 vlog ../*.v
 vlog *.v
 
-vlog -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject/Modelsim/altera_avalon_sc_fifo.v"
+vlog -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject2/Modelsim/altera_avalon_sc_fifo.v"
 
-vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject/Modelsim/dspba_library_package.vhd"
-vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject/Modelsim/dspba_library.vhd"
+vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject2/Modelsim/dspba_library_package.vhd"
+vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject2/Modelsim/dspba_library.vhd"
 
-vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject/Modelsim/auk_dspip_roundsat_hpfir.vhd"
-vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject/Modelsim/auk_dspip_math_pkg_hpfir.vhd"
-vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject/Modelsim/auk_dspip_lib_pkg_hpfir.vhd"
+vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject2/Modelsim/auk_dspip_roundsat_hpfir.vhd"
+vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject2/Modelsim/auk_dspip_math_pkg_hpfir.vhd"
+vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject2/Modelsim/auk_dspip_lib_pkg_hpfir.vhd"
 
-vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject/Modelsim/auk_dspip_avalon_streaming_controller_hpfir.vhd"
-vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject/Modelsim/auk_dspip_avalon_streaming_sink_hpfir.vhd"
-vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject/Modelsim/auk_dspip_avalon_streaming_source_hpfir.vhd"
+vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject2/Modelsim/auk_dspip_avalon_streaming_controller_hpfir.vhd"
+vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject2/Modelsim/auk_dspip_avalon_streaming_sink_hpfir.vhd"
+vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject2/Modelsim/auk_dspip_avalon_streaming_source_hpfir.vhd"
 
 
-vlog -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject/FIR_Filter.v"
-vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject/Modelsim/BP_filt_0002.vhd"
-vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject/Modelsim/BP_filt_0002_ast.vhd"
-vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject/Modelsim/BP_filt_0002_rtl_core.vhd"
+vlog -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject2/FIR_Filter.v"
+vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject2/Modelsim/BP_filt_0002.vhd"
+vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject2/Modelsim/BP_filt_0002_ast.vhd"
+vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject2/Modelsim/BP_filt_0002_rtl_core.vhd"
 
 vsim work.${sim_entity}_tb 
 

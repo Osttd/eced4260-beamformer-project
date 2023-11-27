@@ -1,15 +1,15 @@
 module FIR_Filter (
 	input clk,
 	input rst,
-	input [15:0] data_in,
-	output reg [110:0] data_out);
+	input [31:0] data_in,
+	output reg [158:0] data_out);
 	
 	reg [1:0] err_in = 2'b00;
 	wire [1:0] err_out;
 	reg start;
 	wire valid_out;
-	reg [15:0] buffer_in = 0;
-	wire [110:0] buffer_out;
+	reg [31:0] buffer_in = 0;
+	wire [158:0] buffer_out;
 	
 	BP_Filt filt (
 		.clk(clk), .reset_n(rst), .ast_sink_data(data_in),
