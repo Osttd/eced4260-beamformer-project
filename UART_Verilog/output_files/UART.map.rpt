@@ -1,6 +1,6 @@
 Analysis & Synthesis report for UART
-Wed Nov 08 20:03:44 2023
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Mon Nov 27 13:18:16 2023
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
 ---------------------
@@ -25,7 +25,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2022  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -42,24 +42,24 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 08 20:03:44 2023       ;
-; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                      ; UART                                        ;
-; Top-level Entity Name              ; UART                                        ;
-; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 120                                         ;
-;     Total combinational functions  ; 96                                          ;
-;     Dedicated logic registers      ; 80                                          ;
-; Total registers                    ; 80                                          ;
-; Total pins                         ; 35                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-+------------------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++------------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Nov 27 13:18:16 2023          ;
+; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
+; Revision Name                      ; UART                                           ;
+; Top-level Entity Name              ; UART                                           ;
+; Family                             ; Cyclone IV E                                   ;
+; Total logic elements               ; 120                                            ;
+;     Total combinational functions  ; 96                                             ;
+;     Dedicated logic registers      ; 80                                             ;
+; Total registers                    ; 80                                             ;
+; Total pins                         ; 35                                             ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
++------------------------------------+------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -153,27 +153,27 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 24          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
+;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                       ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                         ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------+---------+
-; UART.v                           ; yes             ; User Verilog HDL File  ; C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Individual_components/UART_Verilog/UART.v ;         ;
-; RX.v                             ; yes             ; User Verilog HDL File  ; C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Individual_components/UART_Verilog/RX.v   ;         ;
-; TX.v                             ; yes             ; User Verilog HDL File  ; C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Individual_components/UART_Verilog/TX.v   ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                           ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                             ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------+---------+
+; UART.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/UART_Verilog/UART.v ;         ;
+; RX.v                             ; yes             ; User Verilog HDL File  ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/UART_Verilog/RX.v   ;         ;
+; TX.v                             ; yes             ; User Verilog HDL File  ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/UART_Verilog/TX.v   ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -296,45 +296,45 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Nov 08 20:03:34 2023
+    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+    Info: Processing started: Mon Nov 27 13:18:07 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off UART -c UART
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file uart.v
-    Info (12023): Found entity 1: UART File: C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Individual_components/UART_Verilog/UART.v Line: 1
+    Info (12023): Found entity 1: UART File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/UART_Verilog/UART.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rx.v
-    Info (12023): Found entity 1: RX File: C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Individual_components/UART_Verilog/RX.v Line: 1
+    Info (12023): Found entity 1: RX File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/UART_Verilog/RX.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tx.v
-    Info (12023): Found entity 1: TX File: C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Individual_components/UART_Verilog/TX.v Line: 1
+    Info (12023): Found entity 1: TX File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/UART_Verilog/TX.v Line: 1
 Info (12127): Elaborating entity "UART" for the top level hierarchy
-Warning (10034): Output port "LEDR[9..8]" at UART.v(5) has no driver File: C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Individual_components/UART_Verilog/UART.v Line: 5
-Info (12128): Elaborating entity "TX" for hierarchy "TX:C1" File: C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Individual_components/UART_Verilog/UART.v Line: 21
-Warning (10230): Verilog HDL assignment warning at TX.v(26): truncated value with size 32 to match size of target (13) File: C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Individual_components/UART_Verilog/TX.v Line: 26
-Warning (10230): Verilog HDL assignment warning at TX.v(34): truncated value with size 32 to match size of target (4) File: C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Individual_components/UART_Verilog/TX.v Line: 34
-Info (12128): Elaborating entity "RX" for hierarchy "RX:C2" File: C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Individual_components/UART_Verilog/UART.v Line: 27
-Warning (10230): Verilog HDL assignment warning at RX.v(25): truncated value with size 32 to match size of target (13) File: C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Individual_components/UART_Verilog/RX.v Line: 25
-Warning (10230): Verilog HDL assignment warning at RX.v(33): truncated value with size 32 to match size of target (4) File: C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Individual_components/UART_Verilog/RX.v Line: 33
+Warning (10034): Output port "LEDR[9..8]" at UART.v(5) has no driver File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/UART_Verilog/UART.v Line: 5
+Info (12128): Elaborating entity "TX" for hierarchy "TX:C1" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/UART_Verilog/UART.v Line: 21
+Warning (10230): Verilog HDL assignment warning at TX.v(26): truncated value with size 32 to match size of target (13) File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/UART_Verilog/TX.v Line: 26
+Warning (10230): Verilog HDL assignment warning at TX.v(34): truncated value with size 32 to match size of target (4) File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/UART_Verilog/TX.v Line: 34
+Info (12128): Elaborating entity "RX" for hierarchy "RX:C2" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/UART_Verilog/UART.v Line: 27
+Warning (10230): Verilog HDL assignment warning at RX.v(25): truncated value with size 32 to match size of target (13) File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/UART_Verilog/RX.v Line: 25
+Warning (10230): Verilog HDL assignment warning at RX.v(33): truncated value with size 32 to match size of target (4) File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/UART_Verilog/RX.v Line: 33
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Individual_components/UART_Verilog/UART.v Line: 5
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Individual_components/UART_Verilog/UART.v Line: 5
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/UART_Verilog/UART.v Line: 5
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/UART_Verilog/UART.v Line: 5
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 5 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Individual_components/UART_Verilog/UART.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Individual_components/UART_Verilog/UART.v Line: 3
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Individual_components/UART_Verilog/UART.v Line: 4
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Individual_components/UART_Verilog/UART.v Line: 4
-    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Individual_components/UART_Verilog/UART.v Line: 4
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/UART_Verilog/UART.v Line: 3
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/UART_Verilog/UART.v Line: 3
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/UART_Verilog/UART.v Line: 4
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/UART_Verilog/UART.v Line: 4
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/UART_Verilog/UART.v Line: 4
 Info (21057): Implemented 156 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 19 output pins
     Info (21061): Implemented 121 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 4836 megabytes
-    Info: Processing ended: Wed Nov 08 20:03:44 2023
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:26
+    Info: Peak virtual memory: 4788 megabytes
+    Info: Processing ended: Mon Nov 27 13:18:16 2023
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:19
 
 
