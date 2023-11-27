@@ -50,3 +50,19 @@ Would not be ideal though
 Looks like BRAM holding output of filters will not be able to be that large
 BRAM per channel there?
 Or do sequential?
+
+
+
+
+
+
+# Assumptions to simplify
+
+## These appear to hold true for the matlab data given
+Each sample will be a different value than the last
+The distance between desired sample indexes is enough time to load the next desired index from a bram (11-12 samples)
+The distance between different channels' desired indexes is less than the distance between two adjacent desired indexes for the same channel (1 sample vs 11-12 samples)
+
+
+
+

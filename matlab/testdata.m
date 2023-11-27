@@ -54,3 +54,8 @@ title("Signal")
 xlabel("t (milliseconds)")
 ylabel("X(t)")
 
+
+max_ind_diff=max(ind_dels(1)-ind_dels(4))
+
+
+
