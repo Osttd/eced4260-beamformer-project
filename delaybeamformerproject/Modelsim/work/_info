@@ -1,0 +1,99 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerproject/Modelsim
+vdelaybeamerformer_tb
+!s110 1701096447
+!i10b 1
+!s100 GRTBM1m]BUSbbTlURdgUN1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IY;Q=]jL<mlPEfB7:TzJVf3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1701096441
+Z3 8delaybeamformer_tb.v
+Z4 Fdelaybeamformer_tb.v
+!i122 2
+L0 3 29
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1701096446.000000
+!s107 delaybeamformer_tb.v|
+Z6 !s90 -reportprogress|300|delaybeamformer_tb.v|
+!i113 1
+Z7 tCvgOpt 0
+vdelaybeamformer
+Z8 !s110 1701098045
+!i10b 1
+!s100 3W]Ya3Nk@XK5G3czOEIj:3
+R1
+IoH6eaWEW706[78Oh=ECFU1
+R2
+R0
+w1701097383
+8../delaybeamformer.v
+F../delaybeamformer.v
+!i122 21
+Z9 L0 3 33
+R5
+r1
+!s85 0
+31
+Z10 !s108 1701098045.000000
+Z11 !s107 ../indexram.v|../delaybeamformer.v|
+Z12 !s90 -reportprogress|300|../delaybeamformer.v|../indexram.v|
+!i113 1
+R7
+vdelaybeamformer_tb
+!s110 1701098046
+!i10b 1
+!s100 h_JFdaMRcPXIgGLfPfgS>0
+R1
+IJdna0;MnnmjY=@ig]VlQl1
+R2
+R0
+w1701098030
+R3
+R4
+!i122 22
+R9
+R5
+r1
+!s85 0
+31
+R10
+Z13 !s107 delaybeamformer_tb.v|
+R6
+!i113 1
+R7
+vindexram
+R8
+!i10b 1
+!s100 ]lja@X:QBH^D]gjnCJN_V3
+R1
+ITgJc`JiOzQ<?^V_Tn[M];0
+R2
+R0
+w1701050385
+8../indexram.v
+F../indexram.v
+!i122 21
+L0 40 69
+R5
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 1
+R7

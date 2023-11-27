@@ -2,9 +2,9 @@
 
 module delaybeamformer(
 	input clk,
-	input [15:0] input_value,
+	input [31:0] input_value,
 	input [15:0] input_index, //modify this to be counted in the module based on input value changing?
-	output reg [15:0] output_value,
+	output reg [31:0] output_value,
 	output reg data_good
 );
 
