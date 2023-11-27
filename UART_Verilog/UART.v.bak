@@ -1,0 +1,15 @@
+module UART (
+	input CLOCK_50,
+	input [9:0] SW,
+	input [3:0] KEY,
+	output [9:0] LEDR,
+	output [7:0] LEDG,
+	output UART_TXD,
+	input UART_RXD);
+	
+	RX rec (
+		.CLK(CLOCK_50), .RX_LINE(UART_RXD), .DATA(RX_DATA), .BUSY(RX_BUSY));
+	TX trans (
+		.CLK(CLOCK_50), .START(TX_START), .BUSY(TX_BUSY), .DATA(TX_DATA), .TX_LINE(UART_TXD));
+	
+endmodule
