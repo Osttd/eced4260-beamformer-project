@@ -1,0 +1,7 @@
+couldn't open "transcript": permission denied
+# Reading pref.tcl
+cd {D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/Modelsim}
+cd {D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject/Modelsim}
+# reading modelsim.ini
+do FIR_Filter_tb.tcl
+# write transcript BP_filter_transcript
