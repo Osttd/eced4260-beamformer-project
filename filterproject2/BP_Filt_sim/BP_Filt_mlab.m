@@ -10,10 +10,10 @@
 %    This Model Only Support FIR_WIDTH to 51 Bits
 
 %FILTER PARAMETER
-%Input Data Width: 32
+%Input Data Width: 12
 %Interpolation Factor: 3
 %Decimation Factor: 1
-%FIR Width (Full Calculation Width Before Output Width Adjust) :48
+%FIR Width (Full Calculation Width Before Output Width Adjust) :31
 %-----------------------------------------------------------------------------------------------------------
 %MegaWizard Scaled Coefficient Values
 
@@ -21,13 +21,13 @@ function  output = BP_Filt_mlab(stimulation, bank);
  coef_matrix_in= [46,148,248,343,339,225,12,-200,-307,-228,11,287,422,300,-52,-445,-622,-413,131,724,970,602,-314,-1326,-1762,-1054,931,3748,6497,8190,8190,6497,3748,931,-1054,-1762,-1326,-314,602,970,724,131,-413,-622,-445,-52,300,422,287,11,-228,-307,-200,12,225,339,343,248,148,46];
  INTER_FACTOR = 3;
  DECI_FACTOR  = 1;
- MSB_RM  = 3;
+ MSB_RM  = 0;
  MSB_TYPE  = 0;
  LSB_RM  = 0;
  LSB_TYPE  = 0;
- FIR_WIDTH  = 48 + MSB_RM + LSB_RM;
- OUT_WIDTH  = 48 ;  %48
- DATA_WIDTH = 32;
+ FIR_WIDTH  = 31 + MSB_RM + LSB_RM;
+ OUT_WIDTH  = 31 ;  %31
+ DATA_WIDTH = 12;
 
   
  % check size of inputs. 

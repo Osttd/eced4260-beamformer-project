@@ -25,9 +25,9 @@ entity BP_Filt_tb is
 
 
     constant PHYSCHANIN_c             : natural := 1;
-    constant PHYSCHANOUT_c            : natural := 2;
-    constant INWIDTH_c                : natural := 32;
-    constant OUTWIDTH_c               : natural := 48;
+    constant PHYSCHANOUT_c            : natural := 3;
+    constant INWIDTH_c                : natural := 12;
+    constant OUTWIDTH_c               : natural := 31;
     constant BANKINWIDTH_c            : natural := 0;
     constant BANKCOUNT_c              : natural := 1;
     constant DATA_WIDTH_c             : natural := (INWIDTH_c+BANKINWIDTH_c) * PHYSCHANIN_c;
@@ -36,9 +36,9 @@ entity BP_Filt_tb is
     constant CHANSPERPHYIN_c          : natural := 1;
     constant CHANSPERPHYOUT_c         : natural := 1;
     constant LOG2_CHANSPERPHYOUT_c    : natural := 0;
-    constant TDM_FACTOR_c             : natural := 2;
+    constant TDM_FACTOR_c             : natural := 1;
     constant INVERSE_TDM_FACTOR_c     : natural := 1;
-    constant INVALID_CYCLES_c         : natural := 1;
+    constant INVALID_CYCLES_c         : natural := 0;
     constant INTERP_FACTOR_c          : natural := 3;
     constant TOTAL_INCHANS_ALLOWED    : natural := PHYSCHANIN_c * CHANSPERPHYIN_c;
     constant TOTAL_OUTCHANS_ALLOWED   : natural := PHYSCHANOUT_c * CHANSPERPHYOUT_c;
@@ -332,7 +332,7 @@ sink_model : process(clk) is
     variable realOutChansCount  : natural := NUM_OF_CHANNELS_c * INVERSE_TDM_FACTOR_c;
     variable totalOutChansCount : natural := TOTAL_OUTCHANS_ALLOWED;
 
-    type Out_2D is array (CHANSPERPHYOUT_c-1 downto 0, PHYSCHANOUT_c-1 downto 0) of string(div_ceil(OUTWIDTH_c,4) downto 1);
+    type Out_2D is array (CHANSPERPHYOUT_c-1 downto 0, PHYSCHANOUT_c-1 downto 0) of integer;
     variable arrayOut : Out_2D;
 
 begin
@@ -360,8 +360,7 @@ begin
                 end if;
 
 
-                -- report as hex representation of integer.
-                arrayOut(y,x) := to_hex(signed(ast_source_data(z*OUTWIDTH_c+OUTWIDTH_c-1 downto OUTWIDTH_c*z)));
+                arrayOut(y,x) := to_integer(signed(ast_source_data(z*OUTWIDTH_c+OUTWIDTH_c-1 downto OUTWIDTH_c*z)));
             end loop;
 
             if (y < CHANSPERPHYOUT_c - 1) then

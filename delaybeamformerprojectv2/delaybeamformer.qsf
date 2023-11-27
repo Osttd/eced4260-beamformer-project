@@ -73,3 +73,4 @@ set_global_assignment -name MIF_FILE indexes_6.mif
 set_global_assignment -name MIF_FILE indexes_7.mif
 set_global_assignment -name MIF_FILE indexes_8.mif
 set_global_assignment -name QIP_FILE signalram.qip
+set_global_assignment -name QIP_FILE signalram_nomem.qip
