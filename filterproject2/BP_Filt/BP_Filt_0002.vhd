@@ -1,4 +1,4 @@
--- (C) 2001-2022 Intel Corporation. All rights reserved.
+-- (C) 2001-2023 Intel Corporation. All rights reserved.
 -- Your use of Intel Corporation's design tools, logic functions and other 
 -- software and tools, and its AMPP partner logic functions, and any output 
 -- files from any of the foregoing (including device programming or simulation 
@@ -23,7 +23,7 @@ entity BP_Filt_0002 is
     ast_sink_data : in STD_LOGIC_VECTOR((0 + 1*32) * 1 + 0 - 1 downto 0);
     ast_sink_valid : in STD_LOGIC;
     ast_sink_error : in STD_LOGIC_VECTOR(1 downto 0);
-    ast_source_data : out STD_LOGIC_VECTOR(53 * 1*3 - 1 downto 0);
+    ast_source_data : out STD_LOGIC_VECTOR(48 * 1*2 - 1 downto 0);
     ast_source_valid : out STD_LOGIC;
     ast_source_error : out STD_LOGIC_VECTOR(1 downto 0)
   );
@@ -41,7 +41,7 @@ architecture syn of BP_Filt_0002 is
     ast_sink_sop : in STD_LOGIC;
     ast_sink_eop : in STD_LOGIC;
     ast_sink_error : in STD_LOGIC_VECTOR(1 downto 0);
-    ast_source_data : out STD_LOGIC_VECTOR(1*53 * 3 - 1 downto 0);
+    ast_source_data : out STD_LOGIC_VECTOR(1*48 * 2 - 1 downto 0);
     ast_source_ready : in STD_LOGIC;
     ast_source_valid : out STD_LOGIC;
     ast_source_sop : out STD_LOGIC;

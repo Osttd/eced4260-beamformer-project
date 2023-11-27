@@ -13,20 +13,20 @@
 %Input Data Width: 32
 %Interpolation Factor: 3
 %Decimation Factor: 1
-%FIR Width (Full Calculation Width Before Output Width Adjust) :53
+%FIR Width (Full Calculation Width Before Output Width Adjust) :48
 %-----------------------------------------------------------------------------------------------------------
 %MegaWizard Scaled Coefficient Values
 
 function  output = BP_Filt_mlab(stimulation, bank);
- coef_matrix_in= [186,593,993,1373,1357,902,51,-803,-1231,-914,47,1150,1690,1200,-208,-1780,-2490,-1654,526,2898,3883,2408,-1258,-5307,-7050,-4219,3725,14995,25991,32766,32766,25991,14995,3725,-4219,-7050,-5307,-1258,2408,3883,2898,526,-1654,-2490,-1780,-208,1200,1690,1150,47,-914,-1231,-803,51,902,1357,1373,993,593,186];
+ coef_matrix_in= [46,148,248,343,339,225,12,-200,-307,-228,11,287,422,300,-52,-445,-622,-413,131,724,970,602,-314,-1326,-1762,-1054,931,3748,6497,8190,8190,6497,3748,931,-1054,-1762,-1326,-314,602,970,724,131,-413,-622,-445,-52,300,422,287,11,-228,-307,-200,12,225,339,343,248,148,46];
  INTER_FACTOR = 3;
  DECI_FACTOR  = 1;
- MSB_RM  = 0;
+ MSB_RM  = 3;
  MSB_TYPE  = 0;
  LSB_RM  = 0;
  LSB_TYPE  = 0;
- FIR_WIDTH  = 53 + MSB_RM + LSB_RM;
- OUT_WIDTH  = 53 ;  %53
+ FIR_WIDTH  = 48 + MSB_RM + LSB_RM;
+ OUT_WIDTH  = 48 ;  %48
  DATA_WIDTH = 32;
 
   

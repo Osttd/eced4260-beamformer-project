@@ -63,7 +63,6 @@ set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_
 set_global_assignment -name MIF_FILE signals_1.mif
 set_global_assignment -name VERILOG_FILE brambeamformer.v
 set_global_assignment -name MIF_FILE indexes.mif
-set_global_assignment -name QIP_FILE indexfifo.qip
 set_global_assignment -name QIP_FILE indexram.qip
 set_global_assignment -name MIF_FILE indexes_1.mif
 set_global_assignment -name MIF_FILE indexes_2.mif

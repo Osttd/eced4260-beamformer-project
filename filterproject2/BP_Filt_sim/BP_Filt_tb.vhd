@@ -1,4 +1,4 @@
--- (C) 2001-2022 Intel Corporation. All rights reserved.
+-- (C) 2001-2023 Intel Corporation. All rights reserved.
 -- Your use of Intel Corporation's design tools, logic functions and other 
 -- software and tools, and its AMPP partner logic functions, and any output 
 -- files from any of the foregoing (including device programming or simulation 
@@ -25,9 +25,9 @@ entity BP_Filt_tb is
 
 
     constant PHYSCHANIN_c             : natural := 1;
-    constant PHYSCHANOUT_c            : natural := 3;
+    constant PHYSCHANOUT_c            : natural := 2;
     constant INWIDTH_c                : natural := 32;
-    constant OUTWIDTH_c               : natural := 53;
+    constant OUTWIDTH_c               : natural := 48;
     constant BANKINWIDTH_c            : natural := 0;
     constant BANKCOUNT_c              : natural := 1;
     constant DATA_WIDTH_c             : natural := (INWIDTH_c+BANKINWIDTH_c) * PHYSCHANIN_c;
@@ -36,17 +36,17 @@ entity BP_Filt_tb is
     constant CHANSPERPHYIN_c          : natural := 1;
     constant CHANSPERPHYOUT_c         : natural := 1;
     constant LOG2_CHANSPERPHYOUT_c    : natural := 0;
-    constant TDM_FACTOR_c             : natural := 1;
+    constant TDM_FACTOR_c             : natural := 2;
     constant INVERSE_TDM_FACTOR_c     : natural := 1;
-    constant INVALID_CYCLES_c         : natural := 0;
+    constant INVALID_CYCLES_c         : natural := 1;
     constant INTERP_FACTOR_c          : natural := 3;
     constant TOTAL_INCHANS_ALLOWED    : natural := PHYSCHANIN_c * CHANSPERPHYIN_c;
     constant TOTAL_OUTCHANS_ALLOWED   : natural := PHYSCHANOUT_c * CHANSPERPHYOUT_c;
     constant NUM_OF_TAPS_c            : natural := 60;
-    constant TOTAL_EFF_COEF_c         : natural := 60;
-    constant COEFF_BIT_WIDTH_c        : natural := 16;
+    constant TOTAL_EFF_COEF_c         : natural := 30;
+    constant COEFF_BIT_WIDTH_c        : natural := 14;
     constant COEFF_BUS_DATA_WIDTH_c   : natural := 16;
-    constant COEFF_BUS_ADDR_WIDTH   : natural := 6;
+    constant COEFF_BUS_ADDR_WIDTH   : natural := 5;
 
 end entity BP_Filt_tb;
 

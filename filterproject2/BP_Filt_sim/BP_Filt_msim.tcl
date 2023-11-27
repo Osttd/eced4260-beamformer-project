@@ -29,7 +29,7 @@ set top_entity BP_Filt
 set timing_resolution "1ps"
 set core_version 22.1
 set device_family "Cyclone IV E"
-set quartus_rootdir C:/intelfpga_lite/22.1std/quartus/
+set quartus_rootdir D:/intelfpga_lite/22.1std/quartus/
 # Change to "gate_level" for gate-level sim
 set sim_type "rtl"
 # END MEGAWIZARD INSERT VARIABLES

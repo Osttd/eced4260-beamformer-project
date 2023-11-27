@@ -7,7 +7,7 @@ module FIR_Filter_tb ();
 	reg rst;
 	reg [31:0] data_in;
 	reg start = 0;
-	wire [158:0] data_out;
+	wire [95:0] data_out;
 	
 	integer x = 0;
 	real y = 0;
