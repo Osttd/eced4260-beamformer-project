@@ -46,7 +46,9 @@ G=Z;
 
 V=X(ind_dels);
 
-A=sum(V);
+A=sum(V)/8/2048;
+
+
 
 figure(3)
 plot(1000*t2,A)
