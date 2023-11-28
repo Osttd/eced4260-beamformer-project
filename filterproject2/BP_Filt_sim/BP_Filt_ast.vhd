@@ -8,18 +8,18 @@ use work.auk_dspip_math_pkg_hpfir.all;
 
 entity BP_Filt_ast is
   generic (
-        INWIDTH             : integer := 32;
-        OUT_WIDTH_UNTRIMMED : integer := 51;
+        INWIDTH             : integer := 12;
+        OUT_WIDTH_UNTRIMMED : integer := 31;
         BANKINWIDTH         : integer := 0;
         REM_LSB_BIT_g       : integer := 0;
         REM_LSB_TYPE_g      : string := "trunc";
-        REM_MSB_BIT_g       : integer := 3;
+        REM_MSB_BIT_g       : integer := 0;
         REM_MSB_TYPE_g      : string := "trunc";
         PHYSCHANIN          : integer := 1;
-        PHYSCHANOUT         : integer := 2;
+        PHYSCHANOUT         : integer := 3;
         CHANSPERPHYIN       : natural := 1;
         CHANSPERPHYOUT      : natural := 1;
-        OUTPUTFIFODEPTH     : integer := 32;
+        OUTPUTFIFODEPTH     : integer := 16;
         USE_PACKETS         : integer := 0;
         MODE_WIDTH         : integer := 0;
         ENABLE_BACKPRESSURE : boolean := false;
@@ -194,11 +194,12 @@ real_passthrough : if COMPLEX_CONST = 1 generate
       port (
         xIn_v                 : in std_logic_vector(0 downto 0);
         xIn_c                 : in std_logic_vector(7 downto 0);
-        xIn_0                : in std_logic_vector(32 - 1 downto 0);
+        xIn_0                : in std_logic_vector(12 - 1 downto 0);
         xOut_v               : out std_logic_vector(0 downto 0);
         xOut_c               : out std_logic_vector(7 downto 0);
-        xOut_0              : out std_logic_vector(51- 1 downto 0);
-        xOut_1              : out std_logic_vector(51- 1 downto 0);
+        xOut_0              : out std_logic_vector(31- 1 downto 0);
+        xOut_1              : out std_logic_vector(31- 1 downto 0);
+        xOut_2              : out std_logic_vector(31- 1 downto 0);
         clk                  : in std_logic;
         areset               : in std_logic
         );
@@ -220,11 +221,12 @@ end component BP_Filt_rtl_core;
            port map (
             xIn_v     => data_valid_core,
             xIn_c     => "00000000",
-            xIn_0     => data_in_core((0 + 32) * 0 + 32 - 1 downto (0 + 32) * 0),
+            xIn_0     => data_in_core((0 + 12) * 0 + 12 - 1 downto (0 + 12) * 0),
             xOut_v    => core_out_valid_core,
             xOut_c    => core_out_channel_core,
-            xOut_0   => core_out_core(51* 0 + 51- 1 downto 51* 0),
-            xOut_1   => core_out_core(51* 1 + 51- 1 downto 51* 1),
+            xOut_0   => core_out_core(31* 0 + 31- 1 downto 31* 0),
+            xOut_1   => core_out_core(31* 1 + 31- 1 downto 31* 1),
+            xOut_2   => core_out_core(31* 2 + 31- 1 downto 31* 2),
             clk       => clk,
             areset    => reset_fir
         );

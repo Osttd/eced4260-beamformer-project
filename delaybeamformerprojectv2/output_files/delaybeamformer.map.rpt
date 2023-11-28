@@ -1,5 +1,5 @@
 Analysis & Synthesis report for delaybeamformer
-Sun Nov 26 22:05:58 2023
+Tue Nov 28 09:37:16 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -13,15 +13,25 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis RAM Summary
-  9. General Register Statistics
- 10. Source assignments for indexram:indexram_inst|altsyncram:altsyncram_component|altsyncram_bci1:auto_generated
- 11. Parameter Settings for User Entity Instance: indexram:indexram_inst|altsyncram:altsyncram_component
- 12. altsyncram Parameter Settings by Entity Instance
- 13. Port Connectivity Checks: "indexram:indexram_inst"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  8. Analysis & Synthesis IP Cores Summary
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Source assignments for signalram:in_signalram|altsyncram:altsyncram_component|altsyncram_0hi1:auto_generated
+ 13. Source assignments for delaybeamformer:delaybeamformer_inst|indexram:indexram_inst|altsyncram:altsyncram_component|altsyncram_bci1:auto_generated
+ 14. Source assignments for signalram_nomem:out_signalram|altsyncram:altsyncram_component|altsyncram_17g1:auto_generated
+ 15. Parameter Settings for User Entity Instance: signalram:in_signalram|altsyncram:altsyncram_component
+ 16. Parameter Settings for User Entity Instance: delaybeamformer:delaybeamformer_inst|indexram:indexram_inst|altsyncram:altsyncram_component
+ 17. Parameter Settings for User Entity Instance: signalram_nomem:out_signalram|altsyncram:altsyncram_component
+ 18. altsyncram Parameter Settings by Entity Instance
+ 19. Port Connectivity Checks: "signalram_nomem:out_signalram"
+ 20. Port Connectivity Checks: "delaybeamformer:delaybeamformer_inst|indexram:indexram_inst"
+ 21. Port Connectivity Checks: "delaybeamformer:delaybeamformer_inst"
+ 22. Port Connectivity Checks: "signalram:in_signalram"
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
+ 26. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -48,18 +58,18 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Nov 26 22:05:58 2023          ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 28 09:37:16 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; delaybeamformer                                ;
-; Top-level Entity Name              ; delaybeamformer                                ;
+; Top-level Entity Name              ; brambeamformer                                 ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 38                                             ;
-;     Total combinational functions  ; 22                                             ;
-;     Dedicated logic registers      ; 27                                             ;
-; Total registers                    ; 27                                             ;
-; Total pins                         ; 50                                             ;
+; Total logic elements               ; 0                                              ;
+;     Total combinational functions  ; 0                                              ;
+;     Dedicated logic registers      ; 0                                              ;
+; Total registers                    ; 0                                              ;
+; Total pins                         ; 45                                             ;
 ; Total virtual pins                 ; 0                                              ;
-; Total memory bits                  ; 16,384                                         ;
+; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
 ; Total PLLs                         ; 0                                              ;
 +------------------------------------+------------------------------------------------+
@@ -71,7 +81,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; delaybeamformer    ; delaybeamformer    ;
+; Top-level entity name                                            ; brambeamformer     ; delaybeamformer    ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -160,88 +170,128 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                         ;
-+----------------------------------+-----------------+-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                         ; File Name with Absolute Path                                                                                                ; Library ;
-+----------------------------------+-----------------+-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------+---------+
-; indexes.mif                      ; yes             ; User Memory Initialization File   ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerproject/indexes.mif            ;         ;
-; delaybeamformer.v                ; yes             ; Auto-Found Verilog HDL File       ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerproject/delaybeamformer.v      ;         ;
-; indexram.v                       ; yes             ; Auto-Found Wizard-Generated File  ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerproject/indexram.v             ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                      ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf                                                    ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                      ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/stratix_ram_block.inc                                             ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                      ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mux.inc                                                       ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                      ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_decode.inc                                                    ;         ;
-; aglobal221.inc                   ; yes             ; Megafunction                      ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc                                                    ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                      ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/a_rdenreg.inc                                                     ;         ;
-; altrom.inc                       ; yes             ; Megafunction                      ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altrom.inc                                                        ;         ;
-; altram.inc                       ; yes             ; Megafunction                      ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altram.inc                                                        ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                      ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altdpram.inc                                                      ;         ;
-; db/altsyncram_bci1.tdf           ; yes             ; Auto-Generated Megafunction       ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerproject/db/altsyncram_bci1.tdf ;         ;
-+----------------------------------+-----------------+-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                           ;
++----------------------------------+-----------------+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                         ; File Name with Absolute Path                                                                                                  ; Library ;
++----------------------------------+-----------------+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------+---------+
+; signals_1.mif                    ; yes             ; User Memory Initialization File   ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/signals_1.mif          ;         ;
+; brambeamformer.v                 ; yes             ; User Verilog HDL File             ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v       ;         ;
+; signalram.v                      ; yes             ; User Wizard-Generated File        ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/signalram.v            ;         ;
+; signalram_nomem.v                ; yes             ; User Wizard-Generated File        ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/signalram_nomem.v      ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                      ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf                                                      ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                      ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/stratix_ram_block.inc                                               ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                      ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mux.inc                                                         ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                      ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_decode.inc                                                      ;         ;
+; aglobal221.inc                   ; yes             ; Megafunction                      ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc                                                      ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                      ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/a_rdenreg.inc                                                       ;         ;
+; altrom.inc                       ; yes             ; Megafunction                      ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altrom.inc                                                          ;         ;
+; altram.inc                       ; yes             ; Megafunction                      ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altram.inc                                                          ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                      ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altdpram.inc                                                        ;         ;
+; db/altsyncram_0hi1.tdf           ; yes             ; Auto-Generated Megafunction       ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_0hi1.tdf ;         ;
+; delaybeamformer.v                ; yes             ; Auto-Found Verilog HDL File       ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/delaybeamformer.v      ;         ;
+; indexram.v                       ; yes             ; Auto-Found Wizard-Generated File  ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/indexram.v             ;         ;
+; db/altsyncram_bci1.tdf           ; yes             ; Auto-Generated Megafunction       ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_bci1.tdf ;         ;
+; db/altsyncram_17g1.tdf           ; yes             ; Auto-Generated Megafunction       ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_17g1.tdf ;         ;
++----------------------------------+-----------------+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 38        ;
-;                                             ;           ;
-; Total combinational functions               ; 22        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 10        ;
-;     -- 3 input functions                    ; 1         ;
-;     -- <=2 input functions                  ; 11        ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 14        ;
-;     -- arithmetic mode                      ; 8         ;
-;                                             ;           ;
-; Total registers                             ; 27        ;
-;     -- Dedicated logic registers            ; 27        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 50        ;
-; Total memory bits                           ; 16384     ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 43        ;
-; Total fan-out                               ; 384       ;
-; Average fan-out                             ; 2.33      ;
-+---------------------------------------------+-----------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 45    ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 45    ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                            ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                    ; Entity Name     ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |delaybeamformer                          ; 22 (22)             ; 27 (27)                   ; 16384       ; 0            ; 0       ; 0         ; 50   ; 0            ; |delaybeamformer                                                                                       ; delaybeamformer ; work         ;
-;    |indexram:indexram_inst|               ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |delaybeamformer|indexram:indexram_inst                                                                ; indexram        ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |delaybeamformer|indexram:indexram_inst|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
-;          |altsyncram_bci1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |delaybeamformer|indexram:indexram_inst|altsyncram:altsyncram_component|altsyncram_bci1:auto_generated ; altsyncram_bci1 ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+-----------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name    ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+----------------+--------------+
+; |brambeamformer            ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 45   ; 0            ; |brambeamformer     ; brambeamformer ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                        ;
-+--------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+-------------+
-; Name                                                                                             ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF         ;
-+--------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+-------------+
-; indexram:indexram_inst|altsyncram:altsyncram_component|altsyncram_bci1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 1024         ; 16           ; --           ; --           ; 16384 ; indexes.mif ;
-+--------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+-------------+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                             ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------+-------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                               ; IP Include File   ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------+-------------------+
+; Altera ; RAM: 1-PORT  ; 22.1    ; N/A          ; N/A          ; |brambeamformer|signalram:in_signalram        ; signalram.v       ;
+; Altera ; RAM: 1-PORT  ; 22.1    ; N/A          ; N/A          ; |brambeamformer|signalram_nomem:out_signalram ; signalram_nomem.v ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------+-------------------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++-----------------------------------------------------------+--------------------+
+; Register name                                             ; Reason for Removal ;
++-----------------------------------------------------------+--------------------+
+; delaybeamformer:delaybeamformer_inst|output_value[0..11]  ; Lost fanout        ;
+; inbramout_signal_buffer[4..20]                            ; Lost fanout        ;
+; out_signal_address[0..3]                                  ; Lost fanout        ;
+; inbramout_signal_buffer[0..3]                             ; Lost fanout        ;
+; out_signal_address[4]                                     ; Lost fanout        ;
+; inbramout_signal_buffer[21..31]                           ; Lost fanout        ;
+; sample_index[0..15]                                       ; Lost fanout        ;
+; out_signal_address[5..10]                                 ; Lost fanout        ;
+; delaybeamformer:delaybeamformer_inst|indexnumtoread[0..9] ; Lost fanout        ;
+; delaybeamformer:delaybeamformer_inst|data_good            ; Lost fanout        ;
+; Total Number of Removed Registers = 82                    ;                    ;
++-----------------------------------------------------------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                 ;
++-------------------------------------------------------+--------------------+------------------------------------------------+
+; Register name                                         ; Reason for Removal ; Registers Removed due to This Register         ;
++-------------------------------------------------------+--------------------+------------------------------------------------+
+; delaybeamformer:delaybeamformer_inst|output_value[0]  ; Lost Fanouts       ; inbramout_signal_buffer[0]                     ;
+; delaybeamformer:delaybeamformer_inst|output_value[1]  ; Lost Fanouts       ; inbramout_signal_buffer[1]                     ;
+; delaybeamformer:delaybeamformer_inst|output_value[2]  ; Lost Fanouts       ; inbramout_signal_buffer[2]                     ;
+; delaybeamformer:delaybeamformer_inst|output_value[3]  ; Lost Fanouts       ; inbramout_signal_buffer[3]                     ;
+; delaybeamformer:delaybeamformer_inst|output_value[4]  ; Lost Fanouts       ; inbramout_signal_buffer[4]                     ;
+; delaybeamformer:delaybeamformer_inst|output_value[5]  ; Lost Fanouts       ; inbramout_signal_buffer[5]                     ;
+; delaybeamformer:delaybeamformer_inst|output_value[6]  ; Lost Fanouts       ; inbramout_signal_buffer[6]                     ;
+; delaybeamformer:delaybeamformer_inst|output_value[7]  ; Lost Fanouts       ; inbramout_signal_buffer[7]                     ;
+; delaybeamformer:delaybeamformer_inst|output_value[8]  ; Lost Fanouts       ; inbramout_signal_buffer[8]                     ;
+; delaybeamformer:delaybeamformer_inst|output_value[9]  ; Lost Fanouts       ; inbramout_signal_buffer[9]                     ;
+; delaybeamformer:delaybeamformer_inst|output_value[10] ; Lost Fanouts       ; inbramout_signal_buffer[10]                    ;
+; delaybeamformer:delaybeamformer_inst|output_value[11] ; Lost Fanouts       ; inbramout_signal_buffer[11]                    ;
+; out_signal_address[0]                                 ; Lost Fanouts       ; delaybeamformer:delaybeamformer_inst|data_good ;
++-------------------------------------------------------+--------------------+------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -249,18 +299,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 27    ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 9     ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
 +--------------------------------------------------------------------------------------------------------------+
-; Source assignments for indexram:indexram_inst|altsyncram:altsyncram_component|altsyncram_bci1:auto_generated ;
+; Source assignments for signalram:in_signalram|altsyncram:altsyncram_component|altsyncram_0hi1:auto_generated ;
 +---------------------------------+--------------------+------+------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                             ;
 +---------------------------------+--------------------+------+------------------------------------------------+
@@ -268,8 +318,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+--------------------+------+------------------------------------------------+
 
 
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for delaybeamformer:delaybeamformer_inst|indexram:indexram_inst|altsyncram:altsyncram_component|altsyncram_bci1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                  ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                   ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Source assignments for signalram_nomem:out_signalram|altsyncram:altsyncram_component|altsyncram_17g1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                    ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                     ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
+
+
 +-----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: indexram:indexram_inst|altsyncram:altsyncram_component ;
+; Parameter Settings for User Entity Instance: signalram:in_signalram|altsyncram:altsyncram_component ;
 +------------------------------------+----------------------+-----------------------------------------+
 ; Parameter Name                     ; Value                ; Type                                    ;
 +------------------------------------+----------------------+-----------------------------------------+
@@ -280,9 +348,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                          ;
 ; WIDTH_BYTEENA                      ; 1                    ; Untyped                                 ;
 ; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                                 ;
-; WIDTH_A                            ; 16                   ; Signed Integer                          ;
-; WIDTHAD_A                          ; 10                   ; Signed Integer                          ;
-; NUMWORDS_A                         ; 1024                 ; Signed Integer                          ;
+; WIDTH_A                            ; 12                   ; Signed Integer                          ;
+; WIDTHAD_A                          ; 11                   ; Signed Integer                          ;
+; NUMWORDS_A                         ; 2048                 ; Signed Integer                          ;
 ; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                                 ;
 ; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                 ;
 ; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                 ;
@@ -311,7 +379,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                 ;
 ; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                 ;
 ; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                 ;
-; INIT_FILE                          ; indexes.mif          ; Untyped                                 ;
+; INIT_FILE                          ; signals_1.mif        ; Untyped                                 ;
 ; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                 ;
 ; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                 ;
 ; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                 ;
@@ -324,33 +392,187 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                 ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                 ;
 ; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                 ;
-; CBXI_PARAMETER                     ; altsyncram_bci1      ; Untyped                                 ;
+; CBXI_PARAMETER                     ; altsyncram_0hi1      ; Untyped                                 ;
 +------------------------------------+----------------------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                                   ;
-+-------------------------------------------+--------------------------------------------------------+
-; Name                                      ; Value                                                  ;
-+-------------------------------------------+--------------------------------------------------------+
-; Number of entity instances                ; 1                                                      ;
-; Entity Instance                           ; indexram:indexram_inst|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; SINGLE_PORT                                            ;
-;     -- WIDTH_A                            ; 16                                                     ;
-;     -- NUMWORDS_A                         ; 1024                                                   ;
-;     -- OUTDATA_REG_A                      ; CLOCK0                                                 ;
-;     -- WIDTH_B                            ; 1                                                      ;
-;     -- NUMWORDS_B                         ; 1                                                      ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                                 ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                           ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                   ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                              ;
-+-------------------------------------------+--------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: delaybeamformer:delaybeamformer_inst|indexram:indexram_inst|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+------------------------------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                                         ;
++------------------------------------+----------------------+------------------------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                                      ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                                   ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                                                 ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                                 ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                                               ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                                      ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                                                                      ;
+; WIDTH_A                            ; 16                   ; Signed Integer                                                               ;
+; WIDTHAD_A                          ; 10                   ; Signed Integer                                                               ;
+; NUMWORDS_A                         ; 1024                 ; Signed Integer                                                               ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                                                                      ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                                      ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                                      ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                                      ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                                      ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                                      ;
+; WIDTH_B                            ; 1                    ; Untyped                                                                      ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                                                      ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                                                      ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                                      ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                                      ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                                      ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                                      ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                                      ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                                      ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                                      ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                                      ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                                      ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                                      ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                                      ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                                      ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                                               ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                                      ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                                      ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                                      ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                                      ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                      ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                      ;
+; INIT_FILE                          ; indexes.mif          ; Untyped                                                                      ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                                      ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                                      ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                                      ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                                      ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                                      ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                                      ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                                      ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                                      ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                                      ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                                      ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                                      ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                                                      ;
+; CBXI_PARAMETER                     ; altsyncram_bci1      ; Untyped                                                                      ;
++------------------------------------+----------------------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: signalram_nomem:out_signalram|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                           ;
++------------------------------------+----------------------+------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                        ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                 ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                        ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                                        ;
+; WIDTH_A                            ; 12                   ; Signed Integer                                 ;
+; WIDTHAD_A                          ; 11                   ; Signed Integer                                 ;
+; NUMWORDS_A                         ; 2048                 ; Signed Integer                                 ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                                        ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                        ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                        ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                        ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                        ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                        ;
+; WIDTH_B                            ; 1                    ; Untyped                                        ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                        ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                        ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                        ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                        ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                        ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                        ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                        ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                        ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                        ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                        ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                        ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                        ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                        ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                 ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                        ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                        ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                        ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                        ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                        ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                        ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                        ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                        ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                        ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                        ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                        ;
+; CBXI_PARAMETER                     ; altsyncram_17g1      ; Untyped                                        ;
++------------------------------------+----------------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                                        ;
++-------------------------------------------+---------------------------------------------------------------------------------------------+
+; Name                                      ; Value                                                                                       ;
++-------------------------------------------+---------------------------------------------------------------------------------------------+
+; Number of entity instances                ; 3                                                                                           ;
+; Entity Instance                           ; signalram:in_signalram|altsyncram:altsyncram_component                                      ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                                                                 ;
+;     -- WIDTH_A                            ; 12                                                                                          ;
+;     -- NUMWORDS_A                         ; 2048                                                                                        ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                                                      ;
+;     -- WIDTH_B                            ; 1                                                                                           ;
+;     -- NUMWORDS_B                         ; 1                                                                                           ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                      ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                                ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                        ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                   ;
+; Entity Instance                           ; delaybeamformer:delaybeamformer_inst|indexram:indexram_inst|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                                                                 ;
+;     -- WIDTH_A                            ; 16                                                                                          ;
+;     -- NUMWORDS_A                         ; 1024                                                                                        ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                                                      ;
+;     -- WIDTH_B                            ; 1                                                                                           ;
+;     -- NUMWORDS_B                         ; 1                                                                                           ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                      ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                                ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                        ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                   ;
+; Entity Instance                           ; signalram_nomem:out_signalram|altsyncram:altsyncram_component                               ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                                                                 ;
+;     -- WIDTH_A                            ; 12                                                                                          ;
+;     -- NUMWORDS_A                         ; 2048                                                                                        ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                                                      ;
+;     -- WIDTH_B                            ; 1                                                                                           ;
+;     -- NUMWORDS_B                         ; 1                                                                                           ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                      ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                                ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                        ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                   ;
++-------------------------------------------+---------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "signalram_nomem:out_signalram"                                                      ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; rden ; Input  ; Info     ; Stuck at GND                                                                        ;
+; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "indexram:indexram_inst"                                                                                                                                                                   ;
+; Port Connectivity Checks: "delaybeamformer:delaybeamformer_inst|indexram:indexram_inst"                                                                                                                              ;
 +-------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port        ; Type  ; Severity ; Details                                                                                                                                                                             ;
 +-------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -363,28 +585,42 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
++--------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "delaybeamformer:delaybeamformer_inst"                                                               ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                 ; Type   ; Severity ; Details                                                                             ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; output_value[31..12] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "signalram:in_signalram"                                                                                                                                                                    ;
++-------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; data        ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (12 bits) it drives.  The 20 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; data[11..0] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; rden        ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts.  ;
+; rden[-1]    ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; wren        ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts.  ;
+; wren[-1]    ; Input  ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; q           ; Output ; Warning  ; Output or bidir port (12 bits) is smaller than the port expression (32 bits) it drives.  The 20 most-significant bit(s) in the port expression will be connected to GND.            ;
++-------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 50                          ;
-; cycloneiii_ff         ; 27                          ;
-;     ENA               ; 9                           ;
-;     plain             ; 18                          ;
-; cycloneiii_lcell_comb ; 22                          ;
-;     arith             ; 8                           ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 1                           ;
-;     normal            ; 14                          ;
+; boundary_port         ; 45                          ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 2                           ;
-;         4 data inputs ; 10                          ;
-; cycloneiii_ram_block  ; 16                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 1.94                        ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
 +-----------------------+-----------------------------+
 
 
@@ -403,23 +639,53 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Sun Nov 26 22:05:50 2023
+    Info: Processing started: Tue Nov 28 09:37:05 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off delaybeamformer -c delaybeamformer
-Warning (125092): Tcl Script File indexram.qip not found
-    Info (125063): set_global_assignment -name QIP_FILE indexram.qip
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
-Warning (12019): Can't analyze file -- file indexfifo.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file brambeamformer.v
+    Info (12023): Found entity 1: brambeamformer File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file signalram.v
+    Info (12023): Found entity 1: signalram File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/signalram.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file signalram_nomem.v
+    Info (12023): Found entity 1: signalram_nomem File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/signalram_nomem.v Line: 40
+Info (12127): Elaborating entity "brambeamformer" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at brambeamformer.v(47): truncated value with size 32 to match size of target (11) File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 47
+Warning (10230): Verilog HDL assignment warning at brambeamformer.v(55): truncated value with size 32 to match size of target (16) File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 55
+Warning (10034): Output port "output_value" at brambeamformer.v(7) has no driver File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+Info (12128): Elaborating entity "signalram" for hierarchy "signalram:in_signalram" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 24
+Info (12128): Elaborating entity "altsyncram" for hierarchy "signalram:in_signalram|altsyncram:altsyncram_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/signalram.v Line: 89
+Info (12130): Elaborated megafunction instantiation "signalram:in_signalram|altsyncram:altsyncram_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/signalram.v Line: 89
+Info (12133): Instantiated megafunction "signalram:in_signalram|altsyncram:altsyncram_component" with the following parameter: File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/signalram.v Line: 89
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "signals_1.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "2048"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "11"
+    Info (12134): Parameter "width_a" = "12"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0hi1.tdf
+    Info (12023): Found entity 1: altsyncram_0hi1 File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_0hi1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_0hi1" for hierarchy "signalram:in_signalram|altsyncram:altsyncram_component|altsyncram_0hi1:auto_generated" File: d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Warning (113018): Width of data items in "signals_1.mif" is greater than the memory width. Truncating data items to fit in memory. File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/signals_1.mif Line: 24
 Warning (12125): Using design file delaybeamformer.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: delaybeamformer File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerproject/delaybeamformer.v Line: 3
-Info (12127): Elaborating entity "delaybeamformer" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at delaybeamformer.v(27): truncated value with size 32 to match size of target (10) File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerproject/delaybeamformer.v Line: 27
+    Info (12023): Found entity 1: delaybeamformer File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/delaybeamformer.v Line: 3
+Info (12128): Elaborating entity "delaybeamformer" for hierarchy "delaybeamformer:delaybeamformer_inst" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 33
+Warning (10230): Verilog HDL assignment warning at delaybeamformer.v(29): truncated value with size 32 to match size of target (10) File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/delaybeamformer.v Line: 29
 Warning (12125): Using design file indexram.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: indexram File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerproject/indexram.v Line: 40
-Info (12128): Elaborating entity "indexram" for hierarchy "indexram:indexram_inst" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerproject/delaybeamformer.v Line: 22
-Info (12128): Elaborating entity "altsyncram" for hierarchy "indexram:indexram_inst|altsyncram:altsyncram_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerproject/indexram.v Line: 89
-Info (12130): Elaborated megafunction instantiation "indexram:indexram_inst|altsyncram:altsyncram_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerproject/indexram.v Line: 89
-Info (12133): Instantiated megafunction "indexram:indexram_inst|altsyncram:altsyncram_component" with the following parameter: File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerproject/indexram.v Line: 89
+    Info (12023): Found entity 1: indexram File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/indexram.v Line: 40
+Info (12128): Elaborating entity "indexram" for hierarchy "delaybeamformer:delaybeamformer_inst|indexram:indexram_inst" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/delaybeamformer.v Line: 23
+Info (12128): Elaborating entity "altsyncram" for hierarchy "delaybeamformer:delaybeamformer_inst|indexram:indexram_inst|altsyncram:altsyncram_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/indexram.v Line: 89
+Info (12130): Elaborated megafunction instantiation "delaybeamformer:delaybeamformer_inst|indexram:indexram_inst|altsyncram:altsyncram_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/indexram.v Line: 89
+Info (12133): Instantiated megafunction "delaybeamformer:delaybeamformer_inst|indexram:indexram_inst|altsyncram:altsyncram_component" with the following parameter: File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/indexram.v Line: 89
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "indexes.mif"
@@ -436,21 +702,139 @@ Info (12133): Instantiated megafunction "indexram:indexram_inst|altsyncram:altsy
     Info (12134): Parameter "width_a" = "16"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_bci1.tdf
-    Info (12023): Found entity 1: altsyncram_bci1 File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerproject/db/altsyncram_bci1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_bci1" for hierarchy "indexram:indexram_inst|altsyncram:altsyncram_component|altsyncram_bci1:auto_generated" File: d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (286030): Timing-Driven Synthesis is running
+    Info (12023): Found entity 1: altsyncram_bci1 File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_bci1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_bci1" for hierarchy "delaybeamformer:delaybeamformer_inst|indexram:indexram_inst|altsyncram:altsyncram_component|altsyncram_bci1:auto_generated" File: d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Critical Warning (127003): Can't find Memory Initialization File or Hexadecimal (Intel-Format) File D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/indexes.mif -- setting all initial values to 0 File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/indexram.v Line: 89
+Info (12128): Elaborating entity "signalram_nomem" for hierarchy "signalram_nomem:out_signalram" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 42
+Info (12128): Elaborating entity "altsyncram" for hierarchy "signalram_nomem:out_signalram|altsyncram:altsyncram_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/signalram_nomem.v Line: 89
+Info (12130): Elaborated megafunction instantiation "signalram_nomem:out_signalram|altsyncram:altsyncram_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/signalram_nomem.v Line: 89
+Info (12133): Instantiated megafunction "signalram_nomem:out_signalram|altsyncram:altsyncram_component" with the following parameter: File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/signalram_nomem.v Line: 89
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "2048"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "11"
+    Info (12134): Parameter "width_a" = "12"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_17g1.tdf
+    Info (12023): Found entity 1: altsyncram_17g1 File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_17g1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_17g1" for hierarchy "signalram_nomem:out_signalram|altsyncram:altsyncram_component|altsyncram_17g1:auto_generated" File: d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "signalram_nomem:out_signalram|altsyncram:altsyncram_component|altsyncram_17g1:auto_generated|q_a[0]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_17g1.tdf Line: 38
+        Warning (14320): Synthesized away node "signalram_nomem:out_signalram|altsyncram:altsyncram_component|altsyncram_17g1:auto_generated|q_a[1]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_17g1.tdf Line: 61
+        Warning (14320): Synthesized away node "signalram_nomem:out_signalram|altsyncram:altsyncram_component|altsyncram_17g1:auto_generated|q_a[2]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_17g1.tdf Line: 84
+        Warning (14320): Synthesized away node "signalram_nomem:out_signalram|altsyncram:altsyncram_component|altsyncram_17g1:auto_generated|q_a[3]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_17g1.tdf Line: 107
+        Warning (14320): Synthesized away node "signalram_nomem:out_signalram|altsyncram:altsyncram_component|altsyncram_17g1:auto_generated|q_a[4]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_17g1.tdf Line: 130
+        Warning (14320): Synthesized away node "signalram_nomem:out_signalram|altsyncram:altsyncram_component|altsyncram_17g1:auto_generated|q_a[5]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_17g1.tdf Line: 153
+        Warning (14320): Synthesized away node "signalram_nomem:out_signalram|altsyncram:altsyncram_component|altsyncram_17g1:auto_generated|q_a[6]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_17g1.tdf Line: 176
+        Warning (14320): Synthesized away node "signalram_nomem:out_signalram|altsyncram:altsyncram_component|altsyncram_17g1:auto_generated|q_a[7]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_17g1.tdf Line: 199
+        Warning (14320): Synthesized away node "signalram_nomem:out_signalram|altsyncram:altsyncram_component|altsyncram_17g1:auto_generated|q_a[8]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_17g1.tdf Line: 222
+        Warning (14320): Synthesized away node "signalram_nomem:out_signalram|altsyncram:altsyncram_component|altsyncram_17g1:auto_generated|q_a[9]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_17g1.tdf Line: 245
+        Warning (14320): Synthesized away node "signalram_nomem:out_signalram|altsyncram:altsyncram_component|altsyncram_17g1:auto_generated|q_a[10]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_17g1.tdf Line: 268
+        Warning (14320): Synthesized away node "signalram_nomem:out_signalram|altsyncram:altsyncram_component|altsyncram_17g1:auto_generated|q_a[11]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_17g1.tdf Line: 291
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "delaybeamformer:delaybeamformer_inst|indexram:indexram_inst|altsyncram:altsyncram_component|altsyncram_bci1:auto_generated|q_a[0]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_bci1.tdf Line: 38
+        Warning (14320): Synthesized away node "delaybeamformer:delaybeamformer_inst|indexram:indexram_inst|altsyncram:altsyncram_component|altsyncram_bci1:auto_generated|q_a[1]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_bci1.tdf Line: 63
+        Warning (14320): Synthesized away node "delaybeamformer:delaybeamformer_inst|indexram:indexram_inst|altsyncram:altsyncram_component|altsyncram_bci1:auto_generated|q_a[2]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_bci1.tdf Line: 88
+        Warning (14320): Synthesized away node "delaybeamformer:delaybeamformer_inst|indexram:indexram_inst|altsyncram:altsyncram_component|altsyncram_bci1:auto_generated|q_a[3]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_bci1.tdf Line: 113
+        Warning (14320): Synthesized away node "delaybeamformer:delaybeamformer_inst|indexram:indexram_inst|altsyncram:altsyncram_component|altsyncram_bci1:auto_generated|q_a[4]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_bci1.tdf Line: 138
+        Warning (14320): Synthesized away node "delaybeamformer:delaybeamformer_inst|indexram:indexram_inst|altsyncram:altsyncram_component|altsyncram_bci1:auto_generated|q_a[5]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_bci1.tdf Line: 163
+        Warning (14320): Synthesized away node "delaybeamformer:delaybeamformer_inst|indexram:indexram_inst|altsyncram:altsyncram_component|altsyncram_bci1:auto_generated|q_a[6]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_bci1.tdf Line: 188
+        Warning (14320): Synthesized away node "delaybeamformer:delaybeamformer_inst|indexram:indexram_inst|altsyncram:altsyncram_component|altsyncram_bci1:auto_generated|q_a[7]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_bci1.tdf Line: 213
+        Warning (14320): Synthesized away node "delaybeamformer:delaybeamformer_inst|indexram:indexram_inst|altsyncram:altsyncram_component|altsyncram_bci1:auto_generated|q_a[8]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_bci1.tdf Line: 238
+        Warning (14320): Synthesized away node "delaybeamformer:delaybeamformer_inst|indexram:indexram_inst|altsyncram:altsyncram_component|altsyncram_bci1:auto_generated|q_a[9]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_bci1.tdf Line: 263
+        Warning (14320): Synthesized away node "delaybeamformer:delaybeamformer_inst|indexram:indexram_inst|altsyncram:altsyncram_component|altsyncram_bci1:auto_generated|q_a[10]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_bci1.tdf Line: 288
+        Warning (14320): Synthesized away node "delaybeamformer:delaybeamformer_inst|indexram:indexram_inst|altsyncram:altsyncram_component|altsyncram_bci1:auto_generated|q_a[11]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_bci1.tdf Line: 313
+        Warning (14320): Synthesized away node "delaybeamformer:delaybeamformer_inst|indexram:indexram_inst|altsyncram:altsyncram_component|altsyncram_bci1:auto_generated|q_a[12]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_bci1.tdf Line: 338
+        Warning (14320): Synthesized away node "delaybeamformer:delaybeamformer_inst|indexram:indexram_inst|altsyncram:altsyncram_component|altsyncram_bci1:auto_generated|q_a[13]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_bci1.tdf Line: 363
+        Warning (14320): Synthesized away node "delaybeamformer:delaybeamformer_inst|indexram:indexram_inst|altsyncram:altsyncram_component|altsyncram_bci1:auto_generated|q_a[14]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_bci1.tdf Line: 388
+        Warning (14320): Synthesized away node "delaybeamformer:delaybeamformer_inst|indexram:indexram_inst|altsyncram:altsyncram_component|altsyncram_bci1:auto_generated|q_a[15]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_bci1.tdf Line: 413
+        Warning (14320): Synthesized away node "signalram:in_signalram|altsyncram:altsyncram_component|altsyncram_0hi1:auto_generated|q_a[0]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_0hi1.tdf Line: 38
+        Warning (14320): Synthesized away node "signalram:in_signalram|altsyncram:altsyncram_component|altsyncram_0hi1:auto_generated|q_a[1]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_0hi1.tdf Line: 63
+        Warning (14320): Synthesized away node "signalram:in_signalram|altsyncram:altsyncram_component|altsyncram_0hi1:auto_generated|q_a[2]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_0hi1.tdf Line: 88
+        Warning (14320): Synthesized away node "signalram:in_signalram|altsyncram:altsyncram_component|altsyncram_0hi1:auto_generated|q_a[3]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_0hi1.tdf Line: 113
+        Warning (14320): Synthesized away node "signalram:in_signalram|altsyncram:altsyncram_component|altsyncram_0hi1:auto_generated|q_a[4]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_0hi1.tdf Line: 138
+        Warning (14320): Synthesized away node "signalram:in_signalram|altsyncram:altsyncram_component|altsyncram_0hi1:auto_generated|q_a[5]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_0hi1.tdf Line: 163
+        Warning (14320): Synthesized away node "signalram:in_signalram|altsyncram:altsyncram_component|altsyncram_0hi1:auto_generated|q_a[6]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_0hi1.tdf Line: 188
+        Warning (14320): Synthesized away node "signalram:in_signalram|altsyncram:altsyncram_component|altsyncram_0hi1:auto_generated|q_a[7]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_0hi1.tdf Line: 213
+        Warning (14320): Synthesized away node "signalram:in_signalram|altsyncram:altsyncram_component|altsyncram_0hi1:auto_generated|q_a[8]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_0hi1.tdf Line: 238
+        Warning (14320): Synthesized away node "signalram:in_signalram|altsyncram:altsyncram_component|altsyncram_0hi1:auto_generated|q_a[9]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_0hi1.tdf Line: 263
+        Warning (14320): Synthesized away node "signalram:in_signalram|altsyncram:altsyncram_component|altsyncram_0hi1:auto_generated|q_a[10]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_0hi1.tdf Line: 288
+        Warning (14320): Synthesized away node "signalram:in_signalram|altsyncram:altsyncram_component|altsyncram_0hi1:auto_generated|q_a[11]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/db/altsyncram_0hi1.tdf Line: 313
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "output_value[0]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[1]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[2]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[3]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[4]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[5]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[6]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[7]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[8]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[9]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[10]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[11]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[12]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[13]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[14]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[15]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[16]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[17]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[18]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[19]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[20]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[21]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[22]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[23]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[24]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[25]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[26]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[27]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[28]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[29]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[30]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+    Warning (13410): Pin "output_value[31]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 7
+Info (17049): 82 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/output_files/delaybeamformer.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 105 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 33 input pins
-    Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 39 logic cells
-    Info (21064): Implemented 16 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4800 megabytes
-    Info: Processing ended: Sun Nov 26 22:05:58 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:17
+Warning (21074): Design contains 13 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 3
+    Warning (15610): No output dependent on input pin "in_signal_address[0]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 4
+    Warning (15610): No output dependent on input pin "in_signal_address[1]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 4
+    Warning (15610): No output dependent on input pin "in_signal_address[2]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 4
+    Warning (15610): No output dependent on input pin "in_signal_address[3]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 4
+    Warning (15610): No output dependent on input pin "in_signal_address[4]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 4
+    Warning (15610): No output dependent on input pin "in_signal_address[5]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 4
+    Warning (15610): No output dependent on input pin "in_signal_address[6]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 4
+    Warning (15610): No output dependent on input pin "in_signal_address[7]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 4
+    Warning (15610): No output dependent on input pin "in_signal_address[8]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 4
+    Warning (15610): No output dependent on input pin "in_signal_address[9]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 4
+    Warning (15610): No output dependent on input pin "in_signal_address[10]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 4
+    Warning (15610): No output dependent on input pin "start" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 5
+Info (21057): Implemented 45 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 32 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 101 warnings
+    Info: Peak virtual memory: 4763 megabytes
+    Info: Processing ended: Tue Nov 28 09:37:16 2023
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:18
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/output_files/delaybeamformer.map.smsg.
 
 
