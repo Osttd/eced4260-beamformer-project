@@ -14,7 +14,7 @@ add wave -noupdate -label in_buffer -radix decimal /brambeamformer_tb/delaybeamf
 add wave -noupdate -divider beamformer
 add wave -noupdate -label desiredindex /brambeamformer_tb/delaybeamformer_inst/delaybeamformer_inst/desiredindex
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {672178 ps} 0}
+WaveRestoreCursors {{Cursor 1} {668899 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 146
 configure wave -valuecolwidth 100
