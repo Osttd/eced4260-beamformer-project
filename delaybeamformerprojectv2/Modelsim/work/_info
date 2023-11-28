@@ -10,23 +10,23 @@ z2
 cModel Technology
 Z0 dD:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerproject/Modelsim
 vbrambeamformer
-Z1 !s110 1701179552
+Z1 !s110 1701182719
 !i10b 1
-!s100 oOcMV]2EF7ZU^aiO@O89m1
+!s100 7:m7ZgbdnzC_CPcg2>1[d1
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IGlSo[Rc:C23jPXQFGan822
+IB]37@cTOlDJ0O^26eibgB1
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 Z4 dD:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/Modelsim
-w1701179534
+w1701182258
 8../brambeamformer.v
 F../brambeamformer.v
-!i122 66
-L0 2 60
+!i122 92
+L0 2 51
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1701179552.000000
+Z6 !s108 1701182719.000000
 Z7 !s107 ../signalram_nomem.v|../signalram.v|../indexram.v|../delaybeamformer.v|../brambeamformer.v|
 Z8 !s90 -reportprogress|300|../brambeamformer.v|../delaybeamformer.v|../indexram.v|../signalram.v|../signalram_nomem.v|
 !i113 1
@@ -34,23 +34,23 @@ Z9 tCvgOpt 0
 vbrambeamformer_tb
 R1
 !i10b 1
-!s100 9FboFUz6OP3gQMcM:aST13
+!s100 kTMjMa`_7^@gWQoQnZ71n2
 R2
-IjWRgJ=5Szk?c7]_XUEHXP3
+I8==i9BL[=3XC6:EYmD@PQ3
 R3
 R4
-w1701179149
+w1701182713
 8brambeamformer_tb.v
 Fbrambeamformer_tb.v
-!i122 67
-Z10 L0 3 29
+!i122 93
+L0 3 54
 R5
 r1
 !s85 0
 31
 R6
 !s107 delaybeamformer_tb.v|brambeamformer_tb.v|
-Z11 !s90 -reportprogress|300|brambeamformer_tb.v|delaybeamformer_tb.v|
+Z10 !s90 -reportprogress|300|brambeamformer_tb.v|delaybeamformer_tb.v|
 !i113 1
 R9
 vdelaybeamerformer_tb
@@ -62,10 +62,10 @@ IY;Q=]jL<mlPEfB7:TzJVf3
 R3
 R0
 w1701096441
-Z12 8delaybeamformer_tb.v
-Z13 Fdelaybeamformer_tb.v
+Z11 8delaybeamformer_tb.v
+Z12 Fdelaybeamformer_tb.v
 !i122 2
-R10
+L0 3 29
 R5
 r1
 !s85 0
@@ -78,16 +78,16 @@ R9
 vdelaybeamformer
 R1
 !i10b 1
-!s100 Q1WNB2LXDeUoWQB5U@eTV0
+!s100 4XGHVbW_:?J3TF=iz8;<X0
 R2
-Ii6A1o4gk1?eZWTMkB@dPE0
+I9ddgEdmj4DacIk5URS[mg2
 R3
 R4
-w1701178841
+w1701182136
 8../delaybeamformer.v
 F../delaybeamformer.v
-!i122 66
-L0 3 36
+!i122 92
+L0 3 38
 R5
 r1
 !s85 0
@@ -106,17 +106,17 @@ IJdna0;MnnmjY=@ig]VlQl1
 R3
 R4
 w1701098030
+R11
 R12
-R13
-!i122 67
+!i122 93
 L0 3 33
 R5
 r1
 !s85 0
 31
 R6
-Z14 !s107 delaybeamformer_tb.v|brambeamformer_tb.v|
-R11
+Z13 !s107 delaybeamformer_tb.v|brambeamformer_tb.v|
+R10
 !i113 1
 R9
 vindexram
@@ -130,8 +130,8 @@ R4
 w1701050385
 8../indexram.v
 F../indexram.v
-!i122 66
-Z15 L0 40 69
+!i122 92
+Z14 L0 40 69
 R5
 r1
 !s85 0
@@ -152,8 +152,8 @@ R4
 w1701112238
 8../signalram.v
 F../signalram.v
-!i122 66
-R15
+!i122 92
+R14
 R5
 r1
 !s85 0
@@ -174,7 +174,7 @@ R4
 w1701113628
 8../signalram_nomem.v
 F../signalram_nomem.v
-!i122 66
+!i122 92
 L0 40 68
 R5
 r1

@@ -44,7 +44,7 @@ Z=X(1:length(ind_dels), 1:8)';
 %G=filter(Hd, Z, 1);
 G=Z;
 
-V=G(ind_dels);
+V=X(ind_dels);
 
 A=sum(V);
 
