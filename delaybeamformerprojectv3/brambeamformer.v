@@ -56,13 +56,13 @@ module brambeamformer(
                         inbramout_signal_buffer<=1;
                     end
                     slice1: begin
-						inbramout_signal_buffer<=inbramout_signal_raw[11:0];
+						inbramout_signal_buffer<=inbramout_signal_raw[30:0];
                     end
                     slice2: begin
-						inbramout_signal_buffer<=inbramout_signal_raw[11:0];
+						inbramout_signal_buffer<=inbramout_signal_raw[61:31];
                     end
                     slice3: begin
-						inbramout_signal_buffer<=inbramout_signal_raw[11:0];
+						inbramout_signal_buffer<=inbramout_signal_raw[92:62];
                     end
 				endcase
 		end

@@ -59,6 +59,7 @@ module brambeamformer_tb();
     end
 
 	always @(posedge clk) begin
+        
 		if (startbeamformer===1) begin
                 control_state=next_control_state;
 				case(control_state)

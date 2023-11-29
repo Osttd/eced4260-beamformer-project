@@ -142,33 +142,33 @@ vlib work;
 vlog ../*.v
 vlog *.v
 
-vlog -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject2/Modelsim/altera_avalon_sc_fifo.v"
+vlog -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/Modelsim/altera_avalon_sc_fifo.v"
 
-vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject2/Modelsim/dspba_library_package.vhd"
-vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject2/Modelsim/dspba_library.vhd"
+vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/Modelsim/dspba_library_package.vhd"
+vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/Modelsim/dspba_library.vhd"
 
-vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject2/Modelsim/auk_dspip_roundsat_hpfir.vhd"
-vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject2/Modelsim/auk_dspip_math_pkg_hpfir.vhd"
-vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject2/Modelsim/auk_dspip_lib_pkg_hpfir.vhd"
+vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/Modelsim/auk_dspip_roundsat_hpfir.vhd"
+vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/Modelsim/auk_dspip_math_pkg_hpfir.vhd"
+vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/Modelsim/auk_dspip_lib_pkg_hpfir.vhd"
 
-vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject2/Modelsim/auk_dspip_avalon_streaming_controller_hpfir.vhd"
-vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject2/Modelsim/auk_dspip_avalon_streaming_sink_hpfir.vhd"
-vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject2/Modelsim/auk_dspip_avalon_streaming_source_hpfir.vhd"
+vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/Modelsim/auk_dspip_avalon_streaming_controller_hpfir.vhd"
+vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/Modelsim/auk_dspip_avalon_streaming_sink_hpfir.vhd"
+vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/Modelsim/auk_dspip_avalon_streaming_source_hpfir.vhd"
 
 
-vlog -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject2/FIR_Filter.v"
-vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject2/Modelsim/BP_filt_0002.vhd"
-vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject2/Modelsim/BP_filt_0002_ast.vhd"
-vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject2/Modelsim/BP_filt_0002_rtl_core.vhd"
+vlog -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v"
+vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/Modelsim/BP_filt_0002.vhd"
+vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/Modelsim/BP_filt_0002_ast.vhd"
+vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/Modelsim/BP_filt_0002_rtl_core.vhd"
 
-vsim work.${sim_entity}_tb 
+vsim -L altera_mf_ver -L lpm_ver -L cycloneiv_ver -L 220model_ver -L sgate -L altera_lnsim -L twentynm work.${sim_entity}_tb 
 
-lappend vsim_cmd -L altera_mf_ver -L lpm_ver -L cyclonev_ver -L 220model_ver -L sgate -L altera_lnsim -L twentynm work.Upsampler_tb
+lappend vsim_cmd -Lf altera_mf_ver -Lf lpm_ver -Lf cyclonev_ver -Lf 220model_ver -Lf sgate -Lf altera_lnsim -Lf twentynm work.Upsampler_tb
 
 lappend vsim_cmd "work.${sim_entity}_tb" "-t" "$timing_resolution"
 
-catch {	eval $vsim_cmd } vsim_msg
-puts $vsim_msg
+#catch {	eval $vsim_cmd } vsim_msg
+#puts $vsim_msg
 
 if {[file exists "wave.do"]} {
     do wave.do
@@ -177,8 +177,8 @@ if {[file exists "wave.do"]} {
 # Start simulation silently
 
 set StdArithNoWarnings 1
-run 0 ns
-set StdArithNoWarnings 0
-catch {run -all} run_msg
-puts $run_msg
+run 4000 ns
+# set StdArithNoWarnings 0
+# catch {run -all} run_msg
+# puts $run_msg
 
