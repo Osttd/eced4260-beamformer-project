@@ -1,20 +1,22 @@
 module FIR_Filter (
 	input clk,
 	input rst,
-	input [11:0] data_in,
+	input	[10:0]  input_address;
+	input input_read
+	input start,
 	output reg [92:0] data_out);
 	
 	reg [1:0] err_in = 2'b00;
+	wire	[11:0] data_in;
 	wire [1:0] err_out;
-	reg start;
 	wire valid_out;
 	reg [11:0] buffer_in = 0;
 	wire [92:0] buffer_out;
 	
 	input_ram store (
-		.address(), .clock(clk), .data(), .rden(),
-		.wden(), .q()
-		
+		.address(input_address), .clock(clk), .data(0), .rden(input_read),
+		.wden(0), .q(data_in)
+	);
 	
 	BP_Filt filt (
 		.clk(clk), .reset_n(rst), .ast_sink_data(data_in),
@@ -23,9 +25,10 @@ module FIR_Filter (
 		.ast_source_error(error_out)
 	);
 	
-	
-	
-	
+	output_ram store (
+		.address(_out), .clock(clk), .data(0), .rden(input_read),
+		.wden(0), .q(data_in)
+	);
 	
 	
 	
