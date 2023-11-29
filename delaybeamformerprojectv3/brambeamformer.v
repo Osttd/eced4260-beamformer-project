@@ -6,15 +6,21 @@ module brambeamformer(
 	input startbeamformer,
 	input readinen,
 	input sumouten,
+	input [15:0] sample_index,
+	input [1:0] slice_state,
 	output [11:0] output_value,
 	output usedataflag
 );
 
+	parameter slice_idle_delay=0, slice1=1, slice2=2, slice3=3;
+
 	wire [11:0] inbramout_signal_raw;
-	reg [15:0] sample_index=-1;//handle delay on the bram reading in
+	reg [11:0] inbramout_signal_buffer;
+	//reg [15:0] sample_index=-1;//handle delay on the bram reading in
 	wire [11:0] beamformerout_signal;
 
-	
+
+
 	signalram in_signalram(
 		.address(readin_address),
 		.clock(clk),
@@ -26,7 +32,7 @@ module brambeamformer(
 
 	delaybeamformer delaybeamformer_inst(
 		.clk(clk),
-		.input_value(inbramout_signal_raw),
+		.input_value(inbramout_signal_buffer),
 		.input_index(sample_index),
 		.startbeamformer(startbeamformer),
 		.output_value(beamformerout_signal),
@@ -42,11 +48,25 @@ module brambeamformer(
 		.q(output_value)
 	);
 
-
-	always @(posedge clk) begin
+	//check the delays on this
+	always @(negedge clk) begin
 		if (startbeamformer===1) begin
-				sample_index = sample_index+1;
+				case(slice_state)
+                    slice_idle_delay: begin
+                        inbramout_signal_buffer<=0;
+                    end
+                    slice1: begin
+						inbramout_signal_buffer<=inbramout_signal_raw[11:0];
+                    end
+                    slice2: begin
+						inbramout_signal_buffer<=inbramout_signal_raw[11:0];
+                    end
+                    slice3: begin
+						inbramout_signal_buffer<=inbramout_signal_raw[11:0];
+                    end
+				endcase
 		end
 	end
+
 
 endmodule
