@@ -43,7 +43,7 @@ module FIR_Filter (
 		.q(filter_ram_out)
 	);
 	
-	
+		
 	//State machine to control instead
 	
 	/*always @ (posedge clk) begin
