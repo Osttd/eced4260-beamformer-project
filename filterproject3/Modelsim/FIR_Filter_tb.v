@@ -3,7 +3,7 @@
 module FIR_Filter_tb ();
 	
 	reg clk;
-	reg rst=1;
+	reg rst=0;
 	reg	[10:0]  input_address=0;
 	reg input_read=0;
 	reg start=0;
@@ -37,12 +37,13 @@ module FIR_Filter_tb ();
 	
 	
 	initial begin
-		#100 
+		#50
 		rst <= 1;
 		input_read<=1;
+		#10
 		start<=1;
 		fork
-			forever #8 input_address<=input_address+1;
+			forever #2 input_address<=input_address+1;
 		join
 
 
@@ -50,6 +51,11 @@ module FIR_Filter_tb ();
 	end
 	
 	initial begin
+
+
+		#3000
+		input_read<=0;
+		rst=0;
 	end
 	
 endmodule 

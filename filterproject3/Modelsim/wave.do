@@ -12,14 +12,15 @@ add wave -noupdate -label input_read /FIR_Filter_tb/U1/input_read
 add wave -noupdate -label input_address -radix unsigned /FIR_Filter_tb/input_address
 add wave -noupdate -divider {fir filter}
 add wave -noupdate -label data_in -radix decimal /FIR_Filter_tb/U1/data_in
+add wave -noupdate -label buffer_out -radix decimal /FIR_Filter_tb/U1/buffer_out
 add wave -noupdate -divider filter
 add wave -noupdate -label input_data -radix decimal /FIR_Filter_tb/U1/filt/ast_sink_data
 add wave -noupdate -label valid /FIR_Filter_tb/U1/filt/ast_sink_valid
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {1611906 ps} 0}
+WaveRestoreCursors {{Cursor 1} {2692628 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 155
-configure wave -valuecolwidth 309
+configure wave -valuecolwidth 90
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
 configure wave -snapdistance 10
@@ -32,4 +33,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ps} {57013 ps}
+WaveRestoreZoom {2661040 ps} {2742157 ps}
