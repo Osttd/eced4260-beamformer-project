@@ -149,7 +149,7 @@ vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beam
 vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/Modelsim/BP_filt_0002_ast.vhd"
 vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/Modelsim/BP_filt_0002_rtl_core.vhd"
 
-vsim -L altera_mf_ver -L altera_mf -L lpm_ver -L cycloneiv_ver -L 220model_ver -L sgate -L altera_lnsim -L twentynm work.${sim_entity}_tb 
+vsim -L altera_mf_ver -L lpm_ver -L cycloneiv_ver -L 220model_ver -L sgate -L altera_lnsim -L twentynm work.${sim_entity}_tb 
 
 
 if {[file exists "wave.do"]} {
