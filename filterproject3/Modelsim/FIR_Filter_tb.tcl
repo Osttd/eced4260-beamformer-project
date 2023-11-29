@@ -124,19 +124,7 @@ foreach {lib} $libs {
 
     #vsim -work work ${sim_entity}_tb.v
 
-if {[string match $flow "rtl"]} {
-    lappend vsim_cmd "-L" "$device_lib_name" "-L" "altera_mf" "-L" "lpm" "-L" "sgate" "-L" "altera" "-L" "altera_lnsim" "-L" "work.Upsampler_tb" "-t" "$timing_resolution"
-} else {
-    lappend vsim_cmd "-L" "$device_lib_name" "-L" "altera" "-L" "work"
-    if {[string match $language_ext "vho"]} {
-	    if {[file exists ${sim_entity}_vhd.sdo]} {
-	        lappend vsim_cmd "-sdftyp" "/${top_entity}_tb/DUT=${top_entity}_vhd.sdo"}
-    }
-    if {[string match $language_ext "vo"]} {
-	    if {[file exists ${sim_entity}_v.sdo]} {
-	        lappend vsim_cmd "-sdftyp" "/${top_entity}_tb/DUT=${sim_entity}_v.sdo"}
-    }
-}
+
 
 vlib work;
 vlog ../*.v
@@ -161,14 +149,8 @@ vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beam
 vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/Modelsim/BP_filt_0002_ast.vhd"
 vcom -work work "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/Modelsim/BP_filt_0002_rtl_core.vhd"
 
-vsim -L altera_mf_ver -L lpm_ver -L cycloneiv_ver -L 220model_ver -L sgate -L altera_lnsim -L twentynm work.${sim_entity}_tb 
+vsim -L altera_mf_ver -L altera_mf -L lpm_ver -L cycloneiv_ver -L 220model_ver -L sgate -L altera_lnsim -L twentynm work.${sim_entity}_tb 
 
-lappend vsim_cmd -Lf altera_mf_ver -Lf lpm_ver -Lf cyclonev_ver -Lf 220model_ver -Lf sgate -Lf altera_lnsim -Lf twentynm work.Upsampler_tb
-
-lappend vsim_cmd "work.${sim_entity}_tb" "-t" "$timing_resolution"
-
-#catch {	eval $vsim_cmd } vsim_msg
-#puts $vsim_msg
 
 if {[file exists "wave.do"]} {
     do wave.do
@@ -178,7 +160,5 @@ if {[file exists "wave.do"]} {
 
 set StdArithNoWarnings 1
 run 4000 ns
-# set StdArithNoWarnings 0
-# catch {run -all} run_msg
-# puts $run_msg
+
 
