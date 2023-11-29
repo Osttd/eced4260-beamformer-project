@@ -53,7 +53,7 @@ module brambeamformer(
 		if (startbeamformer===1) begin
 				case(slice_state)
                     slice_idle_delay: begin
-                        inbramout_signal_buffer<=0;
+                        inbramout_signal_buffer<=1;
                     end
                     slice1: begin
 						inbramout_signal_buffer<=inbramout_signal_raw[11:0];

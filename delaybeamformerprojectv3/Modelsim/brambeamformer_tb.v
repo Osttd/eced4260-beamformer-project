@@ -8,22 +8,25 @@ module brambeamformer_tb();
     reg startbeamformer=0;
     reg readinen=1;
     reg sumouten=0;
-    reg [15:0] sample_index=-1;//handle delay on the bram reading in
+    reg [15:0] sample_index=-2;//handle delay on the bram reading in
 
     wire [11:0] output_value;
     wire usedataflag;
 
 	parameter slice_idle_delay=0, slice1=1, slice2=2, slice3=3;
     reg [1:0] control_state=slice_idle_delay;
+    reg [1:0] next_control_state=slice_idle_delay;
 
 
-    brambeamformer delaybeamformer_inst(
+    brambeamformer brambeamformer_inst(
     .clk(clk),
     .readin_address(readin_address),
     .sumout_address(sumout_address),
     .startbeamformer(startbeamformer),
     .readinen(readinen),
     .sumouten(sumouten),
+    .sample_index(sample_index),
+    .slice_state(control_state),
     .output_value(output_value),
     .usedataflag(usedataflag)
     );
@@ -38,7 +41,7 @@ module brambeamformer_tb();
 		startbeamformer <= 1;
 	end
     initial begin
-        #630
+        #2030
         startbeamformer=0;
         readinen=0;
         sumouten=1;
@@ -57,24 +60,26 @@ module brambeamformer_tb();
 
 	always @(posedge clk) begin
 		if (startbeamformer===1) begin
+                control_state=next_control_state;
 				case(control_state)
                     slice_idle_delay: begin
-                        control_state<=slice1;
-                        readinen<=0;
+                        next_control_state<=slice1;
+                        readinen<=1;//making this 0 does not do really anything
+                        //having the state as a delay works well though
                     end
                     slice1: begin
-                        control_state<=slice2;
+                        next_control_state<=slice2;
                         readinen<=1;
                         sample_index<=sample_index+1;
                     end
                     slice2: begin
-                        control_state<=slice3;
+                        next_control_state<=slice3;
                         sample_index = sample_index+1;
                     end
                     slice3: begin
-                        control_state<=slice_idle_delay;
+                        next_control_state<=slice_idle_delay;
                         sample_index = sample_index+1;
-                        readin_address <= readin_address+1
+                        readin_address <= readin_address+1;
                     end
                 endcase
 		end
