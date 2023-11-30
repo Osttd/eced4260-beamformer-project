@@ -1,6 +1,6 @@
 Analysis & Synthesis report for FIR_Filter
-Wed Nov 29 15:03:55 2023
-Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Thu Nov 30 17:31:08 2023
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
 ---------------------
@@ -23,7 +23,7 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
  15. Source assignments for input_ram:inram|altsyncram:altsyncram_component|altsyncram_8mi1:auto_generated
  16. Source assignments for BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst
  17. Source assignments for BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core
- 18. Source assignments for output_ram:outram|altsyncram:altsyncram_component|altsyncram_d7g1:auto_generated
+ 18. Source assignments for output_ram:outram|altsyncram:altsyncram_component|altsyncram_a7g1:auto_generated
  19. Parameter Settings for User Entity Instance: input_ram:inram|altsyncram:altsyncram_component
  20. Parameter Settings for User Entity Instance: BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst
  21. Parameter Settings for User Entity Instance: BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink
@@ -97,19 +97,18 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
  89. Parameter Settings for User Entity Instance: output_ram:outram|altsyncram:altsyncram_component
  90. altsyncram Parameter Settings by Entity Instance
  91. lpm_mult Parameter Settings by Entity Instance
- 92. Port Connectivity Checks: "output_ram:outram"
- 93. Port Connectivity Checks: "BP_Filt:filt"
- 94. Port Connectivity Checks: "input_ram:inram"
- 95. Post-Synthesis Netlist Statistics for Top Partition
- 96. Elapsed Time Per Partition
- 97. Analysis & Synthesis Messages
+ 92. Port Connectivity Checks: "BP_Filt:filt"
+ 93. Port Connectivity Checks: "input_ram:inram"
+ 94. Post-Synthesis Netlist Statistics for Top Partition
+ 95. Elapsed Time Per Partition
+ 96. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2022  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -129,8 +128,8 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 29 15:03:55 2023          ;
-; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 30 17:31:08 2023          ;
+; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; FIR_Filter                                     ;
 ; Top-level Entity Name              ; FIR_Filter                                     ;
 ; Family                             ; Cyclone IV E                                   ;
@@ -253,52 +252,52 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                              ;
-+---------------------------------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                        ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                                                                         ; Library ;
-+---------------------------------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; BP_Filt.v                                               ; yes             ; User Wizard-Generated File             ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt.v                                               ; BP_Filt ;
-; BP_Filt/dspba_library_package.vhd                       ; yes             ; User VHDL File                         ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/dspba_library_package.vhd                       ; BP_Filt ;
-; BP_Filt/dspba_library.vhd                               ; yes             ; User VHDL File                         ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/dspba_library.vhd                               ; BP_Filt ;
-; BP_Filt/auk_dspip_math_pkg_hpfir.vhd                    ; yes             ; User VHDL File                         ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_math_pkg_hpfir.vhd                    ; BP_Filt ;
-; BP_Filt/auk_dspip_lib_pkg_hpfir.vhd                     ; yes             ; User VHDL File                         ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_lib_pkg_hpfir.vhd                     ; BP_Filt ;
-; BP_Filt/auk_dspip_avalon_streaming_controller_hpfir.vhd ; yes             ; User VHDL File                         ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_avalon_streaming_controller_hpfir.vhd ; BP_Filt ;
-; BP_Filt/auk_dspip_avalon_streaming_sink_hpfir.vhd       ; yes             ; User VHDL File                         ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_avalon_streaming_sink_hpfir.vhd       ; BP_Filt ;
-; BP_Filt/auk_dspip_avalon_streaming_source_hpfir.vhd     ; yes             ; User VHDL File                         ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_avalon_streaming_source_hpfir.vhd     ; BP_Filt ;
-; BP_Filt/auk_dspip_roundsat_hpfir.vhd                    ; yes             ; User VHDL File                         ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_roundsat_hpfir.vhd                    ; BP_Filt ;
-; BP_Filt/altera_avalon_sc_fifo.v                         ; yes             ; User Verilog HDL File                  ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/altera_avalon_sc_fifo.v                         ; BP_Filt ;
-; BP_Filt/BP_Filt_0002_rtl_core.vhd                       ; yes             ; User VHDL File                         ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd                       ; BP_Filt ;
-; BP_Filt/BP_Filt_0002_ast.vhd                            ; yes             ; User VHDL File                         ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_ast.vhd                            ; BP_Filt ;
-; BP_Filt/BP_Filt_0002.vhd                                ; yes             ; User VHDL File                         ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002.vhd                                ; BP_Filt ;
-; FIR_Filter.v                                            ; yes             ; User Verilog HDL File                  ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v                                            ;         ;
-; input_ram.v                                             ; yes             ; User Wizard-Generated File             ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/input_ram.v                                             ;         ;
-; output_ram.v                                            ; yes             ; User Wizard-Generated File             ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/output_ram.v                                            ;         ;
-; altsyncram.tdf                                          ; yes             ; Megafunction                           ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf                                                                             ;         ;
-; stratix_ram_block.inc                                   ; yes             ; Megafunction                           ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/stratix_ram_block.inc                                                                      ;         ;
-; lpm_mux.inc                                             ; yes             ; Megafunction                           ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mux.inc                                                                                ;         ;
-; lpm_decode.inc                                          ; yes             ; Megafunction                           ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_decode.inc                                                                             ;         ;
-; aglobal221.inc                                          ; yes             ; Megafunction                           ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc                                                                             ;         ;
-; a_rdenreg.inc                                           ; yes             ; Megafunction                           ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/a_rdenreg.inc                                                                              ;         ;
-; altrom.inc                                              ; yes             ; Megafunction                           ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altrom.inc                                                                                 ;         ;
-; altram.inc                                              ; yes             ; Megafunction                           ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altram.inc                                                                                 ;         ;
-; altdpram.inc                                            ; yes             ; Megafunction                           ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altdpram.inc                                                                               ;         ;
-; db/altsyncram_8mi1.tdf                                  ; yes             ; Auto-Generated Megafunction            ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/db/altsyncram_8mi1.tdf                                  ;         ;
-; input_data.mif                                          ; yes             ; Auto-Found Memory Initialization File  ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/input_data.mif                                          ;         ;
-; lpm_mult.tdf                                            ; yes             ; Megafunction                           ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf                                                                               ;         ;
-; lpm_add_sub.inc                                         ; yes             ; Megafunction                           ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_add_sub.inc                                                                            ;         ;
-; multcore.inc                                            ; yes             ; Megafunction                           ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/multcore.inc                                                                               ;         ;
-; bypassff.inc                                            ; yes             ; Megafunction                           ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/bypassff.inc                                                                               ;         ;
-; altshift.inc                                            ; yes             ; Megafunction                           ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altshift.inc                                                                               ;         ;
-; db/mult_qdu.tdf                                         ; yes             ; Auto-Generated Megafunction            ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/db/mult_qdu.tdf                                         ;         ;
-; db/mult_udu.tdf                                         ; yes             ; Auto-Generated Megafunction            ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/db/mult_udu.tdf                                         ;         ;
-; db/mult_sdu.tdf                                         ; yes             ; Auto-Generated Megafunction            ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/db/mult_sdu.tdf                                         ;         ;
-; db/mult_0eu.tdf                                         ; yes             ; Auto-Generated Megafunction            ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/db/mult_0eu.tdf                                         ;         ;
-; db/mult_tdu.tdf                                         ; yes             ; Auto-Generated Megafunction            ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/db/mult_tdu.tdf                                         ;         ;
-; db/mult_vdu.tdf                                         ; yes             ; Auto-Generated Megafunction            ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/db/mult_vdu.tdf                                         ;         ;
-; db/mult_meu.tdf                                         ; yes             ; Auto-Generated Megafunction            ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/db/mult_meu.tdf                                         ;         ;
-; db/altsyncram_d7g1.tdf                                  ; yes             ; Auto-Generated Megafunction            ; D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/db/altsyncram_d7g1.tdf                                  ;         ;
-+---------------------------------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                     ;
++---------------------------------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                        ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                                                                ; Library ;
++---------------------------------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; BP_Filt.v                                               ; yes             ; User Wizard-Generated File             ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt.v                                               ; BP_Filt ;
+; BP_Filt/dspba_library_package.vhd                       ; yes             ; User VHDL File                         ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/dspba_library_package.vhd                       ; BP_Filt ;
+; BP_Filt/dspba_library.vhd                               ; yes             ; User VHDL File                         ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/dspba_library.vhd                               ; BP_Filt ;
+; BP_Filt/auk_dspip_math_pkg_hpfir.vhd                    ; yes             ; User VHDL File                         ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_math_pkg_hpfir.vhd                    ; BP_Filt ;
+; BP_Filt/auk_dspip_lib_pkg_hpfir.vhd                     ; yes             ; User VHDL File                         ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_lib_pkg_hpfir.vhd                     ; BP_Filt ;
+; BP_Filt/auk_dspip_avalon_streaming_controller_hpfir.vhd ; yes             ; User VHDL File                         ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_avalon_streaming_controller_hpfir.vhd ; BP_Filt ;
+; BP_Filt/auk_dspip_avalon_streaming_sink_hpfir.vhd       ; yes             ; User VHDL File                         ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_avalon_streaming_sink_hpfir.vhd       ; BP_Filt ;
+; BP_Filt/auk_dspip_avalon_streaming_source_hpfir.vhd     ; yes             ; User VHDL File                         ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_avalon_streaming_source_hpfir.vhd     ; BP_Filt ;
+; BP_Filt/auk_dspip_roundsat_hpfir.vhd                    ; yes             ; User VHDL File                         ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_roundsat_hpfir.vhd                    ; BP_Filt ;
+; BP_Filt/altera_avalon_sc_fifo.v                         ; yes             ; User Verilog HDL File                  ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/altera_avalon_sc_fifo.v                         ; BP_Filt ;
+; BP_Filt/BP_Filt_0002_rtl_core.vhd                       ; yes             ; User VHDL File                         ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd                       ; BP_Filt ;
+; BP_Filt/BP_Filt_0002_ast.vhd                            ; yes             ; User VHDL File                         ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_ast.vhd                            ; BP_Filt ;
+; BP_Filt/BP_Filt_0002.vhd                                ; yes             ; User VHDL File                         ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002.vhd                                ; BP_Filt ;
+; FIR_Filter.v                                            ; yes             ; User Verilog HDL File                  ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v                                            ;         ;
+; input_ram.v                                             ; yes             ; User Wizard-Generated File             ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/input_ram.v                                             ;         ;
+; output_ram.v                                            ; yes             ; User Wizard-Generated File             ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/output_ram.v                                            ;         ;
+; altsyncram.tdf                                          ; yes             ; Megafunction                           ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf                                                                    ;         ;
+; stratix_ram_block.inc                                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/stratix_ram_block.inc                                                             ;         ;
+; lpm_mux.inc                                             ; yes             ; Megafunction                           ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mux.inc                                                                       ;         ;
+; lpm_decode.inc                                          ; yes             ; Megafunction                           ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_decode.inc                                                                    ;         ;
+; aglobal221.inc                                          ; yes             ; Megafunction                           ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc                                                                    ;         ;
+; a_rdenreg.inc                                           ; yes             ; Megafunction                           ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/a_rdenreg.inc                                                                     ;         ;
+; altrom.inc                                              ; yes             ; Megafunction                           ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altrom.inc                                                                        ;         ;
+; altram.inc                                              ; yes             ; Megafunction                           ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altram.inc                                                                        ;         ;
+; altdpram.inc                                            ; yes             ; Megafunction                           ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altdpram.inc                                                                      ;         ;
+; db/altsyncram_8mi1.tdf                                  ; yes             ; Auto-Generated Megafunction            ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/db/altsyncram_8mi1.tdf                                  ;         ;
+; input_data.mif                                          ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/input_data.mif                                          ;         ;
+; lpm_mult.tdf                                            ; yes             ; Megafunction                           ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf                                                                      ;         ;
+; lpm_add_sub.inc                                         ; yes             ; Megafunction                           ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_add_sub.inc                                                                   ;         ;
+; multcore.inc                                            ; yes             ; Megafunction                           ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/multcore.inc                                                                      ;         ;
+; bypassff.inc                                            ; yes             ; Megafunction                           ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/bypassff.inc                                                                      ;         ;
+; altshift.inc                                            ; yes             ; Megafunction                           ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altshift.inc                                                                      ;         ;
+; db/mult_qdu.tdf                                         ; yes             ; Auto-Generated Megafunction            ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/db/mult_qdu.tdf                                         ;         ;
+; db/mult_udu.tdf                                         ; yes             ; Auto-Generated Megafunction            ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/db/mult_udu.tdf                                         ;         ;
+; db/mult_sdu.tdf                                         ; yes             ; Auto-Generated Megafunction            ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/db/mult_sdu.tdf                                         ;         ;
+; db/mult_0eu.tdf                                         ; yes             ; Auto-Generated Megafunction            ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/db/mult_0eu.tdf                                         ;         ;
+; db/mult_tdu.tdf                                         ; yes             ; Auto-Generated Megafunction            ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/db/mult_tdu.tdf                                         ;         ;
+; db/mult_vdu.tdf                                         ; yes             ; Auto-Generated Megafunction            ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/db/mult_vdu.tdf                                         ;         ;
+; db/mult_meu.tdf                                         ; yes             ; Auto-Generated Megafunction            ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/db/mult_meu.tdf                                         ;         ;
+; db/altsyncram_a7g1.tdf                                  ; yes             ; Auto-Generated Megafunction            ; C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/db/altsyncram_a7g1.tdf                                  ;         ;
++---------------------------------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -432,7 +431,7 @@ https://fpgasoftware.intel.com/eula.
 ;          |altsyncram_8mi1:auto_generated|                            ; 0 (0)               ; 0 (0)                     ; 24576       ; 0            ; 0       ; 0         ; 0    ; 0            ; |FIR_Filter|input_ram:inram|altsyncram:altsyncram_component|altsyncram_8mi1:auto_generated                                                                                                                           ; altsyncram_8mi1                         ; work         ;
 ;    |output_ram:outram|                                               ; 0 (0)               ; 0 (0)                     ; 190464      ; 0            ; 0       ; 0         ; 0    ; 0            ; |FIR_Filter|output_ram:outram                                                                                                                                                                                        ; output_ram                              ; work         ;
 ;       |altsyncram:altsyncram_component|                              ; 0 (0)               ; 0 (0)                     ; 190464      ; 0            ; 0       ; 0         ; 0    ; 0            ; |FIR_Filter|output_ram:outram|altsyncram:altsyncram_component                                                                                                                                                        ; altsyncram                              ; work         ;
-;          |altsyncram_d7g1:auto_generated|                            ; 0 (0)               ; 0 (0)                     ; 190464      ; 0            ; 0       ; 0         ; 0    ; 0            ; |FIR_Filter|output_ram:outram|altsyncram:altsyncram_component|altsyncram_d7g1:auto_generated                                                                                                                         ; altsyncram_d7g1                         ; work         ;
+;          |altsyncram_a7g1:auto_generated|                            ; 0 (0)               ; 0 (0)                     ; 190464      ; 0            ; 0       ; 0         ; 0    ; 0            ; |FIR_Filter|output_ram:outram|altsyncram:altsyncram_component|altsyncram_a7g1:auto_generated                                                                                                                         ; altsyncram_a7g1                         ; work         ;
 +----------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -443,7 +442,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                                        ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF            ;
 +---------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------+----------------+
 ; input_ram:inram|altsyncram:altsyncram_component|altsyncram_8mi1:auto_generated|ALTSYNCRAM   ; AUTO ; Single Port ; 2048         ; 12           ; --           ; --           ; 24576  ; input_data.mif ;
-; output_ram:outram|altsyncram:altsyncram_component|altsyncram_d7g1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 2048         ; 96           ; --           ; --           ; 196608 ; None           ;
+; output_ram:outram|altsyncram:altsyncram_component|altsyncram_a7g1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 2048         ; 93           ; --           ; --           ; 190464 ; None           ;
 +---------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------+----------------+
 
 
@@ -640,7 +639,7 @@ Encoding Type:  One-Hot
 
 
 +---------------------------------------------------------------------------------------------------------+
-; Source assignments for output_ram:outram|altsyncram:altsyncram_component|altsyncram_d7g1:auto_generated ;
+; Source assignments for output_ram:outram|altsyncram:altsyncram_component|altsyncram_a7g1:auto_generated ;
 +---------------------------------+--------------------+------+-------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                        ;
 +---------------------------------+--------------------+------+-------------------------------------------+
@@ -2059,7 +2058,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                     ;
 ; WIDTH_BYTEENA                      ; 1                    ; Untyped                            ;
 ; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                            ;
-; WIDTH_A                            ; 96                   ; Signed Integer                     ;
+; WIDTH_A                            ; 93                   ; Signed Integer                     ;
 ; WIDTHAD_A                          ; 11                   ; Signed Integer                     ;
 ; NUMWORDS_A                         ; 2048                 ; Signed Integer                     ;
 ; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                            ;
@@ -2103,7 +2102,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                            ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                            ;
 ; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                            ;
-; CBXI_PARAMETER                     ; altsyncram_d7g1      ; Untyped                            ;
+; CBXI_PARAMETER                     ; altsyncram_a7g1      ; Untyped                            ;
 +------------------------------------+----------------------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -2127,7 +2126,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                         ;
 ; Entity Instance                           ; output_ram:outram|altsyncram:altsyncram_component ;
 ;     -- OPERATION_MODE                     ; SINGLE_PORT                                       ;
-;     -- WIDTH_A                            ; 96                                                ;
+;     -- WIDTH_A                            ; 93                                                ;
 ;     -- NUMWORDS_A                         ; 2048                                              ;
 ;     -- OUTDATA_REG_A                      ; CLOCK0                                            ;
 ;     -- WIDTH_B                            ; 1                                                 ;
@@ -2357,16 +2356,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "output_ram:outram"                                                                                                                               ;
-+------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                          ;
-+------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; data ; Input  ; Warning  ; Input port expression (93 bits) is smaller than the input port (96 bits) it drives.  Extra input bit(s) "data[95..93]" will be connected to GND. ;
-; q    ; Output ; Warning  ; Output or bidir port (96 bits) is wider than the port expression (93 bits) it drives; bit(s) "q[95..93]" have no fanouts                         ;
-+------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "BP_Filt:filt"                                                                                                                                   ;
 +------------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------+
@@ -2420,7 +2409,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -2429,66 +2418,66 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Wed Nov 29 15:03:42 2023
+    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+    Info: Processing started: Thu Nov 30 17:30:55 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FIR_Filter -c FIR_Filter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file bp_filt.v
-    Info (12023): Found entity 1: BP_Filt File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt.v Line: 8
+    Info (12023): Found entity 1: BP_Filt File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt.v Line: 8
 Info (12021): Found 1 design units, including 0 entities, in source file bp_filt/dspba_library_package.vhd
-    Info (12022): Found design unit 1: dspba_library_package (bp_filt) File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/dspba_library_package.vhd Line: 17
+    Info (12022): Found design unit 1: dspba_library_package (bp_filt) File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/dspba_library_package.vhd Line: 17
 Info (12021): Found 6 design units, including 3 entities, in source file bp_filt/dspba_library.vhd
-    Info (12022): Found design unit 1: dspba_delay-delay File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/dspba_library.vhd Line: 34
-    Info (12022): Found design unit 2: dspba_sync_reg-sync_reg File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/dspba_library.vhd Line: 117
-    Info (12022): Found design unit 3: dspba_pipe-rtl File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/dspba_library.vhd Line: 356
-    Info (12023): Found entity 1: dspba_delay File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/dspba_library.vhd Line: 18
-    Info (12023): Found entity 2: dspba_sync_reg File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/dspba_library.vhd Line: 93
-    Info (12023): Found entity 3: dspba_pipe File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/dspba_library.vhd Line: 343
+    Info (12022): Found design unit 1: dspba_delay-delay File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/dspba_library.vhd Line: 34
+    Info (12022): Found design unit 2: dspba_sync_reg-sync_reg File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/dspba_library.vhd Line: 117
+    Info (12022): Found design unit 3: dspba_pipe-rtl File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/dspba_library.vhd Line: 356
+    Info (12023): Found entity 1: dspba_delay File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/dspba_library.vhd Line: 18
+    Info (12023): Found entity 2: dspba_sync_reg File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/dspba_library.vhd Line: 93
+    Info (12023): Found entity 3: dspba_pipe File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/dspba_library.vhd Line: 343
 Info (12021): Found 2 design units, including 0 entities, in source file bp_filt/auk_dspip_math_pkg_hpfir.vhd
-    Info (12022): Found design unit 1: auk_dspip_math_pkg_hpfir (bp_filt) File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_math_pkg_hpfir.vhd Line: 54
-    Info (12022): Found design unit 2: auk_dspip_math_pkg_hpfir-body File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_math_pkg_hpfir.vhd Line: 131
+    Info (12022): Found design unit 1: auk_dspip_math_pkg_hpfir (bp_filt) File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_math_pkg_hpfir.vhd Line: 54
+    Info (12022): Found design unit 2: auk_dspip_math_pkg_hpfir-body File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_math_pkg_hpfir.vhd Line: 131
 Info (12021): Found 1 design units, including 0 entities, in source file bp_filt/auk_dspip_lib_pkg_hpfir.vhd
-    Info (12022): Found design unit 1: auk_dspip_lib_pkg_hpfir (bp_filt) File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_lib_pkg_hpfir.vhd Line: 22
+    Info (12022): Found design unit 1: auk_dspip_lib_pkg_hpfir (bp_filt) File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_lib_pkg_hpfir.vhd Line: 22
 Info (12021): Found 2 design units, including 1 entities, in source file bp_filt/auk_dspip_avalon_streaming_controller_hpfir.vhd
-    Info (12022): Found design unit 1: auk_dspip_avalon_streaming_controller_hpfir-struct File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_avalon_streaming_controller_hpfir.vhd Line: 64
-    Info (12023): Found entity 1: auk_dspip_avalon_streaming_controller_hpfir File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_avalon_streaming_controller_hpfir.vhd Line: 41
+    Info (12022): Found design unit 1: auk_dspip_avalon_streaming_controller_hpfir-struct File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_avalon_streaming_controller_hpfir.vhd Line: 64
+    Info (12023): Found entity 1: auk_dspip_avalon_streaming_controller_hpfir File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_avalon_streaming_controller_hpfir.vhd Line: 41
 Info (12021): Found 2 design units, including 1 entities, in source file bp_filt/auk_dspip_avalon_streaming_sink_hpfir.vhd
-    Info (12022): Found design unit 1: auk_dspip_avalon_streaming_sink_hpfir-rtl File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_avalon_streaming_sink_hpfir.vhd Line: 106
-    Info (12023): Found entity 1: auk_dspip_avalon_streaming_sink_hpfir File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_avalon_streaming_sink_hpfir.vhd Line: 56
+    Info (12022): Found design unit 1: auk_dspip_avalon_streaming_sink_hpfir-rtl File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_avalon_streaming_sink_hpfir.vhd Line: 106
+    Info (12023): Found entity 1: auk_dspip_avalon_streaming_sink_hpfir File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_avalon_streaming_sink_hpfir.vhd Line: 56
 Info (12021): Found 2 design units, including 1 entities, in source file bp_filt/auk_dspip_avalon_streaming_source_hpfir.vhd
-    Info (12022): Found design unit 1: auk_dspip_avalon_streaming_source_hpfir-rtl File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_avalon_streaming_source_hpfir.vhd Line: 109
-    Info (12023): Found entity 1: auk_dspip_avalon_streaming_source_hpfir File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_avalon_streaming_source_hpfir.vhd Line: 70
+    Info (12022): Found design unit 1: auk_dspip_avalon_streaming_source_hpfir-rtl File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_avalon_streaming_source_hpfir.vhd Line: 109
+    Info (12023): Found entity 1: auk_dspip_avalon_streaming_source_hpfir File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_avalon_streaming_source_hpfir.vhd Line: 70
 Info (12021): Found 2 design units, including 1 entities, in source file bp_filt/auk_dspip_roundsat_hpfir.vhd
-    Info (12022): Found design unit 1: auk_dspip_roundsat_hpfir-beh File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_roundsat_hpfir.vhd Line: 57
-    Info (12023): Found entity 1: auk_dspip_roundsat_hpfir File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_roundsat_hpfir.vhd Line: 39
+    Info (12022): Found design unit 1: auk_dspip_roundsat_hpfir-beh File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_roundsat_hpfir.vhd Line: 57
+    Info (12023): Found entity 1: auk_dspip_roundsat_hpfir File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/auk_dspip_roundsat_hpfir.vhd Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file bp_filt/altera_avalon_sc_fifo.v
-    Info (12023): Found entity 1: altera_avalon_sc_fifo File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/altera_avalon_sc_fifo.v Line: 21
+    Info (12023): Found entity 1: altera_avalon_sc_fifo File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/altera_avalon_sc_fifo.v Line: 21
 Info (12021): Found 2 design units, including 1 entities, in source file bp_filt/bp_filt_0002_rtl_core.vhd
-    Info (12022): Found design unit 1: BP_Filt_0002_rtl_core-normal File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 49
-    Info (12023): Found entity 1: BP_Filt_0002_rtl_core File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 34
+    Info (12022): Found design unit 1: BP_Filt_0002_rtl_core-normal File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 49
+    Info (12023): Found entity 1: BP_Filt_0002_rtl_core File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 34
 Info (12021): Found 2 design units, including 1 entities, in source file bp_filt/bp_filt_0002_ast.vhd
-    Info (12022): Found design unit 1: BP_Filt_0002_ast-struct File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_ast.vhd Line: 55
-    Info (12023): Found entity 1: BP_Filt_0002_ast File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_ast.vhd Line: 9
+    Info (12022): Found design unit 1: BP_Filt_0002_ast-struct File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_ast.vhd Line: 55
+    Info (12023): Found entity 1: BP_Filt_0002_ast File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_ast.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file bp_filt/bp_filt_0002.vhd
-    Info (12022): Found design unit 1: BP_Filt_0002-syn File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002.vhd Line: 33
-    Info (12023): Found entity 1: BP_Filt_0002 File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002.vhd Line: 19
+    Info (12022): Found design unit 1: BP_Filt_0002-syn File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002.vhd Line: 33
+    Info (12023): Found entity 1: BP_Filt_0002 File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002.vhd Line: 19
 Info (12021): Found 1 design units, including 1 entities, in source file fir_filter.v
-    Info (12023): Found entity 1: FIR_Filter File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 1
+    Info (12023): Found entity 1: FIR_Filter File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modelsim/fir_filter_tb.v
-    Info (12023): Found entity 1: FIR_Filter_tb File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/Modelsim/FIR_Filter_tb.v Line: 3
+    Info (12023): Found entity 1: FIR_Filter_tb File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/Modelsim/FIR_Filter_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file input_ram.v
-    Info (12023): Found entity 1: input_ram File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/input_ram.v Line: 40
+    Info (12023): Found entity 1: input_ram File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/input_ram.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file output_ram.v
-    Info (12023): Found entity 1: output_ram File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/output_ram.v Line: 40
-Warning (10236): Verilog HDL Implicit Net warning at FIR_Filter.v(34): created implicit net for "error_out" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 34
+    Info (12023): Found entity 1: output_ram File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/output_ram.v Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at FIR_Filter.v(34): created implicit net for "error_out" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 34
 Info (12127): Elaborating entity "FIR_Filter" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at FIR_Filter.v(18): object "buffer_in" assigned a value but never read File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 18
-Warning (10034): Output port "data_out" at FIR_Filter.v(10) has no driver File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-Info (12128): Elaborating entity "input_ram" for hierarchy "input_ram:inram" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 28
-Info (12128): Elaborating entity "altsyncram" for hierarchy "input_ram:inram|altsyncram:altsyncram_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/input_ram.v Line: 89
-Info (12130): Elaborated megafunction instantiation "input_ram:inram|altsyncram:altsyncram_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/input_ram.v Line: 89
-Info (12133): Instantiated megafunction "input_ram:inram|altsyncram:altsyncram_component" with the following parameter: File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/input_ram.v Line: 89
+Warning (10036): Verilog HDL or VHDL warning at FIR_Filter.v(18): object "buffer_in" assigned a value but never read File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 18
+Warning (10034): Output port "data_out" at FIR_Filter.v(10) has no driver File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+Info (12128): Elaborating entity "input_ram" for hierarchy "input_ram:inram" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 28
+Info (12128): Elaborating entity "altsyncram" for hierarchy "input_ram:inram|altsyncram:altsyncram_component" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/input_ram.v Line: 89
+Info (12130): Elaborated megafunction instantiation "input_ram:inram|altsyncram:altsyncram_component" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/input_ram.v Line: 89
+Info (12133): Instantiated megafunction "input_ram:inram|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/input_ram.v Line: 89
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "input_data.mif"
@@ -2505,22 +2494,22 @@ Info (12133): Instantiated megafunction "input_ram:inram|altsyncram:altsyncram_c
     Info (12134): Parameter "width_a" = "12"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_8mi1.tdf
-    Info (12023): Found entity 1: altsyncram_8mi1 File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/db/altsyncram_8mi1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_8mi1" for hierarchy "input_ram:inram|altsyncram:altsyncram_component|altsyncram_8mi1:auto_generated" File: d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "BP_Filt" for hierarchy "BP_Filt:filt" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 35
-Info (12128): Elaborating entity "BP_Filt_0002" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt.v Line: 28
-Warning (10036): Verilog HDL or VHDL warning at BP_Filt_0002.vhd(54): object "coeff_in_read_sig" assigned a value but never read File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002.vhd Line: 54
-Info (12128): Elaborating entity "BP_Filt_0002_ast" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002.vhd Line: 62
-Warning (10541): VHDL Signal Declaration warning at BP_Filt_0002_ast.vhd(210): used implicit default value for signal "core_channel_out_core" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_ast.vhd Line: 210
-Info (12128): Elaborating entity "auk_dspip_avalon_streaming_sink_hpfir" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_ast.vhd Line: 89
-Info (12128): Elaborating entity "auk_dspip_avalon_streaming_source_hpfir" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|auk_dspip_avalon_streaming_source_hpfir:source" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_ast.vhd Line: 109
-Info (12128): Elaborating entity "auk_dspip_avalon_streaming_controller_hpfir" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|auk_dspip_avalon_streaming_controller_hpfir:intf_ctrl" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_ast.vhd Line: 137
-Info (12128): Elaborating entity "BP_Filt_0002_rtl_core" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_ast.vhd Line: 220
-Info (12128): Elaborating entity "dspba_delay" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|dspba_delay:d_u0_m0_wo0_wi0_r0_phasedelay0_q_12" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 877
-Info (12128): Elaborating entity "dspba_delay" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|dspba_delay:d_u0_m0_wo0_wi0_r0_phasedelay0_q_13" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 882
-Info (12128): Elaborating entity "LPM_MULT" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_17_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 986
-Info (12130): Elaborated megafunction instantiation "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_17_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 986
-Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_17_component" with the following parameter: File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 986
+    Info (12023): Found entity 1: altsyncram_8mi1 File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/db/altsyncram_8mi1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_8mi1" for hierarchy "input_ram:inram|altsyncram:altsyncram_component|altsyncram_8mi1:auto_generated" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "BP_Filt" for hierarchy "BP_Filt:filt" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 35
+Info (12128): Elaborating entity "BP_Filt_0002" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt.v Line: 28
+Warning (10036): Verilog HDL or VHDL warning at BP_Filt_0002.vhd(54): object "coeff_in_read_sig" assigned a value but never read File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002.vhd Line: 54
+Info (12128): Elaborating entity "BP_Filt_0002_ast" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002.vhd Line: 62
+Warning (10541): VHDL Signal Declaration warning at BP_Filt_0002_ast.vhd(210): used implicit default value for signal "core_channel_out_core" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_ast.vhd Line: 210
+Info (12128): Elaborating entity "auk_dspip_avalon_streaming_sink_hpfir" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_ast.vhd Line: 89
+Info (12128): Elaborating entity "auk_dspip_avalon_streaming_source_hpfir" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|auk_dspip_avalon_streaming_source_hpfir:source" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_ast.vhd Line: 109
+Info (12128): Elaborating entity "auk_dspip_avalon_streaming_controller_hpfir" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|auk_dspip_avalon_streaming_controller_hpfir:intf_ctrl" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_ast.vhd Line: 137
+Info (12128): Elaborating entity "BP_Filt_0002_rtl_core" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_ast.vhd Line: 220
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|dspba_delay:d_u0_m0_wo0_wi0_r0_phasedelay0_q_12" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 877
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|dspba_delay:d_u0_m0_wo0_wi0_r0_phasedelay0_q_13" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 882
+Info (12128): Elaborating entity "LPM_MULT" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_17_component" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 986
+Info (12130): Elaborated megafunction instantiation "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_17_component" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 986
+Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_17_component" with the following parameter: File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 986
     Info (12134): Parameter "LPM_WIDTHA" = "10"
     Info (12134): Parameter "LPM_WIDTHB" = "12"
     Info (12134): Parameter "LPM_WIDTHS" = "1"
@@ -2530,11 +2519,11 @@ Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|
     Info (12134): Parameter "LPM_TYPE" = "LPM_MULT"
     Info (12134): Parameter "LPM_HINT" = "DEDICATED_MULTIPLIER_CIRCUITRY=YES, MAXIMIZE_SPEED=5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_qdu.tdf
-    Info (12023): Found entity 1: mult_qdu File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/db/mult_qdu.tdf Line: 29
-Info (12128): Elaborating entity "mult_qdu" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_17_component|mult_qdu:auto_generated" File: d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 377
-Info (12128): Elaborating entity "LPM_MULT" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_14_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1142
-Info (12130): Elaborated megafunction instantiation "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_14_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1142
-Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_14_component" with the following parameter: File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1142
+    Info (12023): Found entity 1: mult_qdu File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/db/mult_qdu.tdf Line: 29
+Info (12128): Elaborating entity "mult_qdu" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_17_component|mult_qdu:auto_generated" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 377
+Info (12128): Elaborating entity "LPM_MULT" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_14_component" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1142
+Info (12130): Elaborated megafunction instantiation "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_14_component" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1142
+Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_14_component" with the following parameter: File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1142
     Info (12134): Parameter "LPM_WIDTHA" = "10"
     Info (12134): Parameter "LPM_WIDTHB" = "12"
     Info (12134): Parameter "LPM_WIDTHS" = "1"
@@ -2543,9 +2532,9 @@ Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|
     Info (12134): Parameter "LPM_PIPELINE" = "2"
     Info (12134): Parameter "LPM_TYPE" = "LPM_MULT"
     Info (12134): Parameter "LPM_HINT" = "DEDICATED_MULTIPLIER_CIRCUITRY=YES, MAXIMIZE_SPEED=5"
-Info (12128): Elaborating entity "LPM_MULT" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_12_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1248
-Info (12130): Elaborated megafunction instantiation "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_12_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1248
-Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_12_component" with the following parameter: File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1248
+Info (12128): Elaborating entity "LPM_MULT" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_12_component" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1248
+Info (12130): Elaborated megafunction instantiation "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_12_component" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1248
+Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_12_component" with the following parameter: File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1248
     Info (12134): Parameter "LPM_WIDTHA" = "12"
     Info (12134): Parameter "LPM_WIDTHB" = "12"
     Info (12134): Parameter "LPM_WIDTHS" = "1"
@@ -2555,11 +2544,11 @@ Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|
     Info (12134): Parameter "LPM_TYPE" = "LPM_MULT"
     Info (12134): Parameter "LPM_HINT" = "DEDICATED_MULTIPLIER_CIRCUITRY=YES, MAXIMIZE_SPEED=5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_udu.tdf
-    Info (12023): Found entity 1: mult_udu File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/db/mult_udu.tdf Line: 29
-Info (12128): Elaborating entity "mult_udu" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_12_component|mult_udu:auto_generated" File: d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 377
-Info (12128): Elaborating entity "LPM_MULT" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_11_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1307
-Info (12130): Elaborated megafunction instantiation "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_11_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1307
-Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_11_component" with the following parameter: File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1307
+    Info (12023): Found entity 1: mult_udu File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/db/mult_udu.tdf Line: 29
+Info (12128): Elaborating entity "mult_udu" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_12_component|mult_udu:auto_generated" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 377
+Info (12128): Elaborating entity "LPM_MULT" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_11_component" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1307
+Info (12130): Elaborated megafunction instantiation "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_11_component" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1307
+Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_11_component" with the following parameter: File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1307
     Info (12134): Parameter "LPM_WIDTHA" = "11"
     Info (12134): Parameter "LPM_WIDTHB" = "12"
     Info (12134): Parameter "LPM_WIDTHS" = "1"
@@ -2569,11 +2558,11 @@ Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|
     Info (12134): Parameter "LPM_TYPE" = "LPM_MULT"
     Info (12134): Parameter "LPM_HINT" = "DEDICATED_MULTIPLIER_CIRCUITRY=YES, MAXIMIZE_SPEED=5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_sdu.tdf
-    Info (12023): Found entity 1: mult_sdu File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/db/mult_sdu.tdf Line: 29
-Info (12128): Elaborating entity "mult_sdu" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_11_component|mult_sdu:auto_generated" File: d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 377
-Info (12128): Elaborating entity "LPM_MULT" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_9_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1384
-Info (12130): Elaborated megafunction instantiation "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_9_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1384
-Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_9_component" with the following parameter: File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1384
+    Info (12023): Found entity 1: mult_sdu File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/db/mult_sdu.tdf Line: 29
+Info (12128): Elaborating entity "mult_sdu" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_11_component|mult_sdu:auto_generated" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 377
+Info (12128): Elaborating entity "LPM_MULT" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_9_component" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1384
+Info (12130): Elaborated megafunction instantiation "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_9_component" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1384
+Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_9_component" with the following parameter: File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1384
     Info (12134): Parameter "LPM_WIDTHA" = "13"
     Info (12134): Parameter "LPM_WIDTHB" = "12"
     Info (12134): Parameter "LPM_WIDTHS" = "1"
@@ -2583,11 +2572,11 @@ Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|
     Info (12134): Parameter "LPM_TYPE" = "LPM_MULT"
     Info (12134): Parameter "LPM_HINT" = "DEDICATED_MULTIPLIER_CIRCUITRY=YES, MAXIMIZE_SPEED=5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_0eu.tdf
-    Info (12023): Found entity 1: mult_0eu File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/db/mult_0eu.tdf Line: 29
-Info (12128): Elaborating entity "mult_0eu" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_9_component|mult_0eu:auto_generated" File: d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 377
-Info (12128): Elaborating entity "LPM_MULT" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_7_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1516
-Info (12130): Elaborated megafunction instantiation "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_7_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1516
-Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_7_component" with the following parameter: File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1516
+    Info (12023): Found entity 1: mult_0eu File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/db/mult_0eu.tdf Line: 29
+Info (12128): Elaborating entity "mult_0eu" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_9_component|mult_0eu:auto_generated" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 377
+Info (12128): Elaborating entity "LPM_MULT" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_7_component" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1516
+Info (12130): Elaborated megafunction instantiation "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_7_component" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1516
+Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_7_component" with the following parameter: File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1516
     Info (12134): Parameter "LPM_WIDTHA" = "11"
     Info (12134): Parameter "LPM_WIDTHB" = "12"
     Info (12134): Parameter "LPM_WIDTHS" = "1"
@@ -2596,9 +2585,9 @@ Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|
     Info (12134): Parameter "LPM_PIPELINE" = "2"
     Info (12134): Parameter "LPM_TYPE" = "LPM_MULT"
     Info (12134): Parameter "LPM_HINT" = "DEDICATED_MULTIPLIER_CIRCUITRY=YES, MAXIMIZE_SPEED=5"
-Info (12128): Elaborating entity "LPM_MULT" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_4_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1662
-Info (12130): Elaborated megafunction instantiation "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_4_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1662
-Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_4_component" with the following parameter: File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1662
+Info (12128): Elaborating entity "LPM_MULT" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_4_component" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1662
+Info (12130): Elaborated megafunction instantiation "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_4_component" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1662
+Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_4_component" with the following parameter: File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1662
     Info (12134): Parameter "LPM_WIDTHA" = "10"
     Info (12134): Parameter "LPM_WIDTHB" = "12"
     Info (12134): Parameter "LPM_WIDTHS" = "1"
@@ -2607,9 +2596,9 @@ Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|
     Info (12134): Parameter "LPM_PIPELINE" = "2"
     Info (12134): Parameter "LPM_TYPE" = "LPM_MULT"
     Info (12134): Parameter "LPM_HINT" = "DEDICATED_MULTIPLIER_CIRCUITRY=YES, MAXIMIZE_SPEED=5"
-Info (12128): Elaborating entity "LPM_MULT" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_1_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1813
-Info (12130): Elaborated megafunction instantiation "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_1_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1813
-Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_1_component" with the following parameter: File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1813
+Info (12128): Elaborating entity "LPM_MULT" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_1_component" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1813
+Info (12130): Elaborated megafunction instantiation "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_1_component" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1813
+Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo2_mtree_mult1_1_component" with the following parameter: File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1813
     Info (12134): Parameter "LPM_WIDTHA" = "10"
     Info (12134): Parameter "LPM_WIDTHB" = "12"
     Info (12134): Parameter "LPM_WIDTHS" = "1"
@@ -2618,10 +2607,10 @@ Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|
     Info (12134): Parameter "LPM_PIPELINE" = "2"
     Info (12134): Parameter "LPM_TYPE" = "LPM_MULT"
     Info (12134): Parameter "LPM_HINT" = "DEDICATED_MULTIPLIER_CIRCUITRY=YES, MAXIMIZE_SPEED=5"
-Info (12128): Elaborating entity "dspba_delay" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|dspba_delay:d_u0_m0_wo1_sym_add0_q_14" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1966
-Info (12128): Elaborating entity "LPM_MULT" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo1_mtree_mult1_8_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 2038
-Info (12130): Elaborated megafunction instantiation "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo1_mtree_mult1_8_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 2038
-Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo1_mtree_mult1_8_component" with the following parameter: File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 2038
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|dspba_delay:d_u0_m0_wo1_sym_add0_q_14" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 1966
+Info (12128): Elaborating entity "LPM_MULT" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo1_mtree_mult1_8_component" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 2038
+Info (12130): Elaborated megafunction instantiation "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo1_mtree_mult1_8_component" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 2038
+Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo1_mtree_mult1_8_component" with the following parameter: File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 2038
     Info (12134): Parameter "LPM_WIDTHA" = "10"
     Info (12134): Parameter "LPM_WIDTHB" = "13"
     Info (12134): Parameter "LPM_WIDTHS" = "1"
@@ -2631,11 +2620,11 @@ Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|
     Info (12134): Parameter "LPM_TYPE" = "LPM_MULT"
     Info (12134): Parameter "LPM_HINT" = "DEDICATED_MULTIPLIER_CIRCUITRY=YES, MAXIMIZE_SPEED=5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_tdu.tdf
-    Info (12023): Found entity 1: mult_tdu File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/db/mult_tdu.tdf Line: 29
-Info (12128): Elaborating entity "mult_tdu" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo1_mtree_mult1_8_component|mult_tdu:auto_generated" File: d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 377
-Info (12128): Elaborating entity "LPM_MULT" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo1_mtree_mult1_3_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 2375
-Info (12130): Elaborated megafunction instantiation "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo1_mtree_mult1_3_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 2375
-Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo1_mtree_mult1_3_component" with the following parameter: File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 2375
+    Info (12023): Found entity 1: mult_tdu File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/db/mult_tdu.tdf Line: 29
+Info (12128): Elaborating entity "mult_tdu" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo1_mtree_mult1_8_component|mult_tdu:auto_generated" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 377
+Info (12128): Elaborating entity "LPM_MULT" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo1_mtree_mult1_3_component" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 2375
+Info (12130): Elaborated megafunction instantiation "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo1_mtree_mult1_3_component" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 2375
+Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo1_mtree_mult1_3_component" with the following parameter: File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 2375
     Info (12134): Parameter "LPM_WIDTHA" = "11"
     Info (12134): Parameter "LPM_WIDTHB" = "13"
     Info (12134): Parameter "LPM_WIDTHS" = "1"
@@ -2645,11 +2634,11 @@ Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|
     Info (12134): Parameter "LPM_TYPE" = "LPM_MULT"
     Info (12134): Parameter "LPM_HINT" = "DEDICATED_MULTIPLIER_CIRCUITRY=YES, MAXIMIZE_SPEED=5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_vdu.tdf
-    Info (12023): Found entity 1: mult_vdu File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/db/mult_vdu.tdf Line: 29
-Info (12128): Elaborating entity "mult_vdu" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo1_mtree_mult1_3_component|mult_vdu:auto_generated" File: d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 377
-Info (12128): Elaborating entity "LPM_MULT" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo1_mtree_mult1_0_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 2553
-Info (12130): Elaborated megafunction instantiation "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo1_mtree_mult1_0_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 2553
-Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo1_mtree_mult1_0_component" with the following parameter: File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 2553
+    Info (12023): Found entity 1: mult_vdu File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/db/mult_vdu.tdf Line: 29
+Info (12128): Elaborating entity "mult_vdu" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo1_mtree_mult1_3_component|mult_vdu:auto_generated" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 377
+Info (12128): Elaborating entity "LPM_MULT" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo1_mtree_mult1_0_component" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 2553
+Info (12130): Elaborated megafunction instantiation "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo1_mtree_mult1_0_component" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 2553
+Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo1_mtree_mult1_0_component" with the following parameter: File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 2553
     Info (12134): Parameter "LPM_WIDTHA" = "14"
     Info (12134): Parameter "LPM_WIDTHB" = "13"
     Info (12134): Parameter "LPM_WIDTHS" = "1"
@@ -2659,14 +2648,14 @@ Info (12133): Instantiated megafunction "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|
     Info (12134): Parameter "LPM_TYPE" = "LPM_MULT"
     Info (12134): Parameter "LPM_HINT" = "DEDICATED_MULTIPLIER_CIRCUITRY=YES, MAXIMIZE_SPEED=5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_meu.tdf
-    Info (12023): Found entity 1: mult_meu File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/db/mult_meu.tdf Line: 29
-Info (12128): Elaborating entity "mult_meu" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo1_mtree_mult1_0_component|mult_meu:auto_generated" File: d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 377
-Info (12128): Elaborating entity "dspba_delay" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|dspba_delay:d_u0_m0_wo0_compute_q_16" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 3537
-Info (12128): Elaborating entity "auk_dspip_roundsat_hpfir" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|auk_dspip_roundsat_hpfir:\real_passthrough:gen_outp_blk:2:outp_blk" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_ast.vhd Line: 248
-Info (12128): Elaborating entity "output_ram" for hierarchy "output_ram:outram" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 44
-Info (12128): Elaborating entity "altsyncram" for hierarchy "output_ram:outram|altsyncram:altsyncram_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/output_ram.v Line: 89
-Info (12130): Elaborated megafunction instantiation "output_ram:outram|altsyncram:altsyncram_component" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/output_ram.v Line: 89
-Info (12133): Instantiated megafunction "output_ram:outram|altsyncram:altsyncram_component" with the following parameter: File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/output_ram.v Line: 89
+    Info (12023): Found entity 1: mult_meu File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/db/mult_meu.tdf Line: 29
+Info (12128): Elaborating entity "mult_meu" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|LPM_MULT:u0_m0_wo1_mtree_mult1_0_component|mult_meu:auto_generated" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 377
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|BP_Filt_0002_rtl_core:\real_passthrough:hpfircore_core|dspba_delay:d_u0_m0_wo0_compute_q_16" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_rtl_core.vhd Line: 3537
+Info (12128): Elaborating entity "auk_dspip_roundsat_hpfir" for hierarchy "BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|auk_dspip_roundsat_hpfir:\real_passthrough:gen_outp_blk:2:outp_blk" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/BP_Filt/BP_Filt_0002_ast.vhd Line: 248
+Info (12128): Elaborating entity "output_ram" for hierarchy "output_ram:outram" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 44
+Info (12128): Elaborating entity "altsyncram" for hierarchy "output_ram:outram|altsyncram:altsyncram_component" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/output_ram.v Line: 89
+Info (12130): Elaborated megafunction instantiation "output_ram:outram|altsyncram:altsyncram_component" File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/output_ram.v Line: 89
+Info (12133): Instantiated megafunction "output_ram:outram|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/output_ram.v Line: 89
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
@@ -2679,111 +2668,106 @@ Info (12133): Instantiated megafunction "output_ram:outram|altsyncram:altsyncram
     Info (12134): Parameter "power_up_uninitialized" = "FALSE"
     Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
     Info (12134): Parameter "widthad_a" = "11"
-    Info (12134): Parameter "width_a" = "96"
+    Info (12134): Parameter "width_a" = "93"
     Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_d7g1.tdf
-    Info (12023): Found entity 1: altsyncram_d7g1 File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/db/altsyncram_d7g1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_d7g1" for hierarchy "output_ram:outram|altsyncram:altsyncram_component|altsyncram_d7g1:auto_generated" File: d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "output_ram:outram|altsyncram:altsyncram_component|altsyncram_d7g1:auto_generated|q_a[93]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/db/altsyncram_d7g1.tdf Line: 2177
-        Warning (14320): Synthesized away node "output_ram:outram|altsyncram:altsyncram_component|altsyncram_d7g1:auto_generated|q_a[94]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/db/altsyncram_d7g1.tdf Line: 2200
-        Warning (14320): Synthesized away node "output_ram:outram|altsyncram:altsyncram_component|altsyncram_d7g1:auto_generated|q_a[95]" File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/db/altsyncram_d7g1.tdf Line: 2223
-Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_a7g1.tdf
+    Info (12023): Found entity 1: altsyncram_a7g1 File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/db/altsyncram_a7g1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_a7g1" for hierarchy "output_ram:outram|altsyncram:altsyncram_component|altsyncram_a7g1:auto_generated" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "data_out[0]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[1]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[2]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[3]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[4]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[5]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[6]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[7]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[8]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[9]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[10]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[11]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[12]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[13]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[14]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[15]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[16]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[17]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[18]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[19]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[20]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[21]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[22]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[23]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[24]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[25]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[26]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[27]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[28]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[29]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[30]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[31]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[32]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[33]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[34]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[35]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[36]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[37]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[38]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[39]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[40]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[41]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[42]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[43]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[44]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[45]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[46]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[47]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[48]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[49]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[50]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[51]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[52]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[53]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[54]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[55]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[56]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[57]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[58]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[59]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[60]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[61]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[62]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[63]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[64]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[65]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[66]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[67]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[68]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[69]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[70]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[71]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[72]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[73]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[74]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[75]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[76]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[77]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[78]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[79]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[80]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[81]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[82]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[83]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[84]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[85]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[86]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[87]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[88]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[89]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[90]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[91]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
-    Warning (13410): Pin "data_out[92]" is stuck at GND File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[0]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[1]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[2]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[3]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[4]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[5]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[6]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[7]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[8]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[9]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[10]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[11]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[12]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[13]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[14]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[15]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[16]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[17]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[18]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[19]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[20]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[21]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[22]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[23]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[24]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[25]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[26]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[27]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[28]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[29]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[30]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[31]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[32]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[33]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[34]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[35]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[36]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[37]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[38]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[39]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[40]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[41]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[42]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[43]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[44]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[45]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[46]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[47]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[48]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[49]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[50]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[51]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[52]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[53]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[54]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[55]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[56]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[57]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[58]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[59]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[60]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[61]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[62]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[63]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[64]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[65]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[66]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[67]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[68]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[69]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[70]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[71]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[72]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[73]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[74]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[75]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[76]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[77]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[78]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[79]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[80]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[81]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[82]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[83]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[84]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[85]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[86]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[87]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[88]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[89]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[90]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[91]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
+    Warning (13410): Pin "data_out[92]" is stuck at GND File: C:/Users/Abrah/OneDrive/Documents/GitHub/eced4260-beamformer-project/filterproject3/FIR_Filter.v Line: 10
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 5 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -2794,10 +2778,10 @@ Info (21057): Implemented 3478 device resources after synthesis - the final reso
     Info (21061): Implemented 3120 logic cells
     Info (21064): Implemented 105 RAM segments
     Info (21062): Implemented 38 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 106 warnings
-    Info: Peak virtual memory: 4881 megabytes
-    Info: Processing ended: Wed Nov 29 15:03:55 2023
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 101 warnings
+    Info: Peak virtual memory: 4873 megabytes
+    Info: Processing ended: Thu Nov 30 17:31:08 2023
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Total CPU time (on all processors): 00:00:23
 
 
