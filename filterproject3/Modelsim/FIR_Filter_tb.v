@@ -45,6 +45,16 @@ module FIR_Filter_tb ();
 		fork
 			forever #2 input_address<=input_address+1;
 		join
+		
+		initial begin
+		#50
+		rst <= 1;
+		output_read_en<=1;
+		#10
+		start<=1;
+		fork
+			forever #2 output_address<=output_address+1;
+		join
 
 
 
