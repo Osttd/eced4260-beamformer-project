@@ -38,10 +38,7 @@ module FIR_Filter_tb ();
 	
 	initial begin
 		#50
-		rst <= 1;
 		input_read<=1;
-		#10
-		start<=1;
 		fork
 			forever #2 input_address<=input_address+1;
 		join
@@ -49,14 +46,14 @@ module FIR_Filter_tb ();
 		initial begin
 		#50
 		rst <= 1;
-		output_read_en<=1;
-		#10
 		start<=1;
-		fork
-			forever #2 output_address<=output_address+1;
-		join
 
-
+		forever begin
+			#2
+			if (valid_out!==0) begin
+				output_address<=output_address+1;
+			end
+		end
 
 	end
 	
@@ -66,6 +63,14 @@ module FIR_Filter_tb ();
 		#3000
 		input_read<=0;
 		rst=0;
+		output_address=0;
+		#10
+		output_read_en=1;
+		#20
+		forever #2 output_address<=output_address+1;
+
 	end
+
+	assign output_write_en=valid_out;
 	
 endmodule 

@@ -57,7 +57,13 @@ xlabel("t (milliseconds)")
 ylabel("X(t)")
 
 
-max_ind_diff=max(ind_dels(1)-ind_dels(4))
+max_ind_diff=max(ind_dels(1)-ind_dels(4));
 
+max(raw_data_full(1, :))
+min(raw_data_full(1, :))
+
+raw_data_bits1=int2bit(-1*raw_data_full(1, :), 12);
+
+signals_array={raw_data_bits(1) raw_data_bits(2)};
 
 
