@@ -13,26 +13,26 @@ module brambeamformer(
 	input sumouten,
 	input [15:0] sample_index,
 	input [1:0] slice_state,
-	output [11:0] output_value,
+	output [15:0] output_value,
 	output usedataflag
 );
 
 	parameter slice_idle_delay=0, slice1=1, slice2=2, slice3=3;
 
-	wire [11:0] inbramout_signal_raw;
-	reg [11:0] inbramout_signal_buffer;
+	wire [15:0] inbramout_signal_raw;
+	reg [31:0] inbramout_signal_buffer;
 	//reg [15:0] sample_index=-1;//handle delay on the bram reading in
-	wire [11:0] beamformerout_signal;
+	wire [31:0] beamformerout_signal;
 
 	reg [31:0] data_out,
 	wire valid_out,
-	wire [92:0] filter_ram_out
+	wire [95:0] filter_ram_out
 	
 	reg [1:0] err_in = 2'b00;
-	wire [11:0] data_in;
+	wire [15:0] data_in;
 	wire [1:0] err_out;
-	reg [11:0] buffer_in = 0;
-	wire [92:0] buffer_out;
+	reg [15:0] buffer_in = 0;
+	wire [95:0] buffer_out;
 
 
 	signalram in_signalram(
@@ -86,13 +86,13 @@ module brambeamformer(
                         inbramout_signal_buffer<=1;
                     end
                     slice1: begin
-						inbramout_signal_buffer<=filter_ram_out[30:0];
+						inbramout_signal_buffer<=filter_ram_out[31:0];
                     end
                     slice2: begin
-						inbramout_signal_buffer<=filter_ram_out[61:31];
+						inbramout_signal_buffer<=filter_ram_out[63:32];
                     end
                     slice3: begin
-						inbramout_signal_buffer<=filter_ram_out[92:62];
+						inbramout_signal_buffer<=filter_ram_out[95:64];
                     end
 				endcase
 		end

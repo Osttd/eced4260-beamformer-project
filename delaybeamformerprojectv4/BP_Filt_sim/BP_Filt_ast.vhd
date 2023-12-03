@@ -6,7 +6,7 @@ use ieee.numeric_std.all;
 use work.auk_dspip_lib_pkg_hpfir.all;
 use work.auk_dspip_math_pkg_hpfir.all;
 
-entity BP_Filt_0002_ast is
+entity BP_Filt_ast is
   generic (
         INWIDTH             : integer := 16;
         OUT_WIDTH_UNTRIMMED : integer := 35;
@@ -46,13 +46,13 @@ entity BP_Filt_0002_ast is
     ast_source_error   : out std_logic_vector (1 downto 0)
     );
 attribute altera_attribute : string;
-attribute altera_attribute of BP_Filt_0002_ast:entity is "-name MESSAGE_DISABLE 15400; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 12020; -name MESSAGE_DISABLE 12030; -name MESSAGE_DISABLE 12010; -name MESSAGE_DISABLE 12110; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 13410; -name MESSAGE_DISABLE 10036";
-end BP_Filt_0002_ast;
+attribute altera_attribute of BP_Filt_ast:entity is "-name MESSAGE_DISABLE 15400; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 12020; -name MESSAGE_DISABLE 12030; -name MESSAGE_DISABLE 12010; -name MESSAGE_DISABLE 12110; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 13410; -name MESSAGE_DISABLE 10036";
+end BP_Filt_ast;
 
 -- Warnings Suppression On
 -- altera message_off 10036
 
-architecture struct of BP_Filt_0002_ast is
+architecture struct of BP_Filt_ast is
   
   constant OUTWIDTH          : integer   := OUT_WIDTH_UNTRIMMED - REM_LSB_BIT_g - REM_MSB_BIT_g;
 
@@ -190,7 +190,7 @@ begin
 
 real_passthrough : if COMPLEX_CONST = 1 generate
 
-      component BP_Filt_0002_rtl_core is
+      component BP_Filt_rtl_core is
       port (
         xIn_v                 : in std_logic_vector(0 downto 0);
         xIn_c                 : in std_logic_vector(7 downto 0);
@@ -203,7 +203,7 @@ real_passthrough : if COMPLEX_CONST = 1 generate
         clk                  : in std_logic;
         areset               : in std_logic
         );
-end component BP_Filt_0002_rtl_core;
+end component BP_Filt_rtl_core;
 
 
     --Complex data re-ordering
@@ -217,7 +217,7 @@ end component BP_Filt_0002_rtl_core;
 
 
   begin
-        hpfircore_core: BP_Filt_0002_rtl_core
+        hpfircore_core: BP_Filt_rtl_core
            port map (
             xIn_v     => data_valid_core,
             xIn_c     => "00000000",

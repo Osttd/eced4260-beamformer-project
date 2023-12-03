@@ -16,7 +16,7 @@ use IEEE.std_logic_1164.all;
 use work.auk_dspip_lib_pkg_hpfir.all;
 use work.auk_dspip_math_pkg_hpfir.all;
 
-entity BP_Filt_0002 is
+entity BP_Filt is
   port (
     clk : in STD_LOGIC;    
     reset_n : in STD_LOGIC;
@@ -27,11 +27,11 @@ entity BP_Filt_0002 is
     ast_source_valid : out STD_LOGIC;
     ast_source_error : out STD_LOGIC_VECTOR(1 downto 0)
   );
-end BP_Filt_0002;
+end BP_Filt;
 
 
-architecture syn of BP_Filt_0002 is
-  component BP_Filt_0002_ast
+architecture syn of BP_Filt is
+  component BP_Filt_ast
   port (
     clk : in STD_LOGIC;
     reset_n : in STD_LOGIC;
@@ -59,7 +59,7 @@ begin
 
 
 
-  BP_Filt_0002_ast_inst : BP_Filt_0002_ast
+  BP_Filt_ast_inst : BP_Filt_ast
   port map (
     clk => clk,
     reset_n => reset_n,

@@ -15,7 +15,7 @@
 -- applicable agreement for further details.
 -- ---------------------------------------------------------------------------
 
--- VHDL created from BP_Filt_0002_rtl_core
+-- VHDL created from BP_Filt_rtl_core
 -- VHDL created on Sat Dec  2 23:08:05 2023
 
 
@@ -31,7 +31,7 @@ USE altera_mf.altera_mf_components.all;
 LIBRARY lpm;
 USE lpm.lpm_components.all;
 
-entity BP_Filt_0002_rtl_core is
+entity BP_Filt_rtl_core is
     port (
         xIn_v : in std_logic_vector(0 downto 0);  -- sfix1
         xIn_c : in std_logic_vector(7 downto 0);  -- sfix8
@@ -44,9 +44,9 @@ entity BP_Filt_0002_rtl_core is
         clk : in std_logic;
         areset : in std_logic
     );
-end BP_Filt_0002_rtl_core;
+end BP_Filt_rtl_core;
 
-architecture normal of BP_Filt_0002_rtl_core is
+architecture normal of BP_Filt_rtl_core is
 
     attribute altera_attribute : string;
     attribute altera_attribute of normal : architecture is "-name AUTO_SHIFT_REGISTER_RECOGNITION OFF; -name PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION ON; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 10037; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 15400; -name MESSAGE_DISABLE 14130; -name MESSAGE_DISABLE 10036; -name MESSAGE_DISABLE 12020; -name MESSAGE_DISABLE 12030; -name MESSAGE_DISABLE 12010; -name MESSAGE_DISABLE 12110; -name MESSAGE_DISABLE 14320; -name MESSAGE_DISABLE 13410; -name MESSAGE_DISABLE 113007";
