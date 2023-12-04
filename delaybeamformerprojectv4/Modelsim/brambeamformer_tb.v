@@ -27,7 +27,7 @@ module brambeamformer_tb();
 
 
 	parameter slice_idle_delay=0, slice1=1, slice2=2, slice3=3;
-    parameter loadin=0, filtering=1, finishfiltering=2, beamforming=3, summing=4;
+    parameter loadin=0, filtering=1, finishfiltering=2, beamforming=3, summing=4, done=5;
     reg [2:0] control_state=loadin;
     reg [2:0] next_control_state=loadin;
     reg [1:0] slice_state=slice_idle_delay;
@@ -111,25 +111,38 @@ module brambeamformer_tb();
                 start<=0;
                 output_read_en<=1;
                 startbeamformer <= 1;
+                if (sumout_address===539) begin
+                    sumout_address=0;
+                    next_control_state=summing;
+                end
             end
             summing: begin
                 startbeamformer=0;
                 output_read_en=0;
                 sumouten=1;
-                sumout_address=0;
+                if (sumout_address===539) begin
+                    sumout_address=0;
+                    next_control_state=done;
+                end
+            end
+            done: begin
+                sumouten=0;
             end
 
         endcase
     end
 
-    // always @(posedge clk) begin
-    //     if (valid_out!==0) begin
-    //         readin_address<=readin_address+1;
-    //     end
+    always @(negedge clk) begin
+        if (sumouten!==0) begin
+            sumout_address<=sumout_address+1;
+        end
+    end
 
-    // end
-
-
+    always @(negedge clk) begin
+        if (valid_out!==0) begin
+            readin_address<=readin_address+1;
+        end
+    end
 
     always @(negedge usedataflag) begin
         if (startbeamformer===1) begin

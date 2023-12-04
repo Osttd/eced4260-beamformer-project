@@ -19,12 +19,13 @@ add wave -noupdate -label finishfiltercounter -radix decimal /brambeamformer_tb/
 add wave -noupdate -divider beamformer
 add wave -noupdate -label data_in -radix decimal /brambeamformer_tb/brambeamformer_inst/data_in
 add wave -noupdate -label buffer_out -radix decimal /brambeamformer_tb/brambeamformer_inst/buffer_out
+add wave -noupdate -label filter_ram_out -radix decimal /brambeamformer_tb/brambeamformer_inst/filter_ram_out
 add wave -noupdate -label beamformerout_signal -radix decimal /brambeamformer_tb/brambeamformer_inst/beamformerout_signal
 add wave -noupdate -divider delaybeamformer
 add wave -noupdate -label desiredindex -radix unsigned /brambeamformer_tb/brambeamformer_inst/delaybeamformer_inst/desiredindex
 add wave -noupdate -label input_index -radix unsigned /brambeamformer_tb/brambeamformer_inst/delaybeamformer_inst/input_index
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {4495000 ps} 0}
+WaveRestoreCursors {{Cursor 1} {6122950 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 155
 configure wave -valuecolwidth 123
@@ -40,4 +41,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {4464285 ps} {4541770 ps}
+WaveRestoreZoom {6107964 ps} {6185449 ps}
