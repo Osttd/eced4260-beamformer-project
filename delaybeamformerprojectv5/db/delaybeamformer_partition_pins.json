@@ -1,0 +1,157 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "summed_value[0]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[1]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[2]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[3]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[4]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[5]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[6]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[7]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[8]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[9]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[10]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[11]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[12]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[13]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[14]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[15]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[16]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[17]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[18]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[19]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[20]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[21]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[22]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[23]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[24]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[25]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[26]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[27]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[28]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[29]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[30]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[31]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[32]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[33]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[34]",
+					"strict" : false
+				},
+				{
+					"name" : "summed_value[35]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
