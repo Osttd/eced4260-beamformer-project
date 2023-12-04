@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at brambeamformer.v(52): always construct contains both blocking and non-blocking assignments File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv2/brambeamformer.v Line: 52
+Warning (10268): Verilog HDL information at fullbeamformer.v(189): always construct contains both blocking and non-blocking assignments File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/fullbeamformer.v Line: 189

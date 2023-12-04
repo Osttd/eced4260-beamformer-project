@@ -17,9 +17,9 @@ module delaybeamformer(
 	indexram indexram_inst( //takes 2 clk cycles to read out, with numtoread, total 3 cycles
 	.address(indexnumtoread),
 	.clock(clk),
-	.data(0),
-	.rden(1),
-	.wren(0),
+	.data(16'b0),
+	.rden(1'b1),
+	.wren(1'b0),
 	.q(desiredindex)
 	);
 
@@ -28,7 +28,7 @@ module delaybeamformer(
 			if (input_index === desiredindex) begin
 				if (input_index !== last_input_index) begin
 					data_good=1;
-					indexnumtoread=indexnumtoread+1;
+					indexnumtoread=indexnumtoread+10'd1;
 				end
 			end else begin
 				data_good=0;

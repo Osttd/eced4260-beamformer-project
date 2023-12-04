@@ -1,5 +1,5 @@
 Flow report for delaybeamformer
-Tue Nov 28 09:37:43 2023
+Mon Dec  4 17:54:00 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -41,10 +41,10 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Tue Nov 28 09:37:43 2023          ;
+; Flow Status                        ; Successful - Mon Dec  4 17:54:00 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; delaybeamformer                                ;
-; Top-level Entity Name              ; brambeamformer                                 ;
+; Top-level Entity Name              ; fullbeamformer                                 ;
 ; Family                             ; Cyclone IV E                                   ;
 ; Device                             ; EP4CE115F29C7                                  ;
 ; Timing Models                      ; Final                                          ;
@@ -52,7 +52,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Total combinational functions  ; 0 / 114,480 ( 0 % )                            ;
 ;     Dedicated logic registers      ; 0 / 114,480 ( 0 % )                            ;
 ; Total registers                    ; 0                                              ;
-; Total pins                         ; 45 / 529 ( 9 % )                               ;
+; Total pins                         ; 40 / 529 ( 8 % )                               ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                          ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                                ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/28/2023 09:37:06 ;
+; Start date & time ; 12/04/2023 17:53:24 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; delaybeamformer     ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+-----------------+----------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value   ; Entity Name    ; Section Id                        ;
 +-------------------------------------+----------------------------------------+-----------------+----------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 5311883338953.170117862611396          ; --              ; --             ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 5311883338953.170172680425816          ; --              ; --             ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --              ; --             ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --              ; --             ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --              ; --             ; eda_board_design_signal_integrity ;
@@ -86,13 +86,15 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --              ; --             ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --              ; --             ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --              ; --             ; --                                ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --              ; brambeamformer ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --              ; brambeamformer ; Top                               ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --              ; brambeamformer ; Top                               ;
+; MISC_FILE                           ; BP_Filt.cmp                            ; --              ; --             ; --                                ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --              ; fullbeamformer ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --              ; fullbeamformer ; Top                               ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --              ; fullbeamformer ; Top                               ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --              ; --             ; --                                ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --              ; --             ; --                                ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --              ; --             ; --                                ;
-; TOP_LEVEL_ENTITY                    ; brambeamformer                         ; delaybeamformer ; --             ; --                                ;
+; SYNTHESIS_ONLY_QIP                  ; On                                     ; --              ; --             ; --                                ;
+; TOP_LEVEL_ENTITY                    ; fullbeamformer                         ; delaybeamformer ; --             ; --                                ;
 +-------------------------------------+----------------------------------------+-----------------+----------------+-----------------------------------+
 
 
@@ -101,12 +103,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4750 MB             ; 00:00:17                           ;
-; Fitter               ; 00:00:14     ; 1.0                     ; 5816 MB             ; 00:00:13                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4709 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4866 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4649 MB             ; 00:00:00                           ;
-; Total                ; 00:00:30     ; --                      ; --                  ; 00:00:33                           ;
+; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 4984 MB             ; 00:00:27                           ;
+; Fitter               ; 00:00:09     ; 1.0                     ; 5825 MB             ; 00:00:14                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4733 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4886 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4672 MB             ; 00:00:00                           ;
+; Total                ; 00:00:31     ; --                      ; --                  ; 00:00:45                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

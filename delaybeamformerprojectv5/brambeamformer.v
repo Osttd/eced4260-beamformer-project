@@ -3,18 +3,16 @@ module brambeamformer(
 	input clk,
 	input rst,
 	input start,
-	input [15:0] data_in;
+	input [15:0] data_in,
 	input [10:0] readin_address,
 	input [9:0] sumout_address,
-	input filter_bram_output_write_en,
 	input output_read_en,
 	input startbeamformer,
 	input sumouten,
 	input [15:0] sample_index,
 	input [1:0] slice_state,
 	output [31:0] output_value,
-	output usedataflag,
-	output valid_out
+	output usedataflag
 );
 
 	parameter slice_idle_delay=0, slice1=1, slice2=2, slice3=3;
@@ -30,8 +28,10 @@ module brambeamformer(
 	reg [1:0] err_in = 2'b00;
 
 	wire [1:0] err_out;
-	reg [15:0] buffer_in = 0;
 	wire [95:0] buffer_out;
+	
+	wire filter_bram_output_write_en;
+	wire valid_out;
 
 
 
@@ -39,7 +39,7 @@ module brambeamformer(
 		.clk(clk), .reset_n(rst), .ast_sink_data(data_in),
 		.ast_sink_valid(start), .ast_sink_error(err_in),
 		.ast_source_data(buffer_out), .ast_source_valid(valid_out),
-		.ast_source_error(error_out)
+		.ast_source_error(err_out)
 	);
 	
 	output_ram outram (
@@ -87,6 +87,7 @@ module brambeamformer(
 				endcase
 		end
 	end
-
+	
+    assign filter_bram_output_write_en=valid_out;
 
 endmodule

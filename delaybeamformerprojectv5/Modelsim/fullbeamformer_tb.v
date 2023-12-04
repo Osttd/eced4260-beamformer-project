@@ -12,7 +12,7 @@ module fullbeamformer_tb();
 
     fullbeamformer fullbeamformer_inst(
         .clk(clk),
-        .next_control_state(next_control_state),
+        .ext_next_control_state(next_control_state),
         .summed_value(summed_value)
 
     );
