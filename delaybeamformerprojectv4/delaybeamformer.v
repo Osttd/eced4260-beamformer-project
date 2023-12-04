@@ -22,7 +22,7 @@ module delaybeamformer(
 	.q(desiredindex)
 	);
 
-	always @(posedge clk) begin
+	always @(edge clk) begin
 		if (startbeamformer===1) begin
 			if (input_index === desiredindex) begin
 				data_good=1;

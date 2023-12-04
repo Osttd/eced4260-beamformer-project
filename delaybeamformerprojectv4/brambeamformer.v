@@ -5,7 +5,7 @@ module brambeamformer(
 	input start,
 	input [10:0] signal_address,
 	input [10:0] readin_address,
-	input [10:0] sumout_address,
+	input [9:0] sumout_address,
 	input filter_bram_output_write_en,
 	input output_read_en,
 	input startbeamformer,
@@ -13,8 +13,9 @@ module brambeamformer(
 	input sumouten,
 	input [15:0] sample_index,
 	input [1:0] slice_state,
-	output [15:0] output_value,
-	output usedataflag
+	output [31:0] output_value,
+	output usedataflag,
+	output valid_out
 );
 
 	parameter slice_idle_delay=0, slice1=1, slice2=2, slice3=3;
@@ -24,9 +25,8 @@ module brambeamformer(
 	//reg [15:0] sample_index=-1;//handle delay on the bram reading in
 	wire [31:0] beamformerout_signal;
 
-	reg [31:0] data_out,
-	wire valid_out,
-	wire [95:0] filter_ram_out
+	reg [31:0] data_out;
+	wire [95:0] filter_ram_out;
 	
 	reg [1:0] err_in = 2'b00;
 	wire [15:0] data_in;
