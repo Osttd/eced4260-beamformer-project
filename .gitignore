@@ -1,3 +1,4 @@
 *.flock
 *.qws
 *.vo
+*/simulation/
