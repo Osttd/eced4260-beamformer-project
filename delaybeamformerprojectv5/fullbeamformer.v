@@ -33,7 +33,7 @@ module fullbeamformer(
     wire usedataflag;
     wire valid_out;
 
-    wire [16*8-1:0] signal_in;
+    wire [127:0] signal_in;
 
 
 
@@ -53,7 +53,7 @@ module fullbeamformer(
 		.rden(signalinen),
 		.wren(0),
 		.q(signal_in)
-	);
+	)/* synthesis keep */;
 
 
 
@@ -71,7 +71,7 @@ module fullbeamformer(
     .slice_state(slice_state),
     .output_value(output_value_1),
     .usedataflag(usedataflag)
-    );
+    )/* synthesis keep */;
 
     brambeamformer channel2(
     .clk(clk),
@@ -87,7 +87,7 @@ module fullbeamformer(
     .slice_state(slice_state),
     .output_value(output_value_2),
     .usedataflag(usedataflag)
-    );
+    )/* synthesis keep */;
 
     brambeamformer channel3(
     .clk(clk),
@@ -103,7 +103,7 @@ module fullbeamformer(
     .slice_state(slice_state),
     .output_value(output_value_3),
     .usedataflag(usedataflag)
-    );
+    )/* synthesis keep */;
 
     brambeamformer channel4(
     .clk(clk),
@@ -119,7 +119,7 @@ module fullbeamformer(
     .slice_state(slice_state),
     .output_value(output_value_4),
     .usedataflag(usedataflag)
-    );
+    )/* synthesis keep */;
 
     brambeamformer channel5(
     .clk(clk),
@@ -135,7 +135,7 @@ module fullbeamformer(
     .slice_state(slice_state),
     .output_value(output_value_5),
     .usedataflag(usedataflag)
-    );
+    )/* synthesis keep */;
 
 
     brambeamformer channel6(
@@ -152,7 +152,7 @@ module fullbeamformer(
     .slice_state(slice_state),
     .output_value(output_value_6),
     .usedataflag(usedataflag)
-    );
+    )/* synthesis keep */;
 
     brambeamformer channel7(
     .clk(clk),
@@ -168,7 +168,7 @@ module fullbeamformer(
     .slice_state(slice_state),
     .output_value(output_value_7),
     .usedataflag(usedataflag)
-    );
+    )/* synthesis keep */;
 
     brambeamformer channel8(
     .clk(clk),
@@ -184,7 +184,7 @@ module fullbeamformer(
     .slice_state(slice_state),
     .output_value(output_value_8),
     .usedataflag(usedataflag)
-    );
+    )/* synthesis keep */;
 
     always @(posedge clk) begin
         control_state=next_control_state;
@@ -199,16 +199,20 @@ module fullbeamformer(
                 start<=1;
 
                 signal_address=signal_address+11'd1;
-                if (signal_address===2047) begin
+                if (signal_address===11'd2047) begin
                     next_control_state=finishfiltering;
                 end
-
+                if (valid_out!==0) begin
+                    readin_address=readin_address+11'd1;
+                end
             end
             finishfiltering: begin
                 //this state may be unnesscary if the last few samples are not useful
-
+                if (valid_out!==0) begin
+                    readin_address=readin_address+11'd1;
+                end
                 if (filterfinishcounter===5) begin
-                    readin_address=0;
+                    readin_address=11'd0;
                     next_control_state=beamforming;
                 end
                 filterfinishcounter=filterfinishcounter+4'd1;
@@ -221,10 +225,11 @@ module fullbeamformer(
                 start<=0;
                 output_read_en<=1;
                 startbeamformer <= 1;
-                if (sumout_address===539) begin
-                    sumout_address=0;
+                if (sumout_address===10'd539) begin
+                    sumout_address=10'd0;
                     next_control_state=summing;
                 end
+                sumout_address=sumout_address+10'd1;
                 slice_state=next_slice_state;
 				case(slice_state)
                     slice_idle_delay: begin
@@ -252,10 +257,11 @@ module fullbeamformer(
                 startbeamformer=0;
                 output_read_en=0;
                 sumouten=1;
-                if (sumout_address===539) begin
-                    sumout_address=0;
+                if (sumout_address===10'd539) begin
+                    sumout_address=10'd0;
                     next_control_state=done;
                 end
+				sumout_address=sumout_address+10'd1;
                 summed_value_buffer=output_value_1+output_value_2+output_value_3+output_value_4+output_value_5+output_value_6+output_value_7+output_value_8;
 
 

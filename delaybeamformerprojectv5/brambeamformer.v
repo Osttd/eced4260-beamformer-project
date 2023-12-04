@@ -49,7 +49,7 @@ module brambeamformer(
 		.rden(output_read_en),
 		.wren(filter_bram_output_write_en),
 		.q(filter_ram_out)
-	);
+	)/* synthesis keep */;
 	delaybeamformer delaybeamformer_inst(
 		.clk(clk),
 		.input_value(inbramout_signal_buffer),
@@ -66,7 +66,7 @@ module brambeamformer(
 		.rden(sumouten),
 		.wren(usedataflag),
 		.q(output_value)
-	);
+	)/* synthesis keep */;
 
 	//check the delays on this
 	always @(negedge clk) begin

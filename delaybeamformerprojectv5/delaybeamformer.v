@@ -10,18 +10,18 @@ module delaybeamformer(
 );
 
 	reg [9:0] indexnumtoread = 0;
-	wire [15:0] desiredindex;
+	wire [15:0] desiredindex/* synthesis keep */;
 	reg [15:0] last_input_index;
 	//reg [15:0] desiredindexbuffer;
-	
-	indexram indexram_inst( //takes 2 clk cycles to read out, with numtoread, total 3 cycles
+	//takes 2 clk cycles to read out, with numtoread, total 3 cycles
+	indexrom indexram_inst(  
 	.address(indexnumtoread),
 	.clock(clk),
-	.data(16'b0),
+//	.data(16'b0),
 	.rden(1'b1),
-	.wren(1'b0),
+//	.wren(1'b0),
 	.q(desiredindex)
-	);
+	)/* synthesis keep */;
 
 	always @(posedge clk) begin
 		if (startbeamformer===1) begin
