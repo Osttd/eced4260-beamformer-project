@@ -17,7 +17,7 @@ set timing_resolution "1ps"
 set core_version 22.1
 set device_family "Cyclone IV"
 set quartus_rootdir D:/intelFPGA_lite/22.1std/quartus/
-set projectpath "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5"
+set projectpath "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6"
 # Change to "gate_level" for gate-level sim
 set sim_type "rtl"
 # END MEGAWIZARD INSERT VARIABLES
@@ -160,6 +160,6 @@ if {[file exists "wave.do"]} {
 # Start simulation silently
 
 set StdArithNoWarnings 1
-run 25000 ns
+run 150 us
 
 

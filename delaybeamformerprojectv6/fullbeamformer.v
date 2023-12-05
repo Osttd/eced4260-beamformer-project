@@ -2,7 +2,9 @@
 
 module fullbeamformer(
     input clk,
-    output [39:0] summed_value
+    input locked,
+    output [39:0] summed_value,
+    output reg sumflag
 );
 
 
@@ -222,9 +224,11 @@ module fullbeamformer(
         case(control_state)
             loadin: begin
                 //this will be the pll state
-                signalinen<=1;
-                rst<=1;
-				next_control_state=filtering;
+                if (locked===1'b1) begin
+                    signalinen<=1;
+                    rst<=1;
+                    next_control_state=filtering;
+                end
             end
             filtering: begin
                 start<=1;
@@ -242,7 +246,7 @@ module fullbeamformer(
                 if (valid_out!==0) begin
                     readin_address=readin_address+11'd1;
                 end
-                if (filterfinishcounter===5) begin
+                if (filterfinishcounter===9) begin
                     readin_address=11'd0;
                     next_control_state=beamforming;
                 end
@@ -286,6 +290,7 @@ module fullbeamformer(
                 startbeamformer=0;
                 output_read_en=0;
                 sumouten=1;
+                sumflag=1;
                 if (sumcounter===3'd1) begin
                     if (sumout_address===10'd539) begin
                         sumout_address=10'd0;
@@ -303,6 +308,7 @@ module fullbeamformer(
                 end
             end
             done: begin
+                sumflag=0;
                 sumouten=0;
             end
 
