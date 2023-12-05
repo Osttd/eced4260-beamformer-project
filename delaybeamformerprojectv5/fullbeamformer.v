@@ -271,52 +271,6 @@ module fullbeamformer(
         endcase
     end
 
-    // always @(negedge clk) begin
-    //     if (sumouten!==0) begin
-    //         sumout_address<=sumout_address+1;
-    //     end
-    // end
-
-    // always @(negedge clk) begin
-    //     if (valid_out!==0) begin
-    //         readin_address<=readin_address+1;
-    //     end
-    // end
-
-    // always @(negedge usedataflag) begin
-    //     if (startbeamformer===1) begin
-    //         sumout_address=sumout_address+1;
-    //     end
-    // end
-
-	// always @(posedge clk) begin
-        
-	// 	if (startbeamformer===1) begin
-    //             slice_state=next_slice_state;
-	// 			case(slice_state)
-    //                 slice_idle_delay: begin
-    //                     next_slice_state<=slice1;
-    //                     output_read_en<=1;//making this 0 does not do really anything
-    //                     //having the state as a delay works well though
-    //                 end
-    //                 slice1: begin
-    //                     next_slice_state<=slice2;
-    //                     output_read_en<=1;
-    //                     sample_index<=sample_index+1;
-    //                 end
-    //                 slice2: begin
-    //                     next_slice_state<=slice3;
-    //                     sample_index = sample_index+1;
-    //                 end
-    //                 slice3: begin
-    //                     next_slice_state<=slice_idle_delay;
-    //                     sample_index = sample_index+1;
-    //                     readin_address <= readin_address+1;
-    //                 end
-    //             endcase
-	// 	end
-	// end
-
 
     assign summed_value=summed_value_buffer;
 
