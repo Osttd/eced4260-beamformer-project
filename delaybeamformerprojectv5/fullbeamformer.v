@@ -263,8 +263,6 @@ module fullbeamformer(
                 end
 				sumout_address=sumout_address+10'd1;
                 summed_value_buffer=output_value_1+output_value_2+output_value_3+output_value_4+output_value_5+output_value_6+output_value_7+output_value_8;
-
-
             end
             done: begin
                 sumouten=0;

@@ -61,14 +61,17 @@ max_ind_diff=max(ind_dels(1)-ind_dels(4));
 
 max(raw_data_full(1, :))
 min(raw_data_full(1, :))
-raw_data_bits = int2bit(raw_data_full ,16);
-raw = reshape(raw_data_bits,2048,128)
+%raw_data_bits = int2bit(raw_data_full ,16);
+%raw = reshape(raw_data_bits,2048,128)
 
-raw_data_bits1=int2bit(-1*raw_data_full(1, :), 16);
+%raw_data_bits1=int2bit(raw_data_full(1, :), 16);
+signals1=dec2bin(raw_data_full(1, :), 16)
+signals2=dec2bin(raw_data_full(2, :), 16)
+signalsarray={signals2(:, :) signals1(:, :)}
 
 %signals_array={raw_data_bits(1) raw_data_bits(2)};
-A1 = [12 5];
-N1 = 4;
-B1 = int2bit(A1, N1)
+% A1 = [12 5];
+% N1 = 4;
+% B1 = int2bit(A1, N1)
 
 

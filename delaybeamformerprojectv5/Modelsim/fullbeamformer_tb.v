@@ -3,11 +3,14 @@
 module fullbeamformer_tb();
 
 
-    reg
-    reg [2:0] next_control_state=loadin;
+    reg clk;
+
     parameter loadin=0, filtering=1, finishfiltering=2, beamforming=3, summing=4, done=5;
 
-    wire [35:0] summed_value
+    reg [2:0] next_control_state=loadin;
+
+
+    wire [35:0] summed_value;
 
 
     fullbeamformer fullbeamformer_inst(
