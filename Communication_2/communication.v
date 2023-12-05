@@ -11,20 +11,16 @@ module communication (
 	
 	//set up wires and registers
 	wire TX_BUSY; // used to prevent a transmit event during transmit stream
-	wire [31:0] RX_DATA; // store recieved data
 	wire [31:0] TX_DATA;
 	reg TX_START;
-	wire RX_BUSY; // used to prevent a receive event during receive stream
 	reg [31:0] DATA_BUFF = 0;
 	reg [11:0] rd_addr = 0;
 	reg [11:0] wr_addr = 0;
 	reg [11:0] wr_addr_2 = 0;
 	wire rd_en;
 	reg wr_en;
-	reg RX_BUSY_BUFF;
 	reg TX_BUSY_BUFF;
 	//reg [1:0] RX_STATE = 0;
-	reg RX_STATE = 0;
 	reg [3:0] TX_STATE = 0;
 	reg START_EN;
 	wire [31:0] out_w;
@@ -70,43 +66,9 @@ module communication (
 //		.wren(rd_en_2),
 //		.q(LEDR));
 	
-	//RX
-	/*assign rd_en = (!RX_BUSY & START_EN);
-	
-	always @ (posedge CLOCK_50) begin
-		out_r <= out_w;
-		RX_BUSY_BUFF <= RX_BUSY;
-		if (RX_BUSY_BUFF & !RX_BUSY) begin
-			
-			if (!RX_STATE) begin
-				DATA_BUFF[7:0] <= RX_DATA;
-				RX_STATE <= 1;
-			end else if (RX_STATE) begin
-				DATA_BUFF[15:8] <= RX_DATA[7:0];
-				RX_STATE <= 2;
-			end else if (RX_STATE) begin
-				DATA_BUFF[16:23] <= RX_DATA[7:0];
-				RX_STATE <= 3;
-			end else if (RX_STATE) begin
-				DATA_BUFF[24:31] <= RX_DATA[7:0];
-				RX_STATE <= 0;
-				wr_addr <= wr_addr + 1;
-			end
-		end
-		
-		if (!START) begin
-			START_EN <= 1;
-		end else if (!STOP) begin
-			START_EN <= 0;
-			rd_addr <= 0;
-			wr_addr <= 0;
-		end
-		
-	end*/
-	
 	//TX
 	
-	assign rd_en = (!TX_BUSY & START_EN);
+	assign wr_en = (!TX_BUSY & START_EN);
 	
 	always @(posedge CLOCK_50) begin
 		if (KEY[0] == 1'b0 && TX_BUSY == 1'b0) begin // on key press and while a stream isn't happening
