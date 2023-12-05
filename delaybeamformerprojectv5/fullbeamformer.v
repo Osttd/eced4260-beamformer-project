@@ -2,8 +2,7 @@
 
 module fullbeamformer(
     input clk,
-    input [2:0] ext_next_control_state,
-    output [35:0] summed_value
+    output [39:0] summed_value
 );
 
 
@@ -12,33 +11,57 @@ module fullbeamformer(
     reg [10:0] signal_address=0;
     reg [10:0] readin_address=0;
     reg [9:0] sumout_address=0;
+
     reg output_read_en=0;
     reg startbeamformer=0;
     reg signalinen=1;
     reg sumouten=0;
-    reg [15:0] sample_index=-16'd2;//handle delay on the bram reading in
-    reg [35:0] summed_value_buffer;
+    reg [15:0] sample_index=-16'd1;//handle delay on the bram reading in
+    reg signed [39:0] summed_value_buffer; //multiple of 8 so it can be sliced up for the UART nicely
+    reg signed [33:0] summed_value_buffer_1;
+    reg signed [33:0] summed_value_buffer_2;
+    reg signed [33:0] summed_value_buffer_3;
+    reg signed [33:0] summed_value_buffer_4;
 
 
 
-    wire [31:0] output_value_1;
-    wire [31:0] output_value_2;
-    wire [31:0] output_value_3;
-    wire [31:0] output_value_4;
-    wire [31:0] output_value_5;
-    wire [31:0] output_value_6;
-    wire [31:0] output_value_7;
-    wire [31:0] output_value_8;
+    reg [2:0] sumcounter=0;
 
-    wire usedataflag;
+    wire signed [31:0] output_value_1;
+    wire signed [31:0] output_value_2;
+    wire signed [31:0] output_value_3;
+    wire signed [31:0] output_value_4;
+    wire signed [31:0] output_value_5;
+    wire signed [31:0] output_value_6;
+    wire signed [31:0] output_value_7;
+    wire signed [31:0] output_value_8;
+
+    wire beamformdone;
+    wire beamformdone_1;
+    wire beamformdone_2;
+    wire beamformdone_3;
+    wire beamformdone_4;
+    wire beamformdone_5;
+    wire beamformdone_6;
+    wire beamformdone_7;
+    wire beamformdone_8; 
+
     wire valid_out;
+    wire valid_out_1;
+    wire valid_out_2;
+    wire valid_out_3;
+    wire valid_out_4;
+    wire valid_out_5;
+    wire valid_out_6;
+    wire valid_out_7;
+    wire valid_out_8;
 
     wire [127:0] signal_in;
 
 
 
-	 parameter slice_idle_delay=2'd0, slice1=2'd1, slice2=2'd2, slice3=2'd3;
-    parameter loadin=3'd0, filtering=3'd1, finishfiltering=3'd2, beamforming=3'd3, summing=3'd4, done=3'd5;
+	localparam slice_idle_delay=2'd0, slice1=2'd1, slice2=2'd2, slice3=2'd3;
+    localparam loadin=3'd0, filtering=3'd1, finishfiltering=3'd2, beamforming=3'd3, summing=3'd4, done=3'd5;
     reg [2:0] control_state=loadin;
     reg [2:0] next_control_state=loadin;
     reg [1:0] slice_state=slice_idle_delay;
@@ -70,7 +93,8 @@ module fullbeamformer(
     .sample_index(sample_index),
     .slice_state(slice_state),
     .output_value(output_value_1),
-    .usedataflag(usedataflag)
+    .beamformdone(beamformdone_1),
+    .valid_out(valid_out_1)
     )/* synthesis keep */;
 
     brambeamformer channel2(
@@ -86,7 +110,8 @@ module fullbeamformer(
     .sample_index(sample_index),
     .slice_state(slice_state),
     .output_value(output_value_2),
-    .usedataflag(usedataflag)
+    .beamformdone(beamformdone_2),
+    .valid_out(valid_out_2)
     )/* synthesis keep */;
 
     brambeamformer channel3(
@@ -102,7 +127,8 @@ module fullbeamformer(
     .sample_index(sample_index),
     .slice_state(slice_state),
     .output_value(output_value_3),
-    .usedataflag(usedataflag)
+    .beamformdone(beamformdone_3),
+    .valid_out(valid_out_3)
     )/* synthesis keep */;
 
     brambeamformer channel4(
@@ -118,7 +144,8 @@ module fullbeamformer(
     .sample_index(sample_index),
     .slice_state(slice_state),
     .output_value(output_value_4),
-    .usedataflag(usedataflag)
+    .beamformdone(beamformdone_4),
+    .valid_out(valid_out_4)
     )/* synthesis keep */;
 
     brambeamformer channel5(
@@ -134,7 +161,8 @@ module fullbeamformer(
     .sample_index(sample_index),
     .slice_state(slice_state),
     .output_value(output_value_5),
-    .usedataflag(usedataflag)
+    .beamformdone(beamformdone_5),
+    .valid_out(valid_out_5)
     )/* synthesis keep */;
 
 
@@ -151,7 +179,8 @@ module fullbeamformer(
     .sample_index(sample_index),
     .slice_state(slice_state),
     .output_value(output_value_6),
-    .usedataflag(usedataflag)
+    .beamformdone(beamformdone_6),
+    .valid_out(valid_out_6)
     )/* synthesis keep */;
 
     brambeamformer channel7(
@@ -167,7 +196,8 @@ module fullbeamformer(
     .sample_index(sample_index),
     .slice_state(slice_state),
     .output_value(output_value_7),
-    .usedataflag(usedataflag)
+    .beamformdone(beamformdone_7),
+    .valid_out(valid_out_7)
     )/* synthesis keep */;
 
     brambeamformer channel8(
@@ -183,7 +213,8 @@ module fullbeamformer(
     .sample_index(sample_index),
     .slice_state(slice_state),
     .output_value(output_value_8),
-    .usedataflag(usedataflag)
+    .beamformdone(beamformdone_8),
+    .valid_out(valid_out_8)
     )/* synthesis keep */;
 
     always @(posedge clk) begin
@@ -193,7 +224,7 @@ module fullbeamformer(
                 //this will be the pll state
                 signalinen<=1;
                 rst<=1;
-					 next_control_state=filtering;
+				next_control_state=filtering;
             end
             filtering: begin
                 start<=1;
@@ -218,18 +249,16 @@ module fullbeamformer(
                 filterfinishcounter=filterfinishcounter+4'd1;
             end
 
-
-
             beamforming: begin
                 rst<=0;
                 start<=0;
                 output_read_en<=1;
-                startbeamformer <= 1;
-                if (sumout_address===10'd539) begin
+                if (beamformdone===1'b1) begin
                     sumout_address=10'd0;
                     next_control_state=summing;
                 end
-                sumout_address=sumout_address+10'd1;
+                startbeamformer <= 1;
+
                 slice_state=next_slice_state;
 				case(slice_state)
                     slice_idle_delay: begin
@@ -257,12 +286,21 @@ module fullbeamformer(
                 startbeamformer=0;
                 output_read_en=0;
                 sumouten=1;
-                if (sumout_address===10'd539) begin
-                    sumout_address=10'd0;
-                    next_control_state=done;
+                if (sumcounter===3'd1) begin
+                    if (sumout_address===10'd539) begin
+                        sumout_address=10'd0;
+                        next_control_state=done;
+                    end
+                    summed_value_buffer_1=output_value_1+output_value_2;
+                    summed_value_buffer_2=output_value_3+output_value_4;
+                    summed_value_buffer_3=output_value_5+output_value_6;
+                    summed_value_buffer_4=output_value_7+output_value_8;
+                    sumout_address=sumout_address+10'd1;
+                    sumcounter=3'd0;
+                end else begin
+                    sumcounter=sumcounter+3'd1;
+                    summed_value_buffer=summed_value_buffer_1+summed_value_buffer_2+summed_value_buffer_3+summed_value_buffer_4;
                 end
-				sumout_address=sumout_address+10'd1;
-                summed_value_buffer=output_value_1+output_value_2+output_value_3+output_value_4+output_value_5+output_value_6+output_value_7+output_value_8;
             end
             done: begin
                 sumouten=0;
@@ -272,8 +310,10 @@ module fullbeamformer(
     end
 
 
-    assign summed_value=summed_value_buffer;
 
+    assign summed_value=summed_value_buffer;
+	assign valid_out=valid_out_1&&valid_out_2&&valid_out_3&&valid_out_4&&valid_out_5&&valid_out_6&&valid_out_7&&valid_out_8;
+    assign beamformdone=beamformdone_1&&beamformdone_2&&beamformdone_3&&beamformdone_4&&beamformdone_5&&beamformdone_6&&beamformdone_7&&beamformdone_8;
 
 	 
     defparam channel1.delaybeamformer_inst.indexram_inst.altsyncram_component.init_file = "indexes_1.mif";

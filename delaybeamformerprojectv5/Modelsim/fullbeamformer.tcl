@@ -160,6 +160,6 @@ if {[file exists "wave.do"]} {
 # Start simulation silently
 
 set StdArithNoWarnings 1
-run 21000 ns
+run 25000 ns
 
 

@@ -11,14 +11,16 @@ module brambeamformer(
 	input sumouten,
 	input [15:0] sample_index,
 	input [1:0] slice_state,
-	output [31:0] output_value,
-	output usedataflag
+	output signed [31:0] output_value,
+	output reg beamformdone,
+	output valid_out
 );
 
-	parameter slice_idle_delay=0, slice1=1, slice2=2, slice3=3;
+	localparam slice_idle_delay=0, slice1=1, slice2=2, slice3=3;
 
 	wire [15:0] inbramout_signal_raw;
-	reg [31:0] inbramout_signal_buffer;
+	reg [31:0] inbramout_signal_buffer=0;
+	reg [31:0] sumout_address_usedata=0;
 	//reg [15:0] sample_index=-1;//handle delay on the bram reading in
 	wire [31:0] beamformerout_signal;
 
@@ -31,9 +33,8 @@ module brambeamformer(
 	wire [95:0] buffer_out;
 	
 	wire filter_bram_output_write_en;
-	wire valid_out;
-
-
+	wire usedataflag;
+    reg [9:0] sumout_address_buffer=0;
 
 	BP_Filt filt (
 		.clk(clk), .reset_n(rst), .ast_sink_data(data_in),
@@ -60,7 +61,7 @@ module brambeamformer(
 	);
 
 	signalram_nomem out_signalram(
-		.address(sumout_address),
+		.address(sumout_address_buffer),
 		.clock(clk),
 		.data(beamformerout_signal),
 		.rden(sumouten),
@@ -71,6 +72,7 @@ module brambeamformer(
 	//check the delays on this
 	always @(negedge clk) begin
 		if (startbeamformer===1) begin
+			sumout_address_buffer=sumout_address_usedata;
 				case(slice_state)
                     slice_idle_delay: begin
                         //inbramout_signal_buffer<=1;
@@ -85,9 +87,20 @@ module brambeamformer(
 						inbramout_signal_buffer<=filter_ram_out[95:64];
                     end
 				endcase
+		end else begin
+			sumout_address_buffer=sumout_address;
+		end
+		if (sumout_address_buffer===539) begin
+			beamformdone=1;
 		end
 	end
 	
+    always @(negedge usedataflag) begin
+        if (startbeamformer===1) begin
+            sumout_address_usedata=sumout_address_buffer+1;
+        end
+    end
+
     assign filter_bram_output_write_en=valid_out;
 
 endmodule
