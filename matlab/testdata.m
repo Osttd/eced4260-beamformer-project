@@ -57,17 +57,46 @@ xlabel("t (milliseconds)")
 ylabel("X(t)")
 
 
-max_ind_diff=max(ind_dels(1)-ind_dels(4));
+n = 8;
+data = zeros(n,length(ind_dels(1, :)));
 
-max(raw_data_full(1, :))
-min(raw_data_full(1, :))
+for n = [1:8]
+    up_sample_data(n, :) = upsample(raw_data_full(n, :), f_up/f_adc);
+    up_filter_data(n, :) = filter(b, 1, up_sample_data(n, :));
+
+    i = 1
+
+    for index = ind_dels(n, :)
+        data_out(n,i) = up_filter_data(n, index);
+        i = i+1;
+    end
+end
+
+data_out_average = mean(data_out);
+data_out_normal = normalize(data_out_average, "norm", 1);
+finalized_image = transpose(mag2db(data_out_normal));
+
+figure(4)
+imagesc(finalized_image)
+caxis([-60, 0])
+colormap('gray')
+colorbar();
+
+
+
+
+
+%max_ind_diff=max(ind_dels(1)-ind_dels(4));
+
+%max(raw_data_full(1, :))
+%min(raw_data_full(1, :))
 %raw_data_bits = int2bit(raw_data_full ,16);
 %raw = reshape(raw_data_bits,2048,128)
 
 %raw_data_bits1=int2bit(raw_data_full(1, :), 16);
-signals1=dec2bin(raw_data_full(1, :), 16)
-signals2=dec2bin(raw_data_full(2, :), 16)
-signalsarray={signals2(:, :) signals1(:, :)}
+%signals1=dec2bin(raw_data_full(1, :), 16)
+%signals2=dec2bin(raw_data_full(2, :), 16)
+%signalsarray={signals2(:, :) signals1(:, :)}
 
 %signals_array={raw_data_bits(1) raw_data_bits(2)};
 % A1 = [12 5];

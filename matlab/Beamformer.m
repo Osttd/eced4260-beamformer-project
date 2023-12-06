@@ -22,5 +22,8 @@ finalized_image = transpose(mag2db(data_out_normal));
 
 figure(1)
 imagesc(finalized_image)
+caxis([-60, 0])
+colormap('gray')
+colorbar();
 
 
