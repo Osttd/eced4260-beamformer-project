@@ -48,7 +48,7 @@ module fullbeamformer(
     wire beamformdone_7;
     wire beamformdone_8; 
 
-    wire valid_out;
+    reg valid_out=0;
     wire valid_out_1;
     wire valid_out_2;
     wire valid_out_3;
@@ -96,7 +96,7 @@ module fullbeamformer(
     .slice_state(slice_state),
     .output_value(output_value_1),
     .beamformdone(beamformdone_1),
-    .valid_out(valid_out_1)
+    .valid_out(valid_out)
     )/* synthesis keep */;
 
     brambeamformer channel2(
@@ -113,7 +113,7 @@ module fullbeamformer(
     .slice_state(slice_state),
     .output_value(output_value_2),
     .beamformdone(beamformdone_2),
-    .valid_out(valid_out_2)
+    .valid_out(valid_out)
     )/* synthesis keep */;
 
     brambeamformer channel3(
@@ -130,7 +130,7 @@ module fullbeamformer(
     .slice_state(slice_state),
     .output_value(output_value_3),
     .beamformdone(beamformdone_3),
-    .valid_out(valid_out_3)
+    .valid_out(valid_out)
     )/* synthesis keep */;
 
     brambeamformer channel4(
@@ -147,7 +147,7 @@ module fullbeamformer(
     .slice_state(slice_state),
     .output_value(output_value_4),
     .beamformdone(beamformdone_4),
-    .valid_out(valid_out_4)
+    .valid_out(valid_out)
     )/* synthesis keep */;
 
     brambeamformer channel5(
@@ -164,7 +164,7 @@ module fullbeamformer(
     .slice_state(slice_state),
     .output_value(output_value_5),
     .beamformdone(beamformdone_5),
-    .valid_out(valid_out_5)
+    .valid_out(valid_out)
     )/* synthesis keep */;
 
 
@@ -182,7 +182,7 @@ module fullbeamformer(
     .slice_state(slice_state),
     .output_value(output_value_6),
     .beamformdone(beamformdone_6),
-    .valid_out(valid_out_6)
+    .valid_out(valid_out)
     )/* synthesis keep */;
 
     brambeamformer channel7(
@@ -199,7 +199,7 @@ module fullbeamformer(
     .slice_state(slice_state),
     .output_value(output_value_7),
     .beamformdone(beamformdone_7),
-    .valid_out(valid_out_7)
+    .valid_out(valid_out)
     )/* synthesis keep */;
 
     brambeamformer channel8(
@@ -216,7 +216,7 @@ module fullbeamformer(
     .slice_state(slice_state),
     .output_value(output_value_8),
     .beamformdone(beamformdone_8),
-    .valid_out(valid_out_8)
+    .valid_out(valid_out)
     )/* synthesis keep */;
 
     always @(posedge clk) begin
@@ -232,22 +232,29 @@ module fullbeamformer(
             end
             filtering: begin
                 start<=1;
+                if (filterfinishcounter===8) begin
+                    valid_out=1'd1;
+                end else begin
+                    filterfinishcounter=filterfinishcounter+4'd1;                    
+                end
 
                 signal_address=signal_address+11'd1;
                 if (signal_address===11'd2047) begin
+                    filterfinishcounter=4'd0;
                     next_control_state=finishfiltering;
                 end
-                if (valid_out!==0) begin
+                if (valid_out!==1'd0) begin
                     readin_address=readin_address+11'd1;
                 end
             end
             finishfiltering: begin
-                //this state may be unnesscary if the last few samples are not useful
+                //this state may be unnecessary if the last few samples are not useful
                 if (valid_out!==0) begin
                     readin_address=readin_address+11'd1;
                 end
-                if (filterfinishcounter===9) begin
+                if (filterfinishcounter===8) begin
                     readin_address=11'd0;
+                    valid_out=4'd0;
                     next_control_state=beamforming;
                 end
                 filterfinishcounter=filterfinishcounter+4'd1;
@@ -318,7 +325,7 @@ module fullbeamformer(
 
 
     assign summed_value=summed_value_buffer;
-	assign valid_out=valid_out_1&&valid_out_2&&valid_out_3&&valid_out_4&&valid_out_5&&valid_out_6&&valid_out_7&&valid_out_8;
+	//assign valid_out=valid_out_1&&valid_out_2&&valid_out_3&&valid_out_4&&valid_out_5&&valid_out_6&&valid_out_7&&valid_out_8;
     assign beamformdone=beamformdone_1&&beamformdone_2&&beamformdone_3&&beamformdone_4&&beamformdone_5&&beamformdone_6&&beamformdone_7&&beamformdone_8;
 
 	 

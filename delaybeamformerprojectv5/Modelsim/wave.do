@@ -2,8 +2,11 @@ onerror {resume}
 quietly WaveActivateNextPane {} 0
 add wave -noupdate -divider tb
 add wave -noupdate -label clk /fullbeamformer_tb/clk
-add wave -noupdate -label next_control_state -radix unsigned /fullbeamformer_tb/next_control_state
-add wave -noupdate -format Analog-Step -height 74 -label summed_value -max 177439166.00000003 -min -165703252.0 -radix decimal /fullbeamformer_tb/summed_value
+add wave -noupdate -format Analog-Step -height 74 -label summed_value -max 177439000.0 -min -165703000.0 -radix decimal /fullbeamformer_tb/summed_value
+add wave -noupdate -label uart_start /fullbeamformer_tb/uart_start
+add wave -noupdate -label uart_flag /fullbeamformer_tb/uart_flag
+add wave -noupdate -label uartramaddress /fullbeamformer_tb/uartramaddress
+add wave -noupdate -label tx /fullbeamformer_tb/tx
 add wave -noupdate -divider beamformer
 add wave -noupdate -label control_state -radix unsigned /fullbeamformer_tb/fullbeamformer_inst/control_state
 add wave -noupdate -label signal_address -radix unsigned /fullbeamformer_tb/fullbeamformer_inst/signal_address
@@ -26,7 +29,7 @@ add wave -noupdate -label usedataflag /fullbeamformer_tb/fullbeamformer_inst/cha
 add wave -noupdate -label beamformerout_signal -radix decimal /fullbeamformer_tb/fullbeamformer_inst/channel1/beamformerout_signal
 add wave -noupdate -label sumout_address_buffer -radix unsigned /fullbeamformer_tb/fullbeamformer_inst/channel1/sumout_address_buffer
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {54383 ps} 0}
+WaveRestoreCursors {{Cursor 1} {107157708 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 155
 configure wave -valuecolwidth 123
@@ -42,4 +45,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ps} {186112 ps}
+WaveRestoreZoom {105420918 ps} {117144249 ps}

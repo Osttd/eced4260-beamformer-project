@@ -13,7 +13,7 @@ module brambeamformer(
 	input [1:0] slice_state,
 	output signed [31:0] output_value,
 	output reg beamformdone,
-	output valid_out
+	input valid_out
 );
 
 	localparam slice_idle_delay=0, slice1=1, slice2=2, slice3=3;
@@ -23,7 +23,7 @@ module brambeamformer(
 	reg [31:0] sumout_address_usedata=0;
 	//reg [15:0] sample_index=-1;//handle delay on the bram reading in
 	wire [31:0] beamformerout_signal;
-
+	wire valid_out_old;
 	reg [31:0] data_out;
 	wire [95:0] filter_ram_out;
 	
@@ -39,7 +39,7 @@ module brambeamformer(
 	BP_Filt filt (
 		.clk(clk), .reset_n(rst), .ast_sink_data(data_in),
 		.ast_sink_valid(start), .ast_sink_error(err_in),
-		.ast_source_data(buffer_out), .ast_source_valid(valid_out),
+		.ast_source_data(buffer_out), .ast_source_valid(valid_out_old),
 		.ast_source_error(err_out)
 	);
 	

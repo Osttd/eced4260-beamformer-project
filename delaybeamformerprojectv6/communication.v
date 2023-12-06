@@ -4,7 +4,7 @@ module communication (
 	input STOP,
 	input [7:0] SW, //set transmit data
 	output UART_TXD, // transmit bit
-	output reg wr_en
+	output reg TX_BUSY_REG
 );
 	
 	//set up wires and registers
@@ -29,7 +29,7 @@ module communication (
 	// map components that handle transmit and receive
 	TX C1 (
 		.CLK(CLOCK),
-		.START(TX_START),
+		.START(START),
 		.BUSY(TX_BUSY),
 		.DATA(SW[7:0]),
 		.TX_LINE(UART_TXD));
@@ -68,6 +68,7 @@ module communication (
 	assign wr_en = (!TX_BUSY & START_EN);
 	
 	always @(posedge CLOCK) begin
+		TX_BUSY_REG<=TX_BUSY;
 		if (TX_BUSY == 1'b0) begin // on key press and while a stream isn't happening
 			
 			TX_START <= 1'b1; //start

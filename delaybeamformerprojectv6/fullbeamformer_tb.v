@@ -1,30 +1,28 @@
 `timescale 1ns / 1ps
 
 module fullbeamformer_tb(
-    //for Simulation, uncomment
 	input CLOCK_50,
-	output tx
+	output tx,
+	output ledstatus
 );
 
     //for Simulation, comment
-//    wire clk;
+   wire clk;
 
 
     //for Simulation, uncomment
-    reg clk;
-	initial begin
-		clk <= 0;
-		forever #5 clk <= !clk;
-	end
+    // reg clk;
+	// initial begin
+	// 	clk <= 0;
+	// 	forever #5 clk <= !clk;
+	// end
 
-
-
-
-
-    reg sumout=0;
-
+	 wire sumflag;
+	 
+	 
     //for Simulation, include =1;
-    wire locked=1;
+    // wire locked=1;
+    wire locked;
 
 
 
@@ -45,17 +43,17 @@ module fullbeamformer_tb(
     reg [2:0] next_mode=processing;
 
 
-    reg uartcounter=3'd0;
+    reg [2:0] uartcounter=3'd0;
 
     wire [39:0] summed_value;
 
     //for Simulation, comment
-    // mainpll mainpll_inst(
-    //     .areset(1'b0),
-    //     .inclk0(CLOCK_50),
-    //     .c0(clk),
-    //     .locked(locked)
-    // );
+    mainpll mainpll_inst(
+        .areset(1'b0),
+        .inclk0(CLOCK_50),
+        .c0(clk),
+        .locked(locked)
+    );
 
 
     fullbeamformer fullbeamformer_inst(
@@ -80,7 +78,7 @@ module fullbeamformer_tb(
         .STOP(uart_stop),
         .SW(uart_msg),
         .UART_TXD(tx),
-        .wr_en(uart_flag)
+        .TX_BUSY_REG(uart_flag)
     );
 
 
@@ -97,7 +95,7 @@ module fullbeamformer_tb(
             storing: begin
                 uartramaddress=uartramaddress_buffer_1;
                 uartramaddress_buffer_1=uartramaddress_buffer_1+1;
-                if (sumflag===0'b1) begin
+                if (sumflag===1'b0) begin
                     next_mode=readingout;
                     uartram_wren=0;
                     uartram_rden=1;
@@ -107,6 +105,9 @@ module fullbeamformer_tb(
             end
             readingout: begin
                 uartramaddress=uartramaddress_buffer_2;
+                if (uartramaddress===539) begin
+                    next_mode=done;
+                end
                 case(uartcounter)
                     3'd0: begin
                         uart_msg=uartram_q[7:0];
@@ -136,7 +137,7 @@ module fullbeamformer_tb(
     end
 
 
-    always @(posedge uart_flag) begin
+    always @(negedge uart_flag) begin
         uartcounter=uartcounter+1;
         if (uartcounter===3'd5) begin
             uartcounter=0;

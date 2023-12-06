@@ -1,5 +1,5 @@
 Flow report for delaybeamformer
-Tue Dec  5 16:08:20 2023
+Tue Dec  5 23:55:11 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -41,22 +41,22 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Tue Dec  5 16:08:20 2023          ;
+; Flow Status                        ; Successful - Tue Dec  5 23:55:11 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; delaybeamformer                                ;
-; Top-level Entity Name              ; fullbeamformer                                 ;
+; Top-level Entity Name              ; fullbeamformer_tb                              ;
 ; Family                             ; Cyclone IV E                                   ;
 ; Device                             ; EP4CE115F29C7                                  ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 31,557 / 114,480 ( 28 % )                      ;
-;     Total combinational functions  ; 22,987 / 114,480 ( 20 % )                      ;
-;     Dedicated logic registers      ; 31,201 / 114,480 ( 27 % )                      ;
-; Total registers                    ; 31201                                          ;
-; Total pins                         ; 41 / 529 ( 8 % )                               ;
+; Total logic elements               ; 31,909 / 114,480 ( 28 % )                      ;
+;     Total combinational functions  ; 23,309 / 114,480 ( 20 % )                      ;
+;     Dedicated logic registers      ; 31,406 / 114,480 ( 27 % )                      ;
+; Total registers                    ; 31406                                          ;
+; Total pins                         ; 3 / 529 ( < 1 % )                              ;
 ; Total virtual pins                 ; 0                                              ;
-; Total memory bits                  ; 2,228,224 / 3,981,312 ( 56 % )                 ;
+; Total memory bits                  ; 2,301,952 / 3,981,312 ( 58 % )                 ;
 ; Embedded Multiplier 9-bit elements ; 304 / 532 ( 57 % )                             ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                  ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                                 ;
 +------------------------------------+------------------------------------------------+
 
 
@@ -65,37 +65,38 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/05/2023 16:04:35 ;
+; Start date & time ; 12/05/2023 23:51:59 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; delaybeamformer     ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                    ;
-+-------------------------------------+----------------------------------------+-----------------+----------------+-----------------------------------+
-; Assignment Name                     ; Value                                  ; Default Value   ; Entity Name    ; Section Id                        ;
-+-------------------------------------+----------------------------------------+-----------------+----------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 5311883338953.170180667537632          ; --              ; --             ; --                                ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --              ; --             ; eda_board_design_timing           ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --              ; --             ; eda_board_design_boundary_scan    ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --              ; --             ; eda_board_design_signal_integrity ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --              ; --             ; eda_board_design_symbol           ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --              ; --             ; eda_simulation                    ;
-; EDA_SIMULATION_TOOL                 ; ModelSim (Verilog)                     ; <None>          ; --             ; --                                ;
-; EDA_TIME_SCALE                      ; 1 ps                                   ; --              ; --             ; eda_simulation                    ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --              ; --             ; --                                ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --              ; --             ; --                                ;
-; MISC_FILE                           ; BP_Filt.cmp                            ; --              ; --             ; --                                ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --              ; fullbeamformer ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --              ; fullbeamformer ; Top                               ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --              ; fullbeamformer ; Top                               ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --              ; --             ; --                                ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --              ; --             ; --                                ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --              ; --             ; --                                ;
-; SYNTHESIS_ONLY_QIP                  ; On                                     ; --              ; --             ; --                                ;
-; TOP_LEVEL_ENTITY                    ; fullbeamformer                         ; delaybeamformer ; --             ; --                                ;
-+-------------------------------------+----------------------------------------+-----------------+----------------+-----------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                       ;
++-------------------------------------+----------------------------------------+-----------------+-------------------+-----------------------------------+
+; Assignment Name                     ; Value                                  ; Default Value   ; Entity Name       ; Section Id                        ;
++-------------------------------------+----------------------------------------+-----------------+-------------------+-----------------------------------+
+; COMPILER_SIGNATURE_ID               ; 5311883338953.170183471949932          ; --              ; --                ; --                                ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --              ; --                ; eda_board_design_timing           ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --              ; --                ; eda_board_design_boundary_scan    ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --              ; --                ; eda_board_design_signal_integrity ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --              ; --                ; eda_board_design_symbol           ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --              ; --                ; eda_simulation                    ;
+; EDA_SIMULATION_TOOL                 ; ModelSim (Verilog)                     ; <None>          ; --                ; --                                ;
+; EDA_TIME_SCALE                      ; 1 ps                                   ; --              ; --                ; eda_simulation                    ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --              ; --                ; --                                ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --              ; --                ; --                                ;
+; MISC_FILE                           ; BP_Filt.cmp                            ; --              ; --                ; --                                ;
+; MISC_FILE                           ; mainpll.ppf                            ; --              ; --                ; --                                ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --              ; fullbeamformer_tb ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --              ; fullbeamformer_tb ; Top                               ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --              ; fullbeamformer_tb ; Top                               ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --              ; --                ; --                                ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --              ; --                ; --                                ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --              ; --                ; --                                ;
+; SYNTHESIS_ONLY_QIP                  ; On                                     ; --              ; --                ; --                                ;
+; TOP_LEVEL_ENTITY                    ; fullbeamformer_tb                      ; delaybeamformer ; --                ; --                                ;
++-------------------------------------+----------------------------------------+-----------------+-------------------+-----------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -103,12 +104,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:38     ; 1.0                     ; 5215 MB             ; 00:00:48                           ;
-; Fitter               ; 00:02:25     ; 1.2                     ; 6411 MB             ; 00:05:00                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4868 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:14     ; 1.6                     ; 5294 MB             ; 00:00:19                           ;
-; EDA Netlist Writer   ; 00:00:08     ; 1.0                     ; 4844 MB             ; 00:00:07                           ;
-; Total                ; 00:03:29     ; --                      ; --                  ; 00:06:18                           ;
+; Analysis & Synthesis ; 00:00:57     ; 1.0                     ; 5235 MB             ; 00:01:16                           ;
+; Fitter               ; 00:01:33     ; 1.1                     ; 6404 MB             ; 00:02:40                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4876 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:10     ; 1.4                     ; 5257 MB             ; 00:00:12                           ;
+; EDA Netlist Writer   ; 00:00:09     ; 1.0                     ; 4864 MB             ; 00:00:08                           ;
+; Total                ; 00:02:54     ; --                      ; --                  ; 00:04:21                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
