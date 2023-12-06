@@ -38,7 +38,7 @@ add wave -noupdate -label PRSCL -radix unsigned -childformat {{{/fullbeamformer_
 add wave -noupdate -label INDEX -radix unsigned /fullbeamformer_tb/uart/C1/INDEX
 add wave -noupdate -label DATAFLL /fullbeamformer_tb/uart/C1/DATAFLL
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {572778247 ps} 0}
+WaveRestoreCursors {{Cursor 1} {482242268 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 155
 configure wave -valuecolwidth 60
@@ -54,4 +54,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ps} {1298073 ns}
+WaveRestoreZoom {0 ps} {1417500 ns}

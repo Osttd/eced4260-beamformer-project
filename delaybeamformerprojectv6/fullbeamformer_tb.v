@@ -7,22 +7,22 @@ module fullbeamformer_tb(
 );
 
     //for Simulation, comment
-   wire clk;
+//    wire clk;
 
 
     //for Simulation, uncomment
-    // reg clk;
-	// initial begin
-	// 	clk <= 0;
-	// 	forever #5 clk <= !clk;
-	// end
+    reg clk;
+	initial begin
+		clk <= 0;
+		forever #5 clk <= !clk;
+	end
 
 	 wire sumflag;
 	 
 	 
     //for Simulation, include =1;
-    // wire locked=1;
-    wire locked;
+    wire locked=1;
+    // wire locked;
 
 
 
@@ -48,12 +48,12 @@ module fullbeamformer_tb(
     wire [39:0] summed_value;
 
     //for Simulation, comment
-    mainpll mainpll_inst(
-        .areset(1'b0),
-        .inclk0(CLOCK_50),
-        .c0(clk),
-        .locked(locked)
-    );
+    // mainpll mainpll_inst(
+    //     .areset(1'b0),
+    //     .inclk0(CLOCK_50),
+    //     .c0(clk),
+    //     .locked(locked)
+    // );
 
 
     fullbeamformer fullbeamformer_inst(
