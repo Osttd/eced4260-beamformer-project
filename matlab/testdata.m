@@ -82,9 +82,17 @@ caxis([-60, 0])
 colormap('gray')
 colorbar();
 
+datafromsim=csvread("uartramemory.csv")
 
+simdata_out_average = abs(datafromsim(1:768))/8;
+simdata_out_normal = normalize(simdata_out_average, "norm", 1);
+simfinalized_image = mag2db(simdata_out_normal);
 
-
+figure(5)
+imagesc(simfinalized_image)
+caxis([-60, 0])
+colormap('gray')
+colorbar();
 
 %max_ind_diff=max(ind_dels(1)-ind_dels(4));
 

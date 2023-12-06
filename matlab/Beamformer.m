@@ -26,4 +26,4 @@ caxis([-60, 0])
 colormap('gray')
 colorbar();
 
-
+datafromsim=csvread("uartramemory.csv")
