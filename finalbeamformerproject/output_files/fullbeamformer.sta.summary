@@ -1,0 +1,401 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'mainpll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -5.738
+TNS   : -537.748
+
+Type  : Slow 1200mV 85C Model Setup 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -3.591
+TNS   : -32.815
+
+Type  : Slow 1200mV 85C Model Setup 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -3.516
+TNS   : -32.665
+
+Type  : Slow 1200mV 85C Model Setup 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -3.427
+TNS   : -32.378
+
+Type  : Slow 1200mV 85C Model Setup 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -3.417
+TNS   : -31.433
+
+Type  : Slow 1200mV 85C Model Setup 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -3.342
+TNS   : -31.120
+
+Type  : Slow 1200mV 85C Model Setup 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -3.038
+TNS   : -27.796
+
+Type  : Slow 1200mV 85C Model Setup 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -3.028
+TNS   : -28.246
+
+Type  : Slow 1200mV 85C Model Setup 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -2.937
+TNS   : -27.592
+
+Type  : Slow 1200mV 85C Model Setup 'communication:uart|TX_BUSY_REG'
+Slack : -1.467
+TNS   : -15.234
+
+Type  : Slow 1200mV 85C Model Hold 'mainpll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.138
+TNS   : -0.958
+
+Type  : Slow 1200mV 85C Model Hold 'communication:uart|TX_BUSY_REG'
+Slack : 0.406
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : 1.266
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : 1.420
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : 1.573
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : 1.600
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : 1.701
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : 1.733
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : 1.755
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : 2.054
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'mainpll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 5.369
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'mainpll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 3.578
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'communication:uart|TX_BUSY_REG'
+Slack : -1.285
+TNS   : -16.705
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'mainpll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 4.611
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.819
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'mainpll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -5.001
+TNS   : -460.889
+
+Type  : Slow 1200mV 0C Model Setup 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -3.476
+TNS   : -31.672
+
+Type  : Slow 1200mV 0C Model Setup 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -3.350
+TNS   : -31.342
+
+Type  : Slow 1200mV 0C Model Setup 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -3.291
+TNS   : -30.262
+
+Type  : Slow 1200mV 0C Model Setup 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -3.286
+TNS   : -31.163
+
+Type  : Slow 1200mV 0C Model Setup 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -3.253
+TNS   : -30.013
+
+Type  : Slow 1200mV 0C Model Setup 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -3.020
+TNS   : -26.919
+
+Type  : Slow 1200mV 0C Model Setup 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -2.930
+TNS   : -27.571
+
+Type  : Slow 1200mV 0C Model Setup 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -2.863
+TNS   : -26.928
+
+Type  : Slow 1200mV 0C Model Setup 'communication:uart|TX_BUSY_REG'
+Slack : -1.233
+TNS   : -12.523
+
+Type  : Slow 1200mV 0C Model Hold 'mainpll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.238
+TNS   : -1.763
+
+Type  : Slow 1200mV 0C Model Hold 'communication:uart|TX_BUSY_REG'
+Slack : 0.357
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : 1.398
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : 1.547
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : 1.570
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : 1.708
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : 1.777
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : 1.821
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : 1.842
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : 2.117
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'mainpll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 5.807
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'mainpll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 3.185
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'communication:uart|TX_BUSY_REG'
+Slack : -1.285
+TNS   : -16.705
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'mainpll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 4.631
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.799
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'mainpll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -2.988
+TNS   : -273.564
+
+Type  : Fast 1200mV 0C Model Setup 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.566
+TNS   : -14.778
+
+Type  : Fast 1200mV 0C Model Setup 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.560
+TNS   : -13.921
+
+Type  : Fast 1200mV 0C Model Setup 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.553
+TNS   : -14.143
+
+Type  : Fast 1200mV 0C Model Setup 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.539
+TNS   : -14.394
+
+Type  : Fast 1200mV 0C Model Setup 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.490
+TNS   : -13.588
+
+Type  : Fast 1200mV 0C Model Setup 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.332
+TNS   : -12.020
+
+Type  : Fast 1200mV 0C Model Setup 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.320
+TNS   : -11.670
+
+Type  : Fast 1200mV 0C Model Setup 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.242
+TNS   : -11.588
+
+Type  : Fast 1200mV 0C Model Setup 'communication:uart|TX_BUSY_REG'
+Slack : -0.229
+TNS   : -2.061
+
+Type  : Fast 1200mV 0C Model Hold 'mainpll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.020
+TNS   : -0.063
+
+Type  : Fast 1200mV 0C Model Hold 'communication:uart|TX_BUSY_REG'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : 0.590
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : 0.612
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : 0.697
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : 0.789
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : 0.804
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : 0.835
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : 0.884
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : 0.886
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'mainpll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 7.553
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'mainpll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 1.827
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'communication:uart|TX_BUSY_REG'
+Slack : -1.000
+TNS   : -13.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'mainpll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 4.749
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.400
+TNS   : 0.000
+
+------------------------------------------------------------
