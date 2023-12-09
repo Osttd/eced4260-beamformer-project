@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Dec  6 13:40:45 2023
+Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Revision Name : delaybeamformer
+Top-level Entity Name : fullbeamformer_tb
+Family : Cyclone IV E
+Device : EP4CE115F29C7
+Timing Models : Final
+Total logic elements : 31,927 / 114,480 ( 28 % )
+    Total combinational functions : 23,315 / 114,480 ( 20 % )
+    Dedicated logic registers : 31,409 / 114,480 ( 27 % )
+Total registers : 31409
+Total pins : 3 / 529 ( < 1 % )
+Total virtual pins : 0
+Total memory bits : 2,301,952 / 3,981,312 ( 58 % )
+Embedded Multiplier 9-bit elements : 304 / 532 ( 57 % )
+Total PLLs : 1 / 4 ( 25 % )

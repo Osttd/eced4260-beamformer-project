@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Dec  6 13:39:02 2023
+Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Revision Name : delaybeamformer
+Top-level Entity Name : fullbeamformer_tb
+Family : Cyclone IV E
+Total logic elements : 31,909
+    Total combinational functions : 23,313
+    Dedicated logic registers : 31,409
+Total registers : 31409
+Total pins : 3
+Total virtual pins : 0
+Total memory bits : 2,301,952
+Embedded Multiplier 9-bit elements : 304
+Total PLLs : 1

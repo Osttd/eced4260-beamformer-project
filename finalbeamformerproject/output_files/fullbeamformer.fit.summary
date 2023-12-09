@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri Dec  8 14:33:52 2023
+Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Revision Name : fullbeamformer
+Top-level Entity Name : fullbeamformer_ext
+Family : Cyclone IV E
+Device : EP4CE115F29C7
+Timing Models : Final
+Total logic elements : 31,462 / 114,480 ( 27 % )
+    Total combinational functions : 22,903 / 114,480 ( 20 % )
+    Dedicated logic registers : 31,203 / 114,480 ( 27 % )
+Total registers : 31203
+Total pins : 2 / 529 ( < 1 % )
+Total virtual pins : 0
+Total memory bits : 2,269,184 / 3,981,312 ( 57 % )
+Embedded Multiplier 9-bit elements : 304 / 532 ( 57 % )
+Total PLLs : 1 / 4 ( 25 % )
