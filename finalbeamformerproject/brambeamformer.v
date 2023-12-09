@@ -1,3 +1,4 @@
+// brambeamformer.v
 // Written by Owen Stuttard B00830020 and Abraham El-Jakl B00805351
 module brambeamformer(
 	input clk,

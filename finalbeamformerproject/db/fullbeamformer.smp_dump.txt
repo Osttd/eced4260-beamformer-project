@@ -1,19 +1,19 @@
 
-State Machine - |fullbeamformer_tb|next_mode
+State Machine - |fullbeamformer_ext|next_mode
 Name next_mode.done next_mode.readingout next_mode.storing next_mode.processing 
 next_mode.processing 0 0 0 0 
 next_mode.storing 0 0 1 1 
 next_mode.readingout 0 1 0 1 
 next_mode.done 1 0 0 1 
 
-State Machine - |fullbeamformer_tb|mode
+State Machine - |fullbeamformer_ext|mode
 Name mode.done mode.readingout mode.storing mode.processing 
 mode.processing 0 0 0 0 
 mode.storing 0 0 1 1 
 mode.readingout 0 1 0 1 
 mode.done 1 0 0 1 
 
-State Machine - |fullbeamformer_tb|fullbeamformer:fullbeamformer_inst|next_control_state
+State Machine - |fullbeamformer_ext|fullbeamformer:fullbeamformer_inst|next_control_state
 Name next_control_state.done next_control_state.summing next_control_state.beamforming next_control_state.finishfiltering next_control_state.filtering next_control_state.loadin 
 next_control_state.loadin 0 0 0 0 0 0 
 next_control_state.filtering 0 0 0 0 1 1 
@@ -22,7 +22,7 @@ next_control_state.beamforming 0 0 1 0 0 1
 next_control_state.summing 0 1 0 0 0 1 
 next_control_state.done 1 0 0 0 0 1 
 
-State Machine - |fullbeamformer_tb|fullbeamformer:fullbeamformer_inst|control_state
+State Machine - |fullbeamformer_ext|fullbeamformer:fullbeamformer_inst|control_state
 Name control_state.done control_state.summing control_state.beamforming control_state.finishfiltering control_state.filtering control_state.loadin 
 control_state.loadin 0 0 0 0 0 0 
 control_state.filtering 0 0 0 0 1 1 
@@ -31,7 +31,7 @@ control_state.beamforming 0 0 1 0 0 1
 control_state.summing 0 1 0 0 0 1 
 control_state.done 1 0 0 0 0 1 
 
-State Machine - |fullbeamformer_tb|fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink|sink_state
+State Machine - |fullbeamformer_ext|fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink|sink_state
 Name sink_state.end1 sink_state.st_err sink_state.run1 sink_state.stall sink_state.start 
 sink_state.start 0 0 0 0 0 
 sink_state.stall 0 0 0 1 1 
@@ -39,7 +39,7 @@ sink_state.run1 0 0 1 0 1
 sink_state.st_err 0 1 0 0 1 
 sink_state.end1 1 0 0 0 1 
 
-State Machine - |fullbeamformer_tb|fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink|sink_state
+State Machine - |fullbeamformer_ext|fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink|sink_state
 Name sink_state.end1 sink_state.st_err sink_state.run1 sink_state.stall sink_state.start 
 sink_state.start 0 0 0 0 0 
 sink_state.stall 0 0 0 1 1 
@@ -47,7 +47,7 @@ sink_state.run1 0 0 1 0 1
 sink_state.st_err 0 1 0 0 1 
 sink_state.end1 1 0 0 0 1 
 
-State Machine - |fullbeamformer_tb|fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink|sink_state
+State Machine - |fullbeamformer_ext|fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink|sink_state
 Name sink_state.end1 sink_state.st_err sink_state.run1 sink_state.stall sink_state.start 
 sink_state.start 0 0 0 0 0 
 sink_state.stall 0 0 0 1 1 
@@ -55,7 +55,7 @@ sink_state.run1 0 0 1 0 1
 sink_state.st_err 0 1 0 0 1 
 sink_state.end1 1 0 0 0 1 
 
-State Machine - |fullbeamformer_tb|fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink|sink_state
+State Machine - |fullbeamformer_ext|fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink|sink_state
 Name sink_state.end1 sink_state.st_err sink_state.run1 sink_state.stall sink_state.start 
 sink_state.start 0 0 0 0 0 
 sink_state.stall 0 0 0 1 1 
@@ -63,7 +63,7 @@ sink_state.run1 0 0 1 0 1
 sink_state.st_err 0 1 0 0 1 
 sink_state.end1 1 0 0 0 1 
 
-State Machine - |fullbeamformer_tb|fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink|sink_state
+State Machine - |fullbeamformer_ext|fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink|sink_state
 Name sink_state.end1 sink_state.st_err sink_state.run1 sink_state.stall sink_state.start 
 sink_state.start 0 0 0 0 0 
 sink_state.stall 0 0 0 1 1 
@@ -71,7 +71,7 @@ sink_state.run1 0 0 1 0 1
 sink_state.st_err 0 1 0 0 1 
 sink_state.end1 1 0 0 0 1 
 
-State Machine - |fullbeamformer_tb|fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink|sink_state
+State Machine - |fullbeamformer_ext|fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink|sink_state
 Name sink_state.end1 sink_state.st_err sink_state.run1 sink_state.stall sink_state.start 
 sink_state.start 0 0 0 0 0 
 sink_state.stall 0 0 0 1 1 
@@ -79,7 +79,7 @@ sink_state.run1 0 0 1 0 1
 sink_state.st_err 0 1 0 0 1 
 sink_state.end1 1 0 0 0 1 
 
-State Machine - |fullbeamformer_tb|fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink|sink_state
+State Machine - |fullbeamformer_ext|fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink|sink_state
 Name sink_state.end1 sink_state.st_err sink_state.run1 sink_state.stall sink_state.start 
 sink_state.start 0 0 0 0 0 
 sink_state.stall 0 0 0 1 1 
@@ -87,7 +87,7 @@ sink_state.run1 0 0 1 0 1
 sink_state.st_err 0 1 0 0 1 
 sink_state.end1 1 0 0 0 1 
 
-State Machine - |fullbeamformer_tb|fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink|sink_state
+State Machine - |fullbeamformer_ext|fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|BP_Filt:filt|BP_Filt_0002:bp_filt_inst|BP_Filt_0002_ast:BP_Filt_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink|sink_state
 Name sink_state.end1 sink_state.st_err sink_state.run1 sink_state.stall sink_state.start 
 sink_state.start 0 0 0 0 0 
 sink_state.stall 0 0 0 1 1 

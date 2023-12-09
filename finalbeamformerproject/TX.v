@@ -1,4 +1,5 @@
-//UART TX module code provided by Justin Greige
+// TX.v
+// UART TX module code provided by Justin Greige
 // Modified by Owen Stuttard B00830020 and Abraham El-Jakl B00805351
 module TX (
 	input CLK,

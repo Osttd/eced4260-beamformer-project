@@ -1,3 +1,4 @@
+// fullbeamformer.v
 // Written by Owen Stuttard B00830020 and Abraham El-Jakl B00805351
 module fullbeamformer(
     input clk,
@@ -239,7 +240,6 @@ module fullbeamformer(
                 end
             end
             finishfiltering: begin
-                //this state may be unnecessary if the last few samples are not useful
                 if (valid_out!==0) begin
                     readin_address=readin_address+11'd1;
                 end

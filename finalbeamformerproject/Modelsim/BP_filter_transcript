@@ -1,15 +1,15 @@
 couldn't open "transcript": permission denied
 # Reading pref.tcl
-cd {D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim}
+cd {D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/finalbeamformerproject/Modelsim}
 # reading modelsim.ini
-do beamformer.tcl
+do fullbeamformer.tcl
 # write transcript BP_filter_transcript
 # 
 # START MEGAWIZARD INSERT VARIABLES
 # set top_entity BP_Filt
 # BP_Filt
-# set sim_entity brambeamformer
-# brambeamformer
+# set sim_entity fullbeamformer
+# fullbeamformer
 # set timing_resolution "1ps"
 # 1ps
 # set core_version 22.1
@@ -18,8 +18,8 @@ do beamformer.tcl
 # Cyclone IV
 # set quartus_rootdir D:/intelFPGA_lite/22.1std/quartus/
 # D:/intelFPGA_lite/22.1std/quartus/
-# set projectpath "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5"
-# D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5
+# set projectpath "D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6"
+# D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6
 # Change to "gate_level" for gate-level sim
 # set sim_type "rtl"
 # rtl
@@ -121,7 +121,7 @@ do beamformer.tcl
 # file delete command returned 
 # 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 13:33:26 on Dec 06,2023
+# Start time: 16:57:12 on Dec 08,2023
 # vlog -reportprogress 300 -work lpm D:/intelFPGA_lite/22.1std/quartus/eda/sim_lib/220model.v 
 # -- Compiling module LPM_MEMORY_INITIALIZATION
 # -- Compiling module LPM_HINT_EVALUATION
@@ -215,12 +215,12 @@ do beamformer.tcl
 # 	lpm_inpad
 # 	lpm_outpad
 # 	lpm_bipad
-# End time: 13:33:26 on Dec 06,2023, Elapsed time: 0:00:00
+# End time: 16:57:12 on Dec 08,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 30
 # file delete command returned 
 # 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 13:33:27 on Dec 06,2023
+# Start time: 16:57:13 on Dec 08,2023
 # vlog -reportprogress 300 -work sgate D:/intelFPGA_lite/22.1std/quartus/eda/sim_lib/sgate.v 
 # -- Compiling module oper_add
 # ** Warning: D:/intelFPGA_lite/22.1std/quartus/eda/sim_lib/sgate.v(19): (vlog-13233) Design unit "oper_add" already exists and will be overwritten. Overwriting a VHDL entity with a Verilog module.
@@ -281,16 +281,16 @@ do beamformer.tcl
 # 	oper_decoder
 # 	oper_bus_mux
 # 	oper_latch
-# End time: 13:33:27 on Dec 06,2023, Elapsed time: 0:00:00
+# End time: 16:57:13 on Dec 08,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 19
 # file delete command returned 
 # 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 13:33:27 on Dec 06,2023
+# Start time: 16:57:13 on Dec 08,2023
 # vlog -reportprogress 300 -work altera_lnsim D:/intelFPGA_lite/22.1std/quartus/eda/sim_lib/mentor/altera_lnsim_for_vhdl.sv 
 # 
 # Top level modules:
-# End time: 13:33:28 on Dec 06,2023, Elapsed time: 0:00:01
+# End time: 16:57:14 on Dec 08,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # file delete command returned 
 # 
@@ -303,7 +303,7 @@ do beamformer.tcl
 # 
 # 	vcom -93 -work altera $q_sim_lib/altera_primitives_components.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 13:33:29 on Dec 06,2023
+# Start time: 16:57:15 on Dec 08,2023
 # vcom -reportprogress 300 -93 -work altera D:/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_primitives_components.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -313,11 +313,11 @@ do beamformer.tcl
 # -- Compiling package dffeas_pack
 # -- Loading package dffeas_pack
 # -- Compiling package altera_primitives_components
-# End time: 13:33:29 on Dec 06,2023, Elapsed time: 0:00:00
+# End time: 16:57:16 on Dec 08,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 	vcom -93 -work altera $q_sim_lib/altera_primitives.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 13:33:29 on Dec 06,2023
+# Start time: 16:57:16 on Dec 08,2023
 # vcom -reportprogress 300 -93 -work altera D:/intelFPGA_lite/22.1std/quartus/eda/sim_lib/altera_primitives.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -405,7 +405,7 @@ do beamformer.tcl
 # -- Compiling architecture BEHAVIOR of alt_bidir_diff
 # -- Compiling entity alt_bidir_buf
 # -- Compiling architecture BEHAVIOR of alt_bidir_buf
-# End time: 13:33:29 on Dec 06,2023, Elapsed time: 0:00:00
+# End time: 16:57:16 on Dec 08,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 #     # Compile all FIR Compiler II RTL files
@@ -436,21 +436,15 @@ do beamformer.tcl
 # ** Warning: (vlib-34) Library already exists at "work".
 # vlog ../*.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 13:33:29 on Dec 06,2023
-# vlog -reportprogress 300 ../BP_Filt.v ../DPRAM.v ../FIR_Filter.v ../OPRAM.v ../RAMCHECK.v ../RX.v ../TX.v ../brambeamformer.v ../communication.v ../delaybeamformer.v ../fullbeamformer.v ../fullbeamformer_tb.v ../indexram.v ../indexrom.v ../mainpll.v ../output_ram.v ../signalram.v ../signalram_nomem.v ../uartoutram.v 
+# Start time: 16:57:16 on Dec 08,2023
+# vlog -reportprogress 300 ../BP_Filt.v ../TX.v ../brambeamformer.v ../communication.v ../delaybeamformer.v ../fullbeamformer.v ../fullbeamformer_ext.v ../indexrom.v ../mainpll.v ../output_ram.v ../signalram.v ../signalram_nomem.v ../uartoutram.v 
 # -- Compiling module BP_Filt
-# -- Compiling module DPRAM
-# -- Compiling module FIR_Filter
-# -- Compiling module OPRAM
-# -- Compiling module RAMCHECK
-# -- Compiling module RX
 # -- Compiling module TX
 # -- Compiling module brambeamformer
 # -- Compiling module communication
 # -- Compiling module delaybeamformer
 # -- Compiling module fullbeamformer
-# -- Compiling module fullbeamformer_tb
-# -- Compiling module indexram
+# -- Compiling module fullbeamformer_ext
 # -- Compiling module indexrom
 # -- Compiling module mainpll
 # -- Compiling module output_ram
@@ -459,55 +453,46 @@ do beamformer.tcl
 # -- Compiling module uartoutram
 # 
 # Top level modules:
-# 	FIR_Filter
-# 	RAMCHECK
-# 	fullbeamformer_tb
-# 	indexram
+# 	fullbeamformer_ext
 # 	mainpll
-# End time: 13:33:30 on Dec 06,2023, Elapsed time: 0:00:01
+# End time: 16:57:16 on Dec 08,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog *.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 13:33:30 on Dec 06,2023
-# vlog -reportprogress 300 FIR_Filter_tb.v altera_avalon_sc_fifo.v brambeamformer_tb.v delaybeamformer_tb.v 
-# -- Compiling module FIR_Filter_tb
+# Start time: 16:57:16 on Dec 08,2023
+# vlog -reportprogress 300 altera_avalon_sc_fifo.v 
 # -- Compiling module altera_avalon_sc_fifo
-# -- Compiling module brambeamformer_tb
-# -- Compiling module delaybeamformer_tb
 # 
 # Top level modules:
-# 	FIR_Filter_tb
 # 	altera_avalon_sc_fifo
-# 	brambeamformer_tb
-# 	delaybeamformer_tb
-# End time: 13:33:30 on Dec 06,2023, Elapsed time: 0:00:00
+# End time: 16:57:16 on Dec 08,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -work work "${projectpath}/Modelsim/altera_avalon_sc_fifo.v"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 13:33:30 on Dec 06,2023
-# vlog -reportprogress 300 -work work D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/altera_avalon_sc_fifo.v 
+# Start time: 16:57:16 on Dec 08,2023
+# vlog -reportprogress 300 -work work D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/altera_avalon_sc_fifo.v 
 # -- Compiling module altera_avalon_sc_fifo
 # 
 # Top level modules:
 # 	altera_avalon_sc_fifo
-# End time: 13:33:30 on Dec 06,2023, Elapsed time: 0:00:00
+# End time: 16:57:16 on Dec 08,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -work work "${projectpath}/Modelsim/dspba_library_package.vhd"
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 13:33:30 on Dec 06,2023
-# vcom -reportprogress 300 -work work D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/dspba_library_package.vhd 
+# Start time: 16:57:16 on Dec 08,2023
+# vcom -reportprogress 300 -work work D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/dspba_library_package.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package dspba_library_package
-# End time: 13:33:30 on Dec 06,2023, Elapsed time: 0:00:00
+# End time: 16:57:16 on Dec 08,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -work work "${projectpath}/Modelsim/dspba_library.vhd"
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 13:33:30 on Dec 06,2023
-# vcom -reportprogress 300 -work work D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/dspba_library.vhd 
+# Start time: 16:57:16 on Dec 08,2023
+# vcom -reportprogress 300 -work work D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/dspba_library.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -519,25 +504,25 @@ do beamformer.tcl
 # -- Compiling architecture sync_reg of dspba_sync_reg
 # -- Compiling entity dspba_pipe
 # -- Compiling architecture rtl of dspba_pipe
-# End time: 13:33:30 on Dec 06,2023, Elapsed time: 0:00:00
+# End time: 16:57:16 on Dec 08,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -work work "${projectpath}/Modelsim/auk_dspip_roundsat_hpfir.vhd"
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 13:33:30 on Dec 06,2023
-# vcom -reportprogress 300 -work work D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/auk_dspip_roundsat_hpfir.vhd 
+# Start time: 16:57:16 on Dec 08,2023
+# vcom -reportprogress 300 -work work D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/auk_dspip_roundsat_hpfir.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity auk_dspip_roundsat_hpfir
 # -- Compiling architecture beh of auk_dspip_roundsat_hpfir
-# End time: 13:33:30 on Dec 06,2023, Elapsed time: 0:00:00
+# End time: 16:57:16 on Dec 08,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -work work "${projectpath}/Modelsim/auk_dspip_math_pkg_hpfir.vhd"
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 13:33:30 on Dec 06,2023
-# vcom -reportprogress 300 -work work D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/auk_dspip_math_pkg_hpfir.vhd 
+# Start time: 16:57:16 on Dec 08,2023
+# vcom -reportprogress 300 -work work D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/auk_dspip_math_pkg_hpfir.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -545,37 +530,37 @@ do beamformer.tcl
 # -- Compiling package auk_dspip_math_pkg_hpfir
 # -- Compiling package body auk_dspip_math_pkg_hpfir
 # -- Loading package auk_dspip_math_pkg_hpfir
-# End time: 13:33:30 on Dec 06,2023, Elapsed time: 0:00:00
+# End time: 16:57:17 on Dec 08,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -work work "${projectpath}/Modelsim/auk_dspip_lib_pkg_hpfir.vhd"
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 13:33:31 on Dec 06,2023
-# vcom -reportprogress 300 -work work D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/auk_dspip_lib_pkg_hpfir.vhd 
+# Start time: 16:57:17 on Dec 08,2023
+# vcom -reportprogress 300 -work work D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/auk_dspip_lib_pkg_hpfir.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Loading package auk_dspip_math_pkg_hpfir
 # -- Compiling package auk_dspip_lib_pkg_hpfir
-# End time: 13:33:31 on Dec 06,2023, Elapsed time: 0:00:00
+# End time: 16:57:17 on Dec 08,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -work work "${projectpath}/Modelsim/auk_dspip_avalon_streaming_controller_hpfir.vhd"
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 13:33:31 on Dec 06,2023
-# vcom -reportprogress 300 -work work D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/auk_dspip_avalon_streaming_controller_hpfir.vhd 
+# Start time: 16:57:17 on Dec 08,2023
+# vcom -reportprogress 300 -work work D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/auk_dspip_avalon_streaming_controller_hpfir.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package std_logic_arith
 # -- Compiling entity auk_dspip_avalon_streaming_controller_hpfir
 # -- Compiling architecture struct of auk_dspip_avalon_streaming_controller_hpfir
-# End time: 13:33:31 on Dec 06,2023, Elapsed time: 0:00:00
+# End time: 16:57:17 on Dec 08,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -work work "${projectpath}/Modelsim/auk_dspip_avalon_streaming_sink_hpfir.vhd"
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 13:33:31 on Dec 06,2023
-# vcom -reportprogress 300 -work work D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/auk_dspip_avalon_streaming_sink_hpfir.vhd 
+# Start time: 16:57:17 on Dec 08,2023
+# vcom -reportprogress 300 -work work D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/auk_dspip_avalon_streaming_sink_hpfir.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -585,20 +570,20 @@ do beamformer.tcl
 # -- Loading package altera_mf_components
 # -- Compiling entity auk_dspip_avalon_streaming_sink_hpfir
 # -- Compiling architecture rtl of auk_dspip_avalon_streaming_sink_hpfir
-# ** Warning: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/auk_dspip_avalon_streaming_sink_hpfir.vhd(113): Nonresolved signal 'sink_next_state' may have multiple sources.
+# ** Warning: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/auk_dspip_avalon_streaming_sink_hpfir.vhd(113): Nonresolved signal 'sink_next_state' may have multiple sources.
 #   Drivers:
-#     D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/auk_dspip_avalon_streaming_sink_hpfir.vhd(270):Process sink_comb_update_2
+#     D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/auk_dspip_avalon_streaming_sink_hpfir.vhd(270):Process sink_comb_update_2
 #        Driven at:
-#           D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/auk_dspip_avalon_streaming_sink_hpfir.vhd(279)
-#     D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/auk_dspip_avalon_streaming_sink_hpfir.vhd(177):Process sink_comb_update_1
+#           D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/auk_dspip_avalon_streaming_sink_hpfir.vhd(279)
+#     D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/auk_dspip_avalon_streaming_sink_hpfir.vhd(177):Process sink_comb_update_1
 #        Driven at:
-#           D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/auk_dspip_avalon_streaming_sink_hpfir.vhd(183)
-# End time: 13:33:31 on Dec 06,2023, Elapsed time: 0:00:00
+#           D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/auk_dspip_avalon_streaming_sink_hpfir.vhd(183)
+# End time: 16:57:17 on Dec 08,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 # vcom -work work "${projectpath}/Modelsim/auk_dspip_avalon_streaming_source_hpfir.vhd"
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 13:33:31 on Dec 06,2023
-# vcom -reportprogress 300 -work work D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/auk_dspip_avalon_streaming_source_hpfir.vhd 
+# Start time: 16:57:17 on Dec 08,2023
+# vcom -reportprogress 300 -work work D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/auk_dspip_avalon_streaming_source_hpfir.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -607,32 +592,32 @@ do beamformer.tcl
 # -- Loading package auk_dspip_math_pkg_hpfir
 # -- Compiling entity auk_dspip_avalon_streaming_source_hpfir
 # -- Compiling architecture rtl of auk_dspip_avalon_streaming_source_hpfir
-# ** Warning: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/auk_dspip_avalon_streaming_source_hpfir.vhd(122): Nonresolved signal 'count_finished' may have multiple sources.
+# ** Warning: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/auk_dspip_avalon_streaming_source_hpfir.vhd(122): Nonresolved signal 'count_finished' may have multiple sources.
 #   Drivers:
-#     D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/auk_dspip_avalon_streaming_source_hpfir.vhd(217):Conditional signal assignment line__216
-#     D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/auk_dspip_avalon_streaming_source_hpfir.vhd(206):Conditional signal assignment line__205
-# ** Warning: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/auk_dspip_avalon_streaming_source_hpfir.vhd(123): Nonresolved signal 'count_started' may have multiple sources.
+#     D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/auk_dspip_avalon_streaming_source_hpfir.vhd(217):Conditional signal assignment line__216
+#     D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/auk_dspip_avalon_streaming_source_hpfir.vhd(206):Conditional signal assignment line__205
+# ** Warning: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/auk_dspip_avalon_streaming_source_hpfir.vhd(123): Nonresolved signal 'count_started' may have multiple sources.
 #   Drivers:
-#     D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/auk_dspip_avalon_streaming_source_hpfir.vhd(219):Conditional signal assignment line__218
-#     D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/auk_dspip_avalon_streaming_source_hpfir.vhd(210):Conditional signal assignment line__209
-# End time: 13:33:31 on Dec 06,2023, Elapsed time: 0:00:00
+#     D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/auk_dspip_avalon_streaming_source_hpfir.vhd(219):Conditional signal assignment line__218
+#     D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/auk_dspip_avalon_streaming_source_hpfir.vhd(210):Conditional signal assignment line__209
+# End time: 16:57:17 on Dec 08,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 2
 # 
 # 
 # vlog -work work "${projectpath}/FIR_Filter.v"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 13:33:31 on Dec 06,2023
-# vlog -reportprogress 300 -work work D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/FIR_Filter.v 
+# Start time: 16:57:17 on Dec 08,2023
+# vlog -reportprogress 300 -work work D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/FIR_Filter.v 
 # -- Compiling module FIR_Filter
 # 
 # Top level modules:
 # 	FIR_Filter
-# End time: 13:33:31 on Dec 06,2023, Elapsed time: 0:00:00
+# End time: 16:57:17 on Dec 08,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -work work "${projectpath}/Modelsim/BP_filt_0002.vhd"
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 13:33:31 on Dec 06,2023
-# vcom -reportprogress 300 -work work D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/BP_filt_0002.vhd 
+# Start time: 16:57:17 on Dec 08,2023
+# vcom -reportprogress 300 -work work D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -641,12 +626,12 @@ do beamformer.tcl
 # -- Loading package auk_dspip_lib_pkg_hpfir
 # -- Compiling entity BP_Filt_0002
 # -- Compiling architecture syn of BP_Filt_0002
-# End time: 13:33:31 on Dec 06,2023, Elapsed time: 0:00:00
+# End time: 16:57:17 on Dec 08,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -work work "${projectpath}/Modelsim/BP_filt_0002_ast.vhd"
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 13:33:31 on Dec 06,2023
-# vcom -reportprogress 300 -work work D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/BP_filt_0002_ast.vhd 
+# Start time: 16:57:17 on Dec 08,2023
+# vcom -reportprogress 300 -work work D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_ast.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -655,12 +640,12 @@ do beamformer.tcl
 # -- Loading package auk_dspip_lib_pkg_hpfir
 # -- Compiling entity BP_Filt_0002_ast
 # -- Compiling architecture struct of BP_Filt_0002_ast
-# End time: 13:33:31 on Dec 06,2023, Elapsed time: 0:00:00
+# End time: 16:57:17 on Dec 08,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -work work "${projectpath}/Modelsim/BP_filt_0002_rtl_core.vhd"
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 13:33:31 on Dec 06,2023
-# vcom -reportprogress 300 -work work D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/BP_filt_0002_rtl_core.vhd 
+# Start time: 16:57:17 on Dec 08,2023
+# vcom -reportprogress 300 -work work D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -671,20 +656,25 @@ do beamformer.tcl
 # -- Loading package LPM_COMPONENTS
 # -- Compiling entity BP_Filt_0002_rtl_core
 # -- Compiling architecture normal of BP_Filt_0002_rtl_core
-# End time: 13:33:31 on Dec 06,2023, Elapsed time: 0:00:00
+# End time: 16:57:18 on Dec 08,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
-# vsim -L altera_mf_ver -L lpm_ver -L cycloneiv_ver -L 220model_ver -L sgate -L altera_lnsim -L twentynm work.${sim_entity}_tb 
-# vsim -L altera_mf_ver -L lpm_ver -L cycloneiv_ver -L 220model_ver -L sgate -L altera_lnsim -L twentynm work.brambeamformer_tb 
-# Start time: 13:33:32 on Dec 06,2023
-# Loading work.brambeamformer_tb
+# vsim -L altera_mf_ver -L lpm_ver -L cycloneiv_ver -L 220model_ver -L sgate -L altera_lnsim -L twentynm work.${sim_entity}_ext 
+# vsim -L altera_mf_ver -L lpm_ver -L cycloneiv_ver -L 220model_ver -L sgate -L altera_lnsim -L twentynm work.fullbeamformer_ext 
+# Start time: 16:57:18 on Dec 08,2023
+# Loading work.fullbeamformer_ext
+# Loading work.fullbeamformer
+# Loading work.signalram
+# Loading altera_mf_ver.altsyncram
 # Loading work.brambeamformer
 # Loading work.BP_Filt
 # Loading work.output_ram
-# Loading altera_mf_ver.altsyncram
 # Loading work.delaybeamformer
 # Loading work.indexrom
 # Loading work.signalram_nomem
+# Loading work.uartoutram
+# Loading work.communication
+# Loading work.TX
 # Loading altera_mf_ver.altsyncram_body
 # Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
 # Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
@@ -709,67 +699,456 @@ do beamformer.tcl
 # Loading lpm.lpm_mult
 # Loading 220model_ver.LPM_HINT_EVALUATION
 # Loading work.auk_dspip_roundsat_hpfir(beh)
-# ** Error (suppressible): (vsim-3389) Port 'signal_address' not found in the connected module (4th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /brambeamformer_tb/brambeamformer_inst File: brambeamformer_tb.v Line: 39
-# ** Error (suppressible): (vsim-3389) Port 'filter_bram_output_write_en' not found in the connected module (7th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /brambeamformer_tb/brambeamformer_inst File: brambeamformer_tb.v Line: 39
-# ** Error (suppressible): (vsim-3389) Port 'signalinen' not found in the connected module (10th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /brambeamformer_tb/brambeamformer_inst File: brambeamformer_tb.v Line: 39
-# ** Error (suppressible): (vsim-3389) Port 'usedataflag' not found in the connected module (15th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /brambeamformer_tb/brambeamformer_inst File: brambeamformer_tb.v Line: 39
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (32) for port 'data'. The port definition is at: ../signalram.v(43).
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/in_signalram File: ../fullbeamformer.v Line: 66
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ../signalram.v(45).
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/in_signalram File: ../fullbeamformer.v Line: 66
 # ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
-#    Time: 0 ps  Iteration: 0  Instance: /brambeamformer_tb/brambeamformer_inst/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_17_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1004
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel1/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_17_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1004
 # ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
-#    Time: 0 ps  Iteration: 0  Instance: /brambeamformer_tb/brambeamformer_inst/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_14_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1160
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel1/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_14_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1160
 # ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
-#    Time: 0 ps  Iteration: 0  Instance: /brambeamformer_tb/brambeamformer_inst/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_12_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1266
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel1/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_12_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1266
 # ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
-#    Time: 0 ps  Iteration: 0  Instance: /brambeamformer_tb/brambeamformer_inst/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_11_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1325
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel1/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_11_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1325
 # ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
-#    Time: 0 ps  Iteration: 0  Instance: /brambeamformer_tb/brambeamformer_inst/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_9_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1402
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel1/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_9_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1402
 # ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
-#    Time: 0 ps  Iteration: 0  Instance: /brambeamformer_tb/brambeamformer_inst/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_7_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1534
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel1/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_7_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1534
 # ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
-#    Time: 0 ps  Iteration: 0  Instance: /brambeamformer_tb/brambeamformer_inst/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_4_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1680
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel1/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_4_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1680
 # ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
-#    Time: 0 ps  Iteration: 0  Instance: /brambeamformer_tb/brambeamformer_inst/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_1_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1831
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel1/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_1_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1831
 # ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
-#    Time: 0 ps  Iteration: 0  Instance: /brambeamformer_tb/brambeamformer_inst/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_8_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2056
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel1/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_8_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2056
 # ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
-#    Time: 0 ps  Iteration: 0  Instance: /brambeamformer_tb/brambeamformer_inst/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_3_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2393
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel1/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_3_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2393
 # ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
-#    Time: 0 ps  Iteration: 0  Instance: /brambeamformer_tb/brambeamformer_inst/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_0_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2571
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel1/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_0_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2571
 # ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
-#    Time: 0 ps  Iteration: 0  Instance: /brambeamformer_tb/brambeamformer_inst/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_18_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2686
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel1/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_18_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2686
 # ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
-#    Time: 0 ps  Iteration: 0  Instance: /brambeamformer_tb/brambeamformer_inst/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_15_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2814
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel1/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_15_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2814
 # ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
-#    Time: 0 ps  Iteration: 0  Instance: /brambeamformer_tb/brambeamformer_inst/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_12_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2942
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel1/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_12_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2942
 # ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
-#    Time: 0 ps  Iteration: 0  Instance: /brambeamformer_tb/brambeamformer_inst/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_10_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3048
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel1/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_10_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3048
 # ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
-#    Time: 0 ps  Iteration: 0  Instance: /brambeamformer_tb/brambeamformer_inst/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_8_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3112
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel1/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_8_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3112
 # ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
-#    Time: 0 ps  Iteration: 0  Instance: /brambeamformer_tb/brambeamformer_inst/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_7_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3176
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel1/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_7_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3176
 # ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
-#    Time: 0 ps  Iteration: 0  Instance: /brambeamformer_tb/brambeamformer_inst/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_5_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3269
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel1/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_5_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3269
 # ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
-#    Time: 0 ps  Iteration: 0  Instance: /brambeamformer_tb/brambeamformer_inst/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_2_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv5/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3397
-# Error loading design
-# Error: Error loading design
-#        Pausing macro execution
-# MACRO ./beamformer.tcl PAUSED at line 153
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel1/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_2_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3397
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel2/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_17_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1004
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel2/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_14_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1160
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel2/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_12_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1266
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel2/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_11_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1325
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel2/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_9_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1402
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel2/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_7_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1534
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel2/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_4_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1680
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel2/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_1_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1831
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel2/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_8_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2056
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel2/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_3_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2393
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel2/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_0_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2571
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel2/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_18_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2686
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel2/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_15_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2814
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel2/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_12_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2942
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel2/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_10_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3048
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel2/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_8_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3112
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel2/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_7_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3176
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel2/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_5_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3269
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel2/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_2_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3397
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel3/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_17_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1004
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel3/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_14_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1160
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel3/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_12_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1266
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel3/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_11_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1325
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel3/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_9_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1402
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel3/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_7_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1534
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel3/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_4_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1680
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel3/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_1_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1831
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel3/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_8_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2056
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel3/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_3_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2393
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel3/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_0_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2571
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel3/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_18_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2686
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel3/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_15_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2814
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel3/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_12_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2942
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel3/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_10_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3048
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel3/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_8_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3112
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel3/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_7_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3176
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel3/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_5_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3269
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel3/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_2_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3397
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel4/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_17_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1004
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel4/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_14_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1160
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel4/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_12_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1266
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel4/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_11_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1325
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel4/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_9_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1402
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel4/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_7_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1534
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel4/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_4_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1680
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel4/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_1_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1831
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel4/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_8_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2056
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel4/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_3_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2393
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel4/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_0_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2571
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel4/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_18_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2686
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel4/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_15_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2814
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel4/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_12_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2942
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel4/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_10_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3048
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel4/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_8_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3112
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel4/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_7_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3176
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel4/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_5_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3269
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel4/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_2_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3397
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel5/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_17_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1004
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel5/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_14_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1160
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel5/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_12_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1266
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel5/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_11_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1325
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel5/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_9_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1402
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel5/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_7_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1534
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel5/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_4_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1680
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel5/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_1_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1831
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel5/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_8_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2056
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel5/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_3_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2393
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel5/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_0_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2571
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel5/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_18_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2686
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel5/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_15_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2814
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel5/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_12_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2942
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel5/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_10_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3048
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel5/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_8_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3112
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel5/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_7_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3176
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel5/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_5_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3269
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel5/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_2_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3397
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel6/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_17_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1004
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel6/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_14_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1160
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel6/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_12_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1266
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel6/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_11_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1325
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel6/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_9_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1402
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel6/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_7_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1534
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel6/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_4_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1680
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel6/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_1_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1831
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel6/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_8_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2056
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel6/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_3_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2393
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel6/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_0_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2571
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel6/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_18_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2686
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel6/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_15_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2814
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel6/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_12_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2942
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel6/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_10_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3048
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel6/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_8_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3112
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel6/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_7_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3176
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel6/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_5_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3269
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel6/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_2_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3397
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel7/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_17_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1004
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel7/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_14_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1160
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel7/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_12_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1266
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel7/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_11_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1325
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel7/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_9_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1402
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel7/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_7_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1534
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel7/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_4_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1680
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel7/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_1_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1831
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel7/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_8_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2056
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel7/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_3_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2393
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel7/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_0_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2571
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel7/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_18_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2686
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel7/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_15_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2814
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel7/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_12_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2942
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel7/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_10_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3048
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel7/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_8_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3112
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel7/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_7_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3176
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel7/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_5_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3269
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel7/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_2_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3397
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel8/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_17_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1004
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel8/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_14_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1160
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel8/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_12_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1266
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel8/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_11_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1325
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel8/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_9_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1402
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel8/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_7_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1534
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel8/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_4_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1680
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel8/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo2_mtree_mult1_1_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 1831
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel8/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_8_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2056
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel8/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_3_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2393
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel8/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo1_mtree_mult1_0_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2571
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel8/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_18_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2686
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel8/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_15_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2814
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel8/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_12_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 2942
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel8/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_10_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3048
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel8/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_8_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3112
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel8/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_7_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3176
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel8/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_5_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3269
+# ** Warning: (vsim-3934) [TFMPC] - Missing VHDL connection for formal Verilog port 'sclr'.
+#    Time: 0 ps  Iteration: 0  Instance: /fullbeamformer_ext/fullbeamformer_inst/channel8/filt/bp_filt_inst/BP_Filt_0002_ast_inst/real_passthrough/hpfircore_core/u0_m0_wo0_mtree_mult1_2_component File: D:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/delaybeamformerprojectv6/Modelsim/BP_filt_0002_rtl_core.vhd Line: 3397
+# ** Warning: Design size of 46650 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# 
+# 
+# if {[file exists "wave.do"]} {
+#     do wave.do
+# }
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate -divider tb
+# add wave -noupdate -label clk /fullbeamformer_tb/clk
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: oestu  Hostname: LAPTOP-DAV19RQ7  ProcessID: 26952
+#           Attempting to use alternate WLF file "./wlft5yw8ss".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft5yw8ss
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/clk'.
+# Executing ONERROR command at macro ./wave.do line 4
+# add wave -noupdate -format Analog-Step -height 74 -label summed_value -max 177439000.0 -min -165703000.0 -radix decimal /fullbeamformer_tb/summed_value
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/summed_value'.
+# Executing ONERROR command at macro ./wave.do line 5
+# add wave -noupdate -label tx /fullbeamformer_tb/tx
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/tx'.
+# Executing ONERROR command at macro ./wave.do line 6
+# add wave -noupdate -label uart_flag /fullbeamformer_tb/uart_flag
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/uart_flag'.
+# Executing ONERROR command at macro ./wave.do line 7
+# add wave -noupdate -label uartcounter -radix unsigned /fullbeamformer_tb/uartcounter
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/uartcounter'.
+# Executing ONERROR command at macro ./wave.do line 8
+# add wave -noupdate -label uartramaddress -radix unsigned /fullbeamformer_tb/uartramaddress
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/uartramaddress'.
+# Executing ONERROR command at macro ./wave.do line 9
+# add wave -noupdate -label uart_msg -radix hexadecimal /fullbeamformer_tb/uart_msg
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/uart_msg'.
+# Executing ONERROR command at macro ./wave.do line 10
+# add wave -noupdate -label mode -radix unsigned /fullbeamformer_tb/mode
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/mode'.
+# Executing ONERROR command at macro ./wave.do line 11
+# add wave -noupdate -divider beamformer
+# add wave -noupdate -label control_state -radix unsigned /fullbeamformer_tb/fullbeamformer_inst/control_state
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/fullbeamformer_inst/control_state'.
+# Executing ONERROR command at macro ./wave.do line 13
+# add wave -noupdate -label signal_address -radix unsigned /fullbeamformer_tb/fullbeamformer_inst/signal_address
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/fullbeamformer_inst/signal_address'.
+# Executing ONERROR command at macro ./wave.do line 14
+# add wave -noupdate -label readin_address -radix unsigned /fullbeamformer_tb/fullbeamformer_inst/readin_address
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/fullbeamformer_inst/readin_address'.
+# Executing ONERROR command at macro ./wave.do line 15
+# add wave -noupdate -label sumouten /fullbeamformer_tb/fullbeamformer_inst/sumouten
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/fullbeamformer_inst/sumouten'.
+# Executing ONERROR command at macro ./wave.do line 16
+# add wave -noupdate -label sumout_address -radix unsigned /fullbeamformer_tb/fullbeamformer_inst/sumout_address
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/fullbeamformer_inst/sumout_address'.
+# Executing ONERROR command at macro ./wave.do line 17
+# add wave -noupdate -label output_value_1 -radix decimal /fullbeamformer_tb/fullbeamformer_inst/output_value_1
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/fullbeamformer_inst/output_value_1'.
+# Executing ONERROR command at macro ./wave.do line 18
+# add wave -noupdate -label output_value_2 -radix decimal /fullbeamformer_tb/fullbeamformer_inst/output_value_2
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/fullbeamformer_inst/output_value_2'.
+# Executing ONERROR command at macro ./wave.do line 19
+# add wave -noupdate -label output_value_3 -radix decimal /fullbeamformer_tb/fullbeamformer_inst/output_value_3
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/fullbeamformer_inst/output_value_3'.
+# Executing ONERROR command at macro ./wave.do line 20
+# add wave -noupdate -label output_value_4 -radix decimal /fullbeamformer_tb/fullbeamformer_inst/output_value_4
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/fullbeamformer_inst/output_value_4'.
+# Executing ONERROR command at macro ./wave.do line 21
+# add wave -noupdate -label output_value_5 -radix decimal /fullbeamformer_tb/fullbeamformer_inst/output_value_5
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/fullbeamformer_inst/output_value_5'.
+# Executing ONERROR command at macro ./wave.do line 22
+# add wave -noupdate -label output_value_6 -radix decimal /fullbeamformer_tb/fullbeamformer_inst/output_value_6
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/fullbeamformer_inst/output_value_6'.
+# Executing ONERROR command at macro ./wave.do line 23
+# add wave -noupdate -label output_value_7 -radix decimal /fullbeamformer_tb/fullbeamformer_inst/output_value_7
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/fullbeamformer_inst/output_value_7'.
+# Executing ONERROR command at macro ./wave.do line 24
+# add wave -noupdate -label output_value_8 -radix decimal /fullbeamformer_tb/fullbeamformer_inst/output_value_8
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/fullbeamformer_inst/output_value_8'.
+# Executing ONERROR command at macro ./wave.do line 25
+# add wave -noupdate -divider channel1
+# add wave -noupdate -label data_in -radix decimal /fullbeamformer_tb/fullbeamformer_inst/channel1/data_in
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/fullbeamformer_inst/channel1/data_in'.
+# Executing ONERROR command at macro ./wave.do line 27
+# add wave -noupdate -label buffer_out -radix decimal /fullbeamformer_tb/fullbeamformer_inst/channel1/buffer_out
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/fullbeamformer_inst/channel1/buffer_out'.
+# Executing ONERROR command at macro ./wave.do line 28
+# add wave -noupdate -label sumout_address -radix unsigned /fullbeamformer_tb/fullbeamformer_inst/channel1/sumout_address
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/fullbeamformer_inst/channel1/sumout_address'.
+# Executing ONERROR command at macro ./wave.do line 29
+# add wave -noupdate -label usedataflag /fullbeamformer_tb/fullbeamformer_inst/channel1/usedataflag
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/fullbeamformer_inst/channel1/usedataflag'.
+# Executing ONERROR command at macro ./wave.do line 30
+# add wave -noupdate -label beamformerout_signal -radix decimal /fullbeamformer_tb/fullbeamformer_inst/channel1/beamformerout_signal
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/fullbeamformer_inst/channel1/beamformerout_signal'.
+# Executing ONERROR command at macro ./wave.do line 31
+# add wave -noupdate -label sumout_address_buffer -radix unsigned /fullbeamformer_tb/fullbeamformer_inst/channel1/sumout_address_buffer
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/fullbeamformer_inst/channel1/sumout_address_buffer'.
+# Executing ONERROR command at macro ./wave.do line 32
+# add wave -noupdate -divider delaybeamformer1
+# add wave -noupdate -label input_index -radix unsigned /fullbeamformer_tb/fullbeamformer_inst/channel1/delaybeamformer_inst/input_index
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/fullbeamformer_inst/channel1/delaybeamformer_inst/input_index'.
+# Executing ONERROR command at macro ./wave.do line 34
+# add wave -noupdate -label desiredindex -radix unsigned /fullbeamformer_tb/fullbeamformer_inst/channel1/delaybeamformer_inst/desiredindex
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/fullbeamformer_inst/channel1/delaybeamformer_inst/desiredindex'.
+# Executing ONERROR command at macro ./wave.do line 35
+# add wave -noupdate -divider uart
+# add wave -noupdate -label PRSCL -radix unsigned -childformat {{{/fullbeamformer_tb/uart/C1/PRSCL[15]} -radix unsigned} {{/fullbeamformer_tb/uart/C1/PRSCL[14]} -radix unsigned} {{/fullbeamformer_tb/uart/C1/PRSCL[13]} -radix unsigned} {{/fullbeamformer_tb/uart/C1/PRSCL[12]} -radix unsigned} {{/fullbeamformer_tb/uart/C1/PRSCL[11]} -radix unsigned} {{/fullbeamformer_tb/uart/C1/PRSCL[10]} -radix unsigned} {{/fullbeamformer_tb/uart/C1/PRSCL[9]} -radix unsigned} {{/fullbeamformer_tb/uart/C1/PRSCL[8]} -radix unsigned} {{/fullbeamformer_tb/uart/C1/PRSCL[7]} -radix unsigned} {{/fullbeamformer_tb/uart/C1/PRSCL[6]} -radix unsigned} {{/fullbeamformer_tb/uart/C1/PRSCL[5]} -radix unsigned} {{/fullbeamformer_tb/uart/C1/PRSCL[4]} -radix unsigned} {{/fullbeamformer_tb/uart/C1/PRSCL[3]} -radix unsigned} {{/fullbeamformer_tb/uart/C1/PRSCL[2]} -radix unsigned} {{/fullbeamformer_tb/uart/C1/PRSCL[1]} -radix unsigned} {{/fullbeamformer_tb/uart/C1/PRSCL[0]} -radix unsigned}} -subitemconfig {{/fullbeamformer_tb/uart/C1/PRSCL[15]} {-height 15 -radix unsigned} {/fullbeamformer_tb/uart/C1/PRSCL[14]} {-height 15 -radix unsigned} {/fullbeamformer_tb/uart/C1/PRSCL[13]} {-height 15 -radix unsigned} {/fullbeamformer_tb/uart/C1/PRSCL[12]} {-height 15 -radix unsigned} {/fullbeamformer_tb/uart/C1/PRSCL[11]} {-height 15 -radix unsigned} {/fullbeamformer_tb/uart/C1/PRSCL[10]} {-height 15 -radix unsigned} {/fullbeamformer_tb/uart/C1/PRSCL[9]} {-height 15 -radix unsigned} {/fullbeamformer_tb/uart/C1/PRSCL[8]} {-height 15 -radix unsigned} {/fullbeamformer_tb/uart/C1/PRSCL[7]} {-height 15 -radix unsigned} {/fullbeamformer_tb/uart/C1/PRSCL[6]} {-height 15 -radix unsigned} {/fullbeamformer_tb/uart/C1/PRSCL[5]} {-height 15 -radix unsigned} {/fullbeamformer_tb/uart/C1/PRSCL[4]} {-height 15 -radix unsigned} {/fullbeamformer_tb/uart/C1/PRSCL[3]} {-height 15 -radix unsigned} {/fullbeamformer_tb/uart/C1/PRSCL[2]} {-height 15 -radix unsigned} {/fullbeamformer_tb/uart/C1/PRSCL[1]} {-height 15 -radix unsigned} {/fullbeamformer_tb/uart/C1/PRSCL[0]} {-height 15 -radix unsigned}} /fullbeamformer_tb/uart/C1/PRSCL
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/uart/C1/PRSCL'.
+# Executing ONERROR command at macro ./wave.do line 37
+# add wave -noupdate -label INDEX -radix unsigned /fullbeamformer_tb/uart/C1/INDEX
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/uart/C1/INDEX'.
+# Executing ONERROR command at macro ./wave.do line 38
+# add wave -noupdate -label DATAFLL /fullbeamformer_tb/uart/C1/DATAFLL
+# ** UI-Msg: (vish-4014) No objects found matching '/fullbeamformer_tb/uart/C1/DATAFLL'.
+# Executing ONERROR command at macro ./wave.do line 39
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {482242268 ps} 0}
+# quietly wave cursor active 1
+# configure wave -namecolwidth 155
+# configure wave -valuecolwidth 60
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ns
+# update
+# WaveRestoreZoom {0 ps} {1417500 ns}
+# 
+# Start simulation silently
+# 
+# set StdArithNoWarnings 1
+# 1
+# run 150 us
+# 
+# 
 do fullbeamformer.tcl
-# quit -sim
-# End time: 13:34:04 on Dec 06,2023, Elapsed time: 0:00:32
-# Errors: 4, Warnings: 19
-#vlib work;
-#vlog ../*.v
-#vlog *.v
-#vsim work.Upsampler_tb -Lf 220model_ver -Lf alterra_mf_ver -Lf verilog
-#vsim -L altera_mf_ver -L lpm_ver -L cyclonev_ver -L 220model_ver -L sgate -L altera_lnsim -L twentynm work.Upsampler_tb
-# 
-# Compile all required simulation library files
-# 
-# transcript on
+# End time: 16:58:23 on Dec 08,2023, Elapsed time: 0:01:05
+# Errors: 0, Warnings: 157
 # write transcript BP_filter_transcript

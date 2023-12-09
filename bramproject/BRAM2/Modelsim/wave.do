@@ -6,9 +6,10 @@ add wave -noupdate -label load /BRAM_tb/load
 add wave -noupdate -label start /BRAM_tb/start
 add wave -noupdate -label data_in /BRAM_tb/data_in
 add wave -noupdate -label data_out /BRAM_tb/data_out
-add wave -noupdate /BRAM_tb/UU1/read_addr
+add wave -noupdate -label read_addr /BRAM_tb/UU1/read_addr
+add wave -noupdate -label write_addr /BRAM_tb/UU1/write_addr
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {537926 ps} 0} {{Cursor 2} {50114 ps} 0}
+WaveRestoreCursors {{Cursor 1} {551952 ps} 0} {{Cursor 2} {147119 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
@@ -24,4 +25,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {533750 ps} {708750 ps}
+WaveRestoreZoom {530 ns} {624865 ps}

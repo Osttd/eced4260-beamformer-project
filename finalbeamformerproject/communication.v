@@ -1,4 +1,5 @@
-//Communication module code provided by Justin Greige
+// communication.v
+// Code provided by Justin Greige
 // Heavily modified by Owen Stuttard B00830020 and Abraham El-Jakl B00805351
 
 module communication (

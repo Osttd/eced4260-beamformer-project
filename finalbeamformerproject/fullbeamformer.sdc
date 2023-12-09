@@ -1,4 +1,4 @@
-## Generated SDC file "delaybeamformer.sdc"
+## Generated SDC file "fullbeamformer.sdc"
 
 ## Copyright (C) 2023  Intel Corporation. All rights reserved.
 ## Your use of Intel Corporation's design tools, logic functions 
@@ -20,7 +20,7 @@
 ## PROGRAM "Quartus Prime"
 ## VERSION "Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition"
 
-## DATE    "Mon Dec  4 20:49:45 2023"
+## DATE    "Fri Dec  8 11:55:26 2023"
 
 ##
 ## DEVICE  "EP4CE115F29C7"
@@ -39,7 +39,17 @@ set_time_format -unit ns -decimal_places 3
 # Create Clock
 #**************************************************************
 
-create_clock -name {clk} -period 10.000 -waveform { 0.000 5.000 } [get_ports { clk }]
+create_clock -name {mainpll_inst|altpll_component|auto_generated|pll1|clk[0]} -period 10.000 -waveform { 0.000 5.000 } 
+create_clock -name {CLOCK_50} -period 20.000 -waveform { 0.000 10.000 } [get_ports {CLOCK_50}]
+create_clock -name {communication:uart|TX_BUSY_REG} -period 10.000 -waveform { 0.000 5.000 } 
+create_clock -name {fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good} -period 10.000 -waveform { 0.000 5.000 }  [get_registers {fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good}]
+create_clock -name {fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good} -period 10.000 -waveform { 0.000 5.000 }  [get_registers {fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good}]
+create_clock -name {fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good} -period 10.000 -waveform { 0.000 5.000 }  [get_registers {fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good}]
+create_clock -name {fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good} -period 10.000 -waveform { 0.000 5.000 }  [get_registers {fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good}]
+create_clock -name {fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good} -period 10.000 -waveform { 0.000 5.000 }  [get_registers {fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good}]
+create_clock -name {fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good} -period 10.000 -waveform { 0.000 5.000 }  [get_registers {fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good}]
+create_clock -name {fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good} -period 10.000 -waveform { 0.000 5.000 }  [get_registers {fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good}]
+create_clock -name {fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good} -period 10.000 -waveform { 0.000 5.000 }  [get_registers {fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good}]
 
 
 #**************************************************************
@@ -58,10 +68,170 @@ create_clock -name {clk} -period 10.000 -waveform { 0.000 5.000 } [get_ports { c
 # Set Clock Uncertainty
 #**************************************************************
 
-set_clock_uncertainty -rise_from [get_clocks {clk}] -rise_to [get_clocks {clk}]  0.020  
-set_clock_uncertainty -rise_from [get_clocks {clk}] -fall_to [get_clocks {clk}]  0.020  
-set_clock_uncertainty -fall_from [get_clocks {clk}] -rise_to [get_clocks {clk}]  0.020  
-set_clock_uncertainty -fall_from [get_clocks {clk}] -fall_to [get_clocks {clk}]  0.020  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -rise_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good}]  0.020  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good}] -rise_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -setup 0.070  
+set_clock_uncertainty -fall_from [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good}] -fall_to [get_clocks {CLOCK_50}] -hold 0.100  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {CLOCK_50}]  0.020  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {CLOCK_50}]  0.020  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel8|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel7|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel5|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel6|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel2|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel4|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel1|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good}] -setup 0.100  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {fullbeamformer:fullbeamformer_inst|brambeamformer:channel3|delaybeamformer:delaybeamformer_inst|data_good}] -hold 0.070  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {CLOCK_50}]  0.020  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {CLOCK_50}]  0.020  
 
 
 #**************************************************************

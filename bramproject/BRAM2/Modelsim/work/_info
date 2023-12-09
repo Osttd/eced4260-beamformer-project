@@ -10,23 +10,23 @@ z2
 cModel Technology
 dC:/Users/julie/Desktop/Work/Year5/ICDesign/Project/Quartus/Tutorial/BRAM_tut/Modelsim
 vBRAM
-Z0 !s110 1700522828
+Z0 !s110 1702075750
 !i10b 1
 !s100 hW>V`5I<ORbeEY4jIOAS:2
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
 I@_b`LY4^UfHKf8^UjkKi53
 Z2 VDg1SIo80bB@j0V0VzS_@n1
-Z3 dD:/DDal/5th Year Fall (2023)/ECED4260/project/frombrightspace/Tutorial/BRAM2/Modelsim
+Z3 dD:/DDal/5th Year Fall (2023)/ECED4260/project/git/eced4260-beamformer-project/bramproject/BRAM2/Modelsim
 w1698592371
 8../BRAM.v
 F../BRAM.v
-!i122 12
+!i122 16
 L0 1 41
 Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1700522827.000000
+Z5 !s108 1702075750.000000
 Z6 !s107 ../DPBRAM.v|../BRAM.v|
 Z7 !s90 -reportprogress|300|../BRAM.v|../DPBRAM.v|
 !i113 1
@@ -43,13 +43,13 @@ R3
 w1698592080
 8BRAM_tb.v
 FBRAM_tb.v
-!i122 13
+!i122 17
 L0 3 42
 R4
 r1
 !s85 0
 31
-!s108 1700522828.000000
+R5
 !s107 BRAM_tb.v|
 !s90 -reportprogress|300|BRAM_tb.v|
 !i113 1
@@ -66,7 +66,7 @@ R3
 w1698590115
 8../DPBRAM.v
 F../DPBRAM.v
-!i122 12
+!i122 16
 L0 40 78
 R4
 r1
